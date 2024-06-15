@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="icon" href="assets/celestina/icon.png" type="image/png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KeimLite - </title>
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: --dark-rgb: 0 0 0;
+                margin: 0;
+                padding: 0px;
+                cursor: url('assets/mouse/cursor_Miku-1/miku1.cur'), auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            /* Cursors */
+            a {
+                cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+            }
+            input[type=checkbox] {
+                cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+            }
+            button {
+                cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+            }
+            input[type=text] {
+                cursor: url('assets/mouse/cursor_Miku-1/miku3.cur'), auto;
+            }
+            h1 {
+                cursor: url('assets/mouse/cursor_Miku-1/miku3.cur'), auto;
+            }
+            p {
+                cursor: url('assets/mouse/cursor_Miku-1/miku3.cur'), auto;
+            }
+            ::selection {
+                cursor: url('assets/mouse/cursor_Miku-1/miku8.cur'), auto;
+            }
+            header {
+                text-align: center;
+                padding: 100px;
+            }
+            /* Background */
+            :root {
+                --glow-rgb: 245 245 245;
+                --light-skyblue-rgb: 51 228 249;
+                --dark-skyblue-rgb: 13 120 126;
+                --light-red-rgb:204 27 6;
+                --dark-red-rgb: 242 135 129;
+                --primary-stripe-rgb: 230 230 230;
+                --secondary-stripe-rgb: 240 240 240;
+                --dark-rgb: 0 0 0;
+                --light-rgb: 255 255 255;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            @keyframes pan {
+                0% {
+                    background-position: 0% 0%;
+                }
+                100% {
+                    background-position: -100% 100%;
+                }
+            }
+            @keyframes pan:hover {
+            }
+            #app {
+                height: 100vh;
+                overflow: hidden;
+                position: fixed;
+                z-index: -2;
+            }
+            #star-container {
+                background: radial-gradient(rgb(var(--dark-red-rgb)), rgb(var(--light-red-rgb)));
+                overflow: hidden;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                left: 0px;
+                top: 0px;
+                z-index: -12;
+            }
+            #star-pattern {
+                background-image: url('assets/patterns/404.png');
+                background-size: 10%;  
+                position: fixed;
+                left: 50%;
+                top: 0px;
+                translate: -50% 0%;
+                height: 100%;
+                width: 100%;
+                min-width: 1200px;
+                opacity: 0.10;
+                animation: pan 180s linear infinite;
+                will-change: background-position;
+                z-index: -10;
+                padding: 50px;
+            }
+            #star-gradient-overlay {
+                background: radial-gradient(circle, transparent 75%, rgb(var(--light-red-rgb)));
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                opacity: 0.9;
+                z-index: -10;
+            }
+            /* Sidebar */
+            .headertop {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: rgb(var(--dark-rgb));
+                padding: 10px 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                width: 97%;
+                z-index: 5;
+            }
+            .menu-icon {
+                cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+                padding-right: 10px;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 250px;
+                height: 100%;
+                background-color: rgb(var(--dark-rgb));
+                transition: right 0.3s ease;
+                padding: 20px;
+                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+                z-index: 5;
+            }
+            .sidebar.open {
+                right: 0;
+            }
+            .sidebar h2 {
+                color: rgb(var(--light-rgb));
+                margin-bottom: 20px;
+            }
+            .sidebar ul {
+                list-style: none;
+                padding: 0;
+                cursor: url('assets/mouse/cursor_Miku-1/miku2.cur');
+            }
+            .sidebar ul li {
+                padding: 10px 0;
+                border-bottom: 1px solid rgb(var(--light-rgb));
+            }
+            .sidebar ul li a {
+                color: rgb(var(--light-rgb));
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+            }
+            .sidebar ul li a img {
+                margin-right: 10px;
+            }
+            .sidebar .close-btn {
+                position: absolute;
+                top: 24px;
+                right: 35px;
+                cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+            }
+            main {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 0 20px;
+            }
+            p {
+                line-height: 1.6;
+            }
+            /* Banner Eventos */
+            .carousel {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 25%;
+                height: 80px;
+                overflow: hidden;
+                border-radius: 15px;
+                margin: 0 auto;
+            }
+            .carousel:hover {
+                transform: scale(1.03);
+                cursor: pointer;
+                rotate: -2deg;
+            }
+            .carousel-inner {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                height: 100%;
+            }
+            .carousel-item {
+                min-width: 100%;
+                box-sizing: border-box;
+                position: relative;
+                cursor: pointer;
+            }
+            .carousel-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+            /*.carousel-caption {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+                color: #f4f9f9;
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 0px 0px;
+                border-radius: 0px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                font-size: 12px; 
+                text-align: center; 
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+            }*/
+            /* Animación */
+            @keyframes wave-animation {
+                0%, 40%, 100% {
+                    transform: translateY(0);
+                }
+                20% {
+                    transform: translateY(-5px);
+                }
+            }
+            @keyframes color-change {
+                0%, 100% {
+                    color: #f4f9f9;
+                }
+                50% {
+                    color: #4facfe;
+                }
+            }
+            .wave {
+                color: #f4f9f9;
+            }
+            .wave span {
+                animation: wave-animation 1.5s infinite, color-change 1.5s infinite;
+                display: inline-block;
+            }
+            .wave span:nth-child(1) { animation-delay: 0s; }
+            .wave span:nth-child(2) { animation-delay: 0.1s; }
+            .wave span:nth-child(3) { animation-delay: 0.2s; }
+            .wave span:nth-child(4) { animation-delay: 0.3s; }
+            .wave span:nth-child(5) { animation-delay: 0.4s; }
+            .wave span:nth-child(6) { animation-delay: 0.5s; }
+            .wave span:nth-child(7) { animation-delay: 0.6s; }
+            .wave span:nth-child(8) { animation-delay: 0.7s; }
+            .wave span:nth-child(9) { animation-delay: 0.8s; }
+            /* Pie de Pagina */
+            footer {
+                background-color: rgb(var(--dark-rgb));
+                color: rgb(var(--light-rgb));
+                text-align: center;
+                padding: 20px 0;
+                bottom: 0px;
+                width: 100%;
+                z-index: 5;
+                position: fixed;
+            }
+            .footer-content {
+                max-width: 1200px;
+                margin: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .footer-section {
+                flex: 1;
+                padding: 20px;
+                min-width: 250px;
+            }
+            .footer-section h3 {
+                margin-bottom: 15px;
+            }
+            .footer-section p {
+                margin-bottom: 10px;
+                text-align: justify;
+            }
+            .footer-bottom {
+                border-top: 1px solid rgb(var(--light-rgb));
+                padding-top: 10px;
+            }
+            .footer-bottom p {
+                margin: 0;
+            }
+            .footer-link {
+                color: rgb(var(--light-rgb));
+                text-decoration: underline;
+            }
+            h1 {
+                margin-top: 20px;
+            }
+            .background-404 {
+                position: fixed;
+                top: 200px;
+                width: 50%;
+                height: 35%;
+                background: url('assets/bg/404_pne-1.png') no-repeat center center;
+                background-size: 400px auto;
+                z-index: 1;
+            }
+            .background-aqua {
+                position: fixed;
+                top: 17%;
+                right: 13%;
+                width: 37%;
+                height: 75%;
+                background: url('assets/bg/aqua_render-2.png') no-repeat center center;
+                background-size: 300px auto;
+                z-index: 1;
+            }
+            .background-aqua:hover {
+                transform: scale(1.03);
+                rotate: -2deg;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="headertop">
+            <a onclick="window.location.href='index.html'"><img src="assets/celestina/logo_Error.png" alt="Logo Icon" style="height: 60px;"></a>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <a href="https://discord.com/channels/807285452435751004/855618660499324938/1243656849262121080" target="_blank"><img src="assets/banners/banner_event-1.png" alt="Evento 1" class="carousel-image"></a>
+                                <div class="carousel-caption">
+                                    <h1>Luces y Sombras</h1>
+                                    <p>Concurso luces y sombras año 2024.</p>
+                                </div>
+                        </div>
+                        <!-- Agrega más eventos aquí -->
+                </div>
+            </div>
+             <div class="menu-icon" onclick="toggleSidebar()">
+                <a><img src="assets/ui/menu.png" alt="Menu Icon" style="height: 40px;"></a>
+            </div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="close-btn" onclick="toggleSidebar()">
+                <a><img src="assets/ui/close.png" alt="Close Icon" style="height: 40px;"></a>
+            </div>
+            <h2></h2>
+            <ul style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur')">
+                <li><a onclick="window.location.href='index.html'"><img src="assets/ui/home.png" alt="Home" style="height: 20px;"> INICIO</a></li>
+                <li><a onclick="window.location.href='leaderboard.html'"><img src="assets/ui/topCrown.png" alt="Ranking" style="height: 20px;"> TOP SEMANAL</a></li>
+                <!-- <li><a onclick="window.location.href='eimon.html'"><img src="assets/social/youtube.png" alt="Eimon Q" style="height: 20px;"> AEMON Q</a></li> -->
+                <li><a onclick="window.location.href='museumIndex.html'"><img src="assets/ui/archive.png" alt="Archive" style="height: 20px;"> MUSEO</a></li>
+            </ul>
+            <p style="color: rgb(var(--light-rgb)); text-align: center; text-size: 8;">¡Visita todas nuestras redes sociales!</p>
+            <div style="text-align: center"> 
+                <a onclick="window.location.href='https://x.com/KeimLite'"><img src="assets/social/twitter.png" alt="Twitter" style="height: 40px;"></a>
+                <a onclick="window.location.href='https://discord.com/invite/fDY7MqHb4d'"><img src="assets/social/discord.png" alt="Discord" style="height: 40px;"></a>
+                <a onclick="window.location.href='https://whatsapp.com/channel/0029Va9IIWhHLHQXm4tCLo03'"><img src="assets/social/whatsApp.png" alt="WhatsApp" style="height: 40px;"></a>
+            </div>
+        </div>
+
+        <div class="background-404"></div>
+        <a><div class="background-aqua" onclick="window.location.href='index.html'"></div></a>
+
+        <div id="app">
+            <div id="star-container">
+                <div id="star-pattern"></div>
+                <div id="star-gradient-overlay"></div>
+            </div>
+        </div>
+        <script>
+            function toggleSidebar() {
+                document.getElementById('sidebar').classList.toggle('open');
+            }
+
+            let currentIndex = 0;
+            const items = document.querySelectorAll('.carousel-item');
+            function showSlide(index) {
+                items.forEach((item, i) => {
+                    item.classList.remove('active');
+                    if (i === index) {
+                        item.classList.add('active');
+                    }
+                });
+                const offset = -index * 100;
+                document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+            }
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % items.length;
+                showSlide(currentIndex);
+            }
+            setInterval(nextSlide, 5000);
+        </script>
+        <footer>
+            <!-- <div class="footer-content">
+                <div class="footer-section">
+                    <h3>¿Qué es Keim Lite?</h3>
+                    <p>Keim Lite es un servidor de escritura creado en 2021 dedicado a novelas de todo tipo. Creada por el señor Eimon Q, su objetivo es fomentar un ambiente en el que los escritores puedan aprender y perfeccionar sus habilidades de escritura, además de compartir sus obras con una comunidad con el mismo hobby y gustos.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>¿Qué es Celestina?</h3>
+                    <p>Celestina es un proyecto personal que he desarrollado (RulerFox) con dos objetivos principales. El primero es aprender a programar con HTML y adquirir habilidades para la creación de páginas web. El segundo es optimizar y acelerar el proceso de actualización del Top Semanal de Novelas para cuando yo no pueda hacerlo, otro pueda ocupar mi lugar.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>¿Top Semanal de Novelas?</h3>
+                    <p>El Top Semanal de Novelas es una sección pequeña en nuestro servidor de Discord. Cada semana, se actualiza para presentar las diez obras más populares, seleccionadas en función de su número total de visitas o seguidores.</p>
+                </div>
+            </div> -->
+            <div class="footer-bottom">
+                <div class="wave">
+                    <p>PÁGINA DESCONOCIDA, DESACTIVADA O AÚN NO CREADA</p>
+                    <span>❤</span> | <span>🐌</span>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

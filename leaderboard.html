@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="icon" href="assets/celestina/icon.png" type="image/png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Celestina Project</title>
+        <link rel="stylesheet" href="styles.css/sty_bg-aqua.css">
+        <link rel="stylesheet" href="styles.css/sty_banner-events.css">
+        <link rel="stylesheet" href="styles.css/sty_footer.css">
+        <link rel="stylesheet" href="styles.css/sty_letterAni.css">
+        <link rel="stylesheet" href="styles.css/sty_sidebar.css">
+        <link rel="stylesheet" href="styles.css/sty_base-week.css">
+        <link rel="stylesheet" href="styles.css/sty_button-more-week.css">
+        <link rel="stylesheet" href="styles.css/sty_button-order-week.css">
+        <link rel="stylesheet" href="styles.css/sty_button-filter-week.css">
+        <link rel="stylesheet" href="styles.css/sty_button-download-week.css">
+        <link rel="stylesheet" href="styles.css/sty_button-print-week.css">
+        <link rel="stylesheet" href="styles.css/sty_button-pagination-week.css">
+        <link rel="stylesheet" href="styles.css/sty_novels-week.css">
+        <link rel="stylesheet" href="styles.css/sty_scrollTop.css">
+    </head>
+    <body>
+        <div class="headertop">
+            <img src="assets/celestina/logo.png" alt="Logo Icon" style="height: auto; width: 175px;" onclick="window.location.href='index.html'">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <a href="https://discord.com/channels/807285452435751004/855618660499324938/1243656849262121080" target="_blank"><img src="assets/banners/banner_event-1.png" alt="Evento 1" class="carousel-image"></a>
+                            <div class="carousel-caption">
+                                <h1>Luces y Sombras</h1>
+                                <p>Concurso luces y sombras año 2024.</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-icon" onclick="toggleSidebar()">
+                <a><img src="assets/ui/menu.png" alt="Menu Icon" style="height: 40px;"></a>
+            </div>
+        </div>
+
+        <div class="sidebar" id="sidebar">
+            <div class="close-btn" onclick="toggleSidebar()">
+                <a><img src="assets/ui/close.png" alt="Close Icon" style="height: 40px;"></a>
+            </div>
+            <h2></h2>
+            <ul style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur')">
+                <li><a onclick="window.location.href='index.html'"><img src="assets/ui/home.png" alt="Home" style="height: 20px;"> INICIO</a></li>
+                <li><a onclick="window.location.href='leaderboard.html'"><img src="assets/ui/topCrown.png" alt="Ranking" style="height: 20px;"> TOP SEMANAL</a></li>
+                <li><a onclick="window.location.href='eimon.html'"><img src="assets/social/youtube.png" alt="Eimon Q" style="height: 20px;"> AEMON Q</a></li>
+                <li><a onclick="window.location.href='novelsIndex.html'"><img src="assets/ui/archive.png" alt="Archive" style="height: 20px;"> MUSEO</a></li>
+            </ul>
+            <p style="color: rgb(var(--light-rgb)); text-align: center; text-size: 8; padding-top: inherit;">¡Visita todas nuestras redes sociales!</p>
+            <div style="text-align: center"> 
+                <a onclick="window.location.href='https://x.com/KeimLite'"><img src="assets/social/twitter.png" alt="Twitter" style="height: 40px;"></a>
+                <a onclick="window.location.href='https://discord.com/invite/fDY7MqHb4d'"><img src="assets/social/discord.png" alt="Discord" style="height: 40px;"></a>
+                <a onclick="window.location.href='https://whatsapp.com/channel/0029Va9IIWhHLHQXm4tCLo03'"><img src="assets/social/whatsApp.png" alt="WhatsApp" style="height: 40px;"></a>
+            </div>
+            <p style="color: rgb(var(--light-rgb));position: inherit;text-align: center;bottom: 10px;">Hecho por RulerFox 🗿</p>
+        </div>
+
+        <div class="header">
+            <li><h1>SEMANA NÚMERO 31</h1></li>
+            <p style="color: rgb(var(--light-rgb));">TOP MÁS VISITADOS</p>
+        </div>
+
+        <!-- <button class="more-button" onclick="toggleMoreOptions()" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">
+            <img src="assets/ui/more.png" alt="More Icon"></a>
+        </button>
+        <button class="order-button" onclick="toggleOrderMenu()" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">
+            <img src="assets/ui/sort.png" alt="Order Icon"></a>
+        </button>
+        <button class="filter-button" onclick="toggleFilterMenu()" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">
+            <img src="assets/ui/filter_On.png" alt="Filter Icon"></a>
+        </button> -->
+        <button class="print-button" onclick="togglePrintMenu()" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">
+            <a><img src="assets/ui/download.png" alt="Download Icon"></a>
+        </button> <!--
+        <div class="filter-menu" id="filterMenu"> /* +25*/
+            <p>Filtrar por:</p>
+                <form id="filterForm">
+                    <label for="author">Autor:</label>
+                    <select id="author" name="author" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">
+                        <option value="">Todos</option>
+                    </select>
+                    <label for="status">Estado:</label>
+                    <select id="status" name="status">
+                        <option value="">Todos</option>
+                    </select>
+                    <label for="genre">Géneros:</label>
+                    <select id="genre" name="genre">
+                        <option value="">Todos</option>
+                    </select>
+                    <label for="date">Año:</label>
+                    <select id="date" name="date">
+                        <option value="">Todos</option>
+                    </select>
+                    <button type="button" onclick="applyFilters()">Aplicar Filtros</button><button id="resetButton" onclick="resetFilters()">Reiniciar</button>
+                </form>
+            </div>
+        </div> -->
+        <div class="print-menu" id="printMenu">
+            <p>Descargar por:</p>
+            <div>
+                <label>
+                    <p><input type="checkbox" id="statusActivo" value="Activo">Activo</p>
+                </label>
+                <label>
+                     <p><input type="checkbox" id="statusInactivo" value="Inactivo">Inactivo</p>
+                </label>
+                <label>
+                     <p><input type="checkbox" id="statusFinalizado" value="Finalizado">Finalizado</p>
+                </label>
+                <label>
+                     <p><input type="checkbox" id="statusEliminado" value="Eliminado">Eliminado</p>
+                </label>
+                <button onclick="printFilteredNovels()" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">Imprimir</button>
+            </div>
+        </div>
+
+        <div id="novelsList"></div>
+        <div id="pagination" class="paginationButton"></div>
+
+        <div id="app">
+            <div id="star-container">
+                <div id="star-pattern"></div>
+                <div id="star-gradient-overlay"></div>
+            </div>
+        </div>
+
+        <button id="toTopBtn" style="display: none;">
+            <img src="assets/ui/arrowCircle_up.png" alt="Ir Arriba" />Ir Arriba
+        </button>
+
+        <script src="script.js/scr_novels-week.js"></script>
+        <script src="script.js/scr_sidebar.js"></script>
+        <script src="script.js/scr_button-printNload-week.js"></script>
+        <script src="script.js/scr_button-filter-week.js"></script>
+        <script src="script.js/scr_scrollTop.js"></script>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>¿Top Semanal de Novelas?</h3>
+                    <p>El Top Semanal de Novelas es una sección pequeña en nuestro servidor de Discord. Cada semana, se actualiza para presentar las diez obras más populares, seleccionadas en función de su número total de visitas o seguidores.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>¿Hay alguna recompensa?</h3>
+                    <p>Actualmente, no existe ninguna compensación por quedar en primer lugar o en el top diez. Esto es solo un método para motivar a que la gente publique semana a semana sin rendirse.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>¿Cómo puedo participar?</h3>
+                    <p>Es sencillo. Solo debes hablar con el encargado o la encargada de manejar las actualizaciones del top y él o ella te agregará. Sin depositos ni pagos por recarga.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="wave">
+                    <p>MUCHAS NOVELAS NOVELESCAS</p>
+                    <span>❤</span> | <span>🐌</span>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
