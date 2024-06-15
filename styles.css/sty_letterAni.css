@@ -1,0 +1,32 @@
+            @keyframes wave-animation {
+                0%, 40%, 100% {
+                    transform: translateY(0);
+                }
+                20% {
+                    transform: translateY(-5px);
+                }
+            }
+            @keyframes color-change {
+                0%, 100% {
+                    color: rgb(var(--light-rgb));
+                }
+                50% {
+                    color: rgb(var(--light-skyblue-rgb));
+                }
+            }
+            .wave {
+                color: rgb(var(--light-rgb));
+            }
+            .wave span {
+                animation: wave-animation 1.5s infinite, color-change 1.5s infinite;
+                display: inline-block;
+            }
+            .wave span:nth-child(1) { animation-delay: 0s; }
+            .wave span:nth-child(2) { animation-delay: 0.1s; }
+            .wave span:nth-child(3) { animation-delay: 0.2s; }
+            .wave span:nth-child(4) { animation-delay: 0.3s; }
+            .wave span:nth-child(5) { animation-delay: 0.4s; }
+            .wave span:nth-child(6) { animation-delay: 0.5s; }
+            .wave span:nth-child(7) { animation-delay: 0.6s; }
+            .wave span:nth-child(8) { animation-delay: 0.7s; }
+            .wave span:nth-child(9) { animation-delay: 0.8s; }

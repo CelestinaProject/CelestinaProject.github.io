@@ -1,0 +1,284 @@
+            body, html {
+                font-family: 'Arial', sans-serif;
+                background-color: rgb(var(--dark-rgb));
+                margin: 0;
+                padding: 0px;
+                overflow: hidden;
+                cursor: url('../assets/mouse/cursor_Miku-1/miku1.cur'), auto;
+            }
+            /* Cursors */
+            a,
+            input[type=checkbox],
+            button {
+                cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+            }
+            input[type=text],
+            h1,
+            p {
+                cursor: url('../assets/mouse/cursor_Miku-1/miku3.cur'), auto;
+            }
+            ::selection {
+                cursor: url('../assets/mouse/cursor_Miku-1/miku8.cur'), auto;
+            }
+            header {
+                text-align: center;
+                padding: 100px;
+            }
+            /* Background */
+            :root {
+                --glow-rgb: 245 245 245;
+                --light-skyblue-rgb: 51 228 249;
+                --dark-skyblue-rgb: 13 120 126;
+                --primary-stripe-rgb: 230 230 230;
+                --secondary-stripe-rgb: 240 240 240;
+                --dark-rgb: 0 0 0;
+                --light-rgb: 255 255 255;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            @keyframes pan {
+                0% {
+                    background-position: 0% 0%;
+                }
+                100% {
+                    background-position: 100% 100%;
+                }
+            }
+            #app {
+                height: 100vh;
+                overflow: hidden;
+                position: fixed;
+                z-index: -2;
+            }
+            #star-container {
+                background: radial-gradient(rgb(var(--light-skyblue-rgb)), rgb(var(--dark-skyblue-rgb)));
+                overflow: hidden;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                left: 0px;
+                top: 0px;
+                z-index: -12;
+            }
+            #star-pattern {
+                background-image: url('../assets/misc/aqua.png');
+                background-size: 10%;  
+                position: fixed;
+                left: 50%;
+                top: 0px;
+                translate: -50% 0%;
+                height: 100%;
+                width: 100%;
+                min-width: 1200px;
+                opacity: 0.10;
+                animation: pan 180s linear infinite;
+                will-change: background-position;
+                z-index: -10;
+            }
+            #star-gradient-overlay {
+                background: radial-gradient(circle, transparent 75%, rgb(var(--dark-skyblue-rgb)));
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                opacity: 0.9;
+                z-index: -10;
+            }
+            /* Sidebar */
+            .headertop {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: rgb(var(--dark-rgb));
+                padding: 10px 20px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                width: 97,5%;
+                z-index: 2;
+            }
+            .menu-icon {
+                cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+                padding-right: 10px;
+            }
+            .sidebar {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 250px;
+                height: 100%;
+                background-color: rgb(var(--dark-rgb));
+                transition: right 0.3s ease;
+                padding: 20px;
+                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+                z-index: 2;
+            }
+            .sidebar.open {
+                right: 0;
+            }
+            .sidebar h2 {
+                color: rgb(var(--light-rgb));
+                margin-bottom: 20px;
+            }
+            .sidebar ul {
+                list-style: none;
+                padding: 0;
+                cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur');
+            }
+            .sidebar ul li {
+                padding: 10px 0;
+                border-bottom: 1px solid rgb(var(--light-rgb));
+            }
+            .sidebar ul li a {
+                color: rgb(var(--light-rgb));
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+            }
+            .sidebar ul li a img {
+                margin-right: 10px;
+            }
+            .sidebar .close-btn {
+                position: absolute;
+                top: 24px;
+                right: 35px;
+                cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+            }
+            main {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 0 20px;
+            }
+            p {
+                line-height: 1.6;
+            }
+            /* Banner Eventos */
+            .carousel {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 25%;
+                height: 80px;
+                overflow: hidden;
+                border-radius: 15px;
+                margin: 0 auto;
+            }
+            .carousel:hover {
+                transform: scale(1.03);
+                cursor: pointer;
+                rotate: -2deg;
+            }
+            .carousel-inner {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                height: 100%;
+            }
+            .carousel-item {
+                min-width: 100%;
+                box-sizing: border-box;
+                position: relative;
+                cursor: pointer;
+            }
+            .carousel-image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+            /*.carousel-caption {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+                color: #f4f9f9;
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 0px 0px;
+                border-radius: 0px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                font-size: 12px; 
+                text-align: center; 
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+            }*/
+            /* Animación */
+            @keyframes wave-animation {
+                0%, 40%, 100% {
+                    transform: translateY(0);
+                }
+                20% {
+                    transform: translateY(-5px);
+                }
+            }
+            @keyframes color-change {
+                0%, 100% {
+                    color: #f4f9f9;
+                }
+                50% {
+                    color: #4facfe;
+                }
+            }
+            .wave {
+                color: #f4f9f9;
+            }
+            .wave span {
+                animation: wave-animation 1.5s infinite, color-change 1.5s infinite;
+                display: inline-block;
+            }
+            .wave span:nth-child(1) { animation-delay: 0s; }
+            .wave span:nth-child(2) { animation-delay: 0.1s; }
+            .wave span:nth-child(3) { animation-delay: 0.2s; }
+            .wave span:nth-child(4) { animation-delay: 0.3s; }
+            .wave span:nth-child(5) { animation-delay: 0.4s; }
+            .wave span:nth-child(6) { animation-delay: 0.5s; }
+            .wave span:nth-child(7) { animation-delay: 0.6s; }
+            .wave span:nth-child(8) { animation-delay: 0.7s; }
+            .wave span:nth-child(9) { animation-delay: 0.8s; }
+            /* Pie de Pagina */
+            footer {
+                background-color: rgb(var(--dark-rgb));
+                color: rgb(var(--light-rgb));
+                text-align: center;
+                padding: 20px 0;
+                margin-top: 100px;
+                width: 100%;
+				height: 78%;
+                z-index: 1;
+                position: fixed;
+				bottom: 0px;
+            }
+            .footer-content {
+                max-width: 1200px;
+                margin: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .footer-section {
+                flex: 1;
+                padding: 20px;
+                min-width: 250px;
+            }
+            .footer-section h3 {
+                margin-bottom: 15px;
+            }
+            .footer-section p {
+                margin-bottom: 10px;
+                /*text-align: justify;*/
+            }
+            .footer-bottom {
+                border-top: 1px solid rgb(var(--light-rgb));
+                padding-top: 10px;
+            }
+            .footer-bottom p {
+                margin: 0;
+            }
+            .footer-link {
+                color: rgb(var(--light-rgb));
+                text-decoration: underline;
+            }
+            h1 {
+                margin-top: 20px;
+            }

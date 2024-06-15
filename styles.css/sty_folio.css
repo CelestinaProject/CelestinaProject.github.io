@@ -1,0 +1,290 @@
+:root {
+    --primary-color: #ff4500;
+    --secondary-color: #f4f9f9;
+	--terciary-color: 255 255 255;
+	--cuartec-color: 0 0 0;
+    --background-color: #f4f9f9;
+    --text-color: 0 0 0;
+    --sidebar-bg-color: 0 0 0;
+    --hover-color: #ff6347;
+    --transition-duration: 0.3s;
+    --primary-stripe-rgb: 0 0 0;
+    --secondary-stripe-rgb: 52 49 90;
+	--detail-color: 204 204 204;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: rgb(var(--cuartec-color));
+    margin: 0;
+    padding: 0px;
+    line-height: 1.6;
+}
+header {
+    text-align: center;
+    padding: 0px 0px;
+    z-index: 1;
+}
+/* Sidebar */
+.headertop {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.menu-icon {
+    cursor: pointer;
+    padding-left: 20px;
+    z-index: 0;
+}
+/* Eimon */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/bg/nightAnimatedBackground.gif') no-repeat center center;
+    background-size: cover;
+    z-index: -10;
+    animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px;
+    z-index: 1;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+.profile img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    animation: spin 5s linear infinite;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.info {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    z-index: 1;
+}
+.info h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    z-index: 1;
+}
+.info p {
+    margin: 10px 100px;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    line-height: 1.6;
+    z-index: 1;
+}
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    z-index: 1;
+}
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    z-index: 1;
+}
+.social-icons a img {
+    width: 100%;
+    height: 100%;
+}
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+.novels-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(var(--terciary-color));
+    transition: color var(--transition-speed);
+    z-index: 1;
+}
+.novels-menu {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: rgb(var(--cuartec-color));
+    color: rgb(var(--terciary-color));
+    padding: 20px;
+    box-sizing: border-box;
+    transition: bottom 0.5s ease-in-out;
+    overflow-y: auto;
+    max-height: 70vh;
+    box-shadow: -2px 0 50px rgb(var(--terciary-color));
+    z-index: 1;
+    clip-path: polygon(
+        0% 5%, 1.25% 0%, 2.5% 5%, 
+        3.75% 0%, 5% 5%, 6.25% 0%, 
+        7.5% 5%, 8.75% 0%, 10% 5%, 
+        11.25% 0%, 12.5% 5%, 13.75% 0%, 
+        15% 5%, 16.25% 0%, 17.5% 5%, 
+        18.75% 0%, 20% 5%, 21.25% 0%, 
+        22.5% 5%, 23.75% 0%, 25% 5%, 
+        26.25% 0%, 27.5% 5%, 28.75% 0%, 
+        30% 5%, 31.25% 0%, 32.5% 5%, 
+        33.75% 0%, 35% 5%, 36.25% 0%, 
+        37.5% 5%, 38.75% 0%, 40% 5%, 
+        41.25% 0%, 42.5% 5%, 43.75% 0%, 
+        45% 5%, 46.25% 0%, 47.5% 5%, 
+        48.75% 0%, 50% 5%, 51.25% 0%, 
+        52.5% 5%, 53.75% 0%, 55% 5%, 
+        56.25% 0%, 57.5% 5%, 58.75% 0%, 
+        60% 5%, 61.25% 0%, 62.5% 5%, 
+        63.75% 0%, 65% 5%, 66.25% 0%, 
+        67.5% 5%, 68.75% 0%, 70% 5%, 
+        71.25% 0%, 72.5% 5%, 73.75% 0%, 
+        75% 5%, 76.25% 0%, 77.5% 5%, 
+        78.75% 0%, 80% 5%, 81.25% 0%, 
+        82.5% 5%, 83.75% 0%, 85% 5%, 
+        86.25% 0%, 87.5% 5%, 88.75% 0%, 
+        90% 5%, 91.25% 0%, 92.5% 5%, 
+        93.75% 0%, 95% 5%, 96.25% 0%, 
+        97.5% 5%, 98.75% 0%, 100% 5%, 
+        100% 100%, 0% 100%
+    );
+}
+@keyframes pan {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+.novel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    padding: 20px;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 25px;
+    background-color: black;
+}
+/*.novel:nth-child(even) {
+    flex-direction: row-reverse;
+}*/
+.novel img {
+    width: 175px;
+    height: 250px;
+    margin: 0 50px;
+}
+.novelGlow {
+    box-shadow: 0px 0 10px rgb(var(--terciary-color));
+    border-bottom: 5px solid rgb(var(--detail-color));
+}
+.novel-info {
+    max-width: 900px;
+}
+.novel-info h2 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+}
+.novel-info p {
+    text-align: justify;
+}
+.platform-icons {
+    display: flex;
+}
+.platform-icons a {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin: 20px;
+    z-index: 1;
+}
+.platform-icons a img {
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+}
+.platform-icons a:hover {
+    transform: scale(1.2);
+}
+.show-menu .novel {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 1;
+}
+.close-menu .novels-menu {
+    bottom: 100;
+    z-index: 1;
+}
+.show-menu .novels-menu {
+    bottom: 0;
+    z-index: 1;
+}
+.novels-link::after {
+    content: "▼";
+    margin-left: -1px;
+    z-index: 1;
+}
+.novels-link::before {
+    content: "Abrir";
+    margin-right: -1px;
+    z-index: 1;
+}
+.show-menu .novels-link::after {
+    content: "▲";
+    margin-left: -1px;
+    z-index: 1;
+}
+.show-menu .novels-link::before {
+    content: "Cerrar";
+    margin-right: -1px;
+    z-index: 1;
+}
+:root {
+    --primary-color: rgb(var(--terciary-color));
+    --text-color: rgb(var(--terciary-color));
+}
+.novel:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-10px);
+    color: var(--text-color);
+    background-size: 18px 18px;
+    background-image: linear-gradient(
+        45deg,
+        rgb(var(--primary-stripe-rgb)) 25%,
+        rgb(var(--secondary-stripe-rgb)) 25%,
+        rgb(var(--secondary-stripe-rgb)) 50%,
+        rgb(var(--primary-stripe-rgb)) 50%,
+        rgb(var(--primary-stripe-rgb)) 75%,
+        rgb(var(--secondary-stripe-rgb)) 75%,
+        rgb(var(--secondary-stripe-rgb)) 100%
+    );
+    animation: pan 360s linear infinite;
+}

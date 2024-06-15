@@ -1,0 +1,100 @@
+            .novel-container {
+                margin-bottom: 20px;
+                min-width: 525px;
+		max-width: 525px;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                transition: transform 0.2s;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                align: center;
+                cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+            }
+            .novel-container:hover {
+                transform: translateY(-5px);
+                cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+            }
+            .header {
+                background-image: url('../assets/banners/banner_Top-1.png');
+                background-size: cover;
+                background-position: center;
+                padding: 10px;
+                border-radius: 15px;
+                color: rgb(var(--light-rgb));
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+                margin-bottom: 20px;
+                justify-content: center;
+                margin-top: 20px;
+                width: auto;
+                height: auto;
+                flex-direction: center; /*flex*/
+                align-items: center;
+                align: center;
+                position: 50%;
+            }
+            .header h1 {
+                margin: 0;
+                font-size: xx-large;
+                font-weight: bold;
+                text-align: center;
+                color: rgb(var(--light-rgb));
+            }
+            .header p {
+                margin: 5px 0;
+                font-size: larger;
+                text-align: center;
+            }
+            .controls {
+                margin-bottom: 20px;
+            }
+            .novel-header {
+                display: flex;
+                align-items: center;
+                padding: 15px;
+                background-color: rgb(var(--light-rgb));
+                border-bottom: 1px solid #ececec;
+                cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+                width: 100%;
+            }
+            .novel-header span {
+                font-size: 24px;
+                margin-left: 20px;
+                margin-right: 20px;
+                font-family: 'Bell MT', serif;
+            }
+            .novel-cover {
+                width: 60px;
+                height: 90px;
+                margin-right: 20px;
+                border-radius: 5px;
+                object-fit: cover;
+            }
+            .novel-title {
+                font-size: larger;
+                font-weight: bold;
+                cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+                transition: color 0.3s;
+                color: rgb(var(--dark-skyblue-rgb));
+            }
+            .novel-header div {
+                margin-bottom: 5px;
+            }
+            .novel-details {
+                display: none;
+                align-items: center;
+                overflow: hidden;
+                transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+                color: rgb(var(--dark-rgb));
+                padding: 10px;
+                border-top: 1px solid #ececec;
+                background-color: rgb(var(--primary-stripe-rgb));
+                width: 100%;
+                border-collapse: collapse;
+                text-align: center;
+            }
+            .novel-details div {
+                margin-bottom: 8px;
+            }

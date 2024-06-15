@@ -1,0 +1,39 @@
+            body, html {
+                font-family: 'Arial', sans-serif;
+                margin: 0;
+                padding: 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                cursor: url('../assets/mouse/cursor_Miku-1/miku1.cur'), auto;
+            }
+            a,
+            input[type=checkbox],
+            button, 
+            option,
+            form,
+            label {
+                cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+            }
+            input[type=text],
+            h1,
+            p {
+                cursor: url('../assets/mouse/cursor_Miku-1/miku3.cur'), auto;
+            }
+            ::selection {
+                cursor: url('../assets/mouse/cursor_Miku-1/miku8.cur'), auto;
+            }
+            header {
+                text-align: center;
+                padding: 100px;
+            }
+::-webkit-scrollbar {
+    background-color: rgb(var(--dark-rgb));
+    color: rgb(var(--light-rgb));
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(var(--dark-skyblue-rgb));
+}
+::-webkit-scrollbar-corner {
+    background-color: rgb(var(--dark-rgb));
+}
