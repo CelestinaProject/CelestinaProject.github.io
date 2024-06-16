@@ -6,6 +6,9 @@
                 margin-top: 10px;
                 width: -webkit-fill-available;
                 z-index: 1;
+				position: relative;
+				height: auto;
+				bottom: 0;
             }
             .footer-content {
                 max-width: -webkit-fill-available;

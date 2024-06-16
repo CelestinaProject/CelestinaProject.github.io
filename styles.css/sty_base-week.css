@@ -27,13 +27,13 @@
                 text-align: center;
                 padding: 100px;
             }
-::-webkit-scrollbar {
-    background-color: rgb(var(--dark-rgb));
-    color: rgb(var(--light-rgb));
-}
-::-webkit-scrollbar-thumb {
-    background-color: rgb(var(--dark-skyblue-rgb));
-}
-::-webkit-scrollbar-corner {
-    background-color: rgb(var(--dark-rgb));
-}
+			::-webkit-scrollbar {
+				background-color: rgb(var(--dark-rgb));
+				color: rgb(var(--light-rgb));
+			}
+			::-webkit-scrollbar-thumb {
+				background-color: rgb(var(--dark-skyblue-rgb));
+			}
+			::-webkit-scrollbar-corner {
+				background-color: rgb(var(--dark-rgb));
+			}
