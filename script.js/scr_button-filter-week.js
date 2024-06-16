@@ -24,7 +24,7 @@ function applyFilters() {
 currentPage = 1;
     totalPages = Math.ceil(filteredNovels.length / itemsPerPage);
     renderNovels(filteredNovels, currentPage, totalPages);
-    /*renderPagination(filteredNovels);*/
+    renderPagination(filteredNovels);
     toggleFilterMenu();
 }
 
