@@ -15,7 +15,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
-    color: rgb(var(--cuartec-color));
+    color: rgb(var(--terciary-color));
     margin: 0;
     padding: 0px;
     line-height: 1.6;
