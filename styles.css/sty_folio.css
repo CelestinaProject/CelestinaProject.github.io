@@ -8,7 +8,7 @@
     --sidebar-bg-color: #000;
     --hover-color: #ff6347;
     --transition-duration: 0.3s;
-    --primary-stripe-rgb: #000;
+    --primary-stripe-rgb: 0 0 0;
     --secondary-stripe-rgb: 52 49 90;
 	--detail-color: 204 204 204;
 }
