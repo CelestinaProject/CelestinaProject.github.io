@@ -17,7 +17,7 @@
                 cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
             }
             .header {
-                background-image: url('../assets/banners/banner_Top-1.png');
+                background-image: url('../assets/banners/banner_top-1.png');
                 background-size: cover;
                 background-position: center;
                 padding: 10px;
