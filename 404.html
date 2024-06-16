@@ -18,40 +18,10 @@
             body {
                 background-color: rgb(var(--dark-rgb));
             }
-            /* Cursors */
-            a {
-                cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;
-            }
-            input[type=checkbox] {
-                cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;
-            }
-            button {
-                cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;
-            }
-            input[type=text] {
-                cursor: url('assets/mouse/cursor_Miku-1/miku3.cur'), auto;
-            }
-            h1 {
-                cursor: url('assets/mouse/cursor_Miku-1/miku3.cur'), auto;
-            }
-            p {
-                cursor: url('assets/mouse/cursor_Miku-1/miku3.cur'), auto;
-            }
-            ::selection {
-                cursor: url('assets/mouse/cursor_Miku-1/miku8.cur'), auto;
-            }
             /* Background */
             :root {
-                --glow-rgb: 245 245 245;
-                --light-skyblue-rgb: 51 228 249;
-                --dark-skyblue-rgb: 13 120 126;
                 --light-red-rgb:204 27 6;
                 --dark-red-rgb: 242 135 129;
-                --primary-stripe-rgb: 230 230 230;
-                --secondary-stripe-rgb: 240 240 240;
-                --dark-rgb: 0 0 0;
-                --light-rgb: 255 255 255;
-            }
             #star-container {
                 background: radial-gradient(rgb(var(--dark-red-rgb)), rgb(var(--light-red-rgb)));
             }
@@ -63,14 +33,11 @@
             }
             .background-404 {
                 position: fixed;
-                top: 30%;
-				left: 35.5%;
-                width: -webkit-fill-available;
-                height: -webkit-fill-available;
-				max-height: 400px;
-				max-width: 216px;
+                bottom: 30%;
+                width: 440px;
+                height: 240px;
                 background: url('assets/bg/404_pne-1.png') no-repeat center center;
-                background-size: contain;
+                background-size: cover;
                 z-index: -1;
             }
             .background-aqua {
