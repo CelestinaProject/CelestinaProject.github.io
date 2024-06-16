@@ -142,6 +142,6 @@ function printFilteredNovels() {
 
 window.onload = function() {
     sortNovels();
-    populateFilters();
+    /*populateFilters();*/
     renderPagination(novels);
 };
