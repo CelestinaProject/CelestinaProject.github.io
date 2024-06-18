@@ -28,8 +28,11 @@ header {
 /* Sidebar */
 .headertop {
     display: flex;
-    justify-content: left;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
 }
 .menu-icon {
     cursor: pointer;
@@ -83,24 +86,29 @@ header {
     z-index: 1;
 }
 .info h1 {
-    font-size: 2.5rem;
+    font-size: -webkit-xxx-large;
     margin: 0;
     z-index: 1;
 	color: var(--secondary-color);
 }
 .info p {
-    margin: 10px 100px;
-    font-size: 1.2rem;
+    display: flex;
+    margin: 0px 50px;
+    font-size: small;
     color: var(--secondary-color);
     line-height: 1.6;
     z-index: 1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 .social-icons {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-    z-index: 1;
+    justify-content: space-evenly;
+    margin: 10px 50px 10px 50px;
 }
 .social-icons a {
     width: 40px;
@@ -119,8 +127,7 @@ header {
 }
 .novels-link {
     display: inline-block;
-    margin-top: 20px;
-    font-size: 1.5rem;
+    font-size: x-large;
     cursor: pointer;
     text-decoration: underline;
     color: rgb(var(--terciary-color));
@@ -139,7 +146,7 @@ header {
     transition: bottom 0.5s ease-in-out;
     overflow-y: auto;
     max-height: 70vh;
-    box-shadow: inset 0px 20px 0px 20px rgb(255 255 255);
+    box-shadow: inset 0px 20px 20px 0px rgb(255 255 255 / 17%);
     z-index: 1;
     clip-path: polygon(
         0% 5%, 1.25% 0%, 2.5% 5%, 
@@ -206,11 +213,15 @@ header {
     flex-direction: row-reverse;
 }*/
 .novel img {
-    width: 175px;
-    height: 250px;
-    margin-top: 10px;
-	margin-right: 10px;
-	margin-left: -15px;
+    width: 20%;
+    height: 40%;
+    min-width: 100px;
+    min-height: 160px;
+    max-width: 175px;
+    max-height: 250px;
+    margin-top: 1%;
+    margin-right: 10px;
+    margin-left: -8%;
 }
 .novelGlow {
     box-shadow: 0px 0 10px rgb(var(--terciary-color));
@@ -221,33 +232,43 @@ header {
 }
 .novel-info h2 {
     margin: 0 0 10px;
-    font-size: 1.5rem;
+    font-size: larger;
 }
 .novel-info p {
     text-align: justify;
+	font-size: small;
 }
 .platform-icons {
     display: flex;
-	justify-content: flex-start;
+    justify-content: flex-start;
     flex-direction: row;
     align-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: nowrap;
     margin-bottom: 10px;
-    width: -webkit-fill-available;
+    width: auto;
     height: -webkit-fill-available;
 }
 .platform-icons a {
-    width: 50px;
-    height: 50px;
     cursor: pointer;
     transition: transform 0.3s;
-    margin: 20px;
+    margin: 0px;
     z-index: 1;
+    width: 40px;
+    height: 40px;
+    max-width: -webkit-fill-available;
+    max-height: -webkit-fill-available;
+    margin-right: 10px;
+    min-height: 50%;
 }
 .platform-icons a img {
-    width: 100%;
-    height: 100%;
+    width: 40px;
+    height: 40px;
+    max-width: -webkit-fill-available;
+    max-height: -webkit-fill-available;
+    min-width: 50%;
+    margin: 0px;
+    min-height: 50%;
 }
 .platform-icons a:hover {
     transform: scale(1.2);
@@ -305,4 +326,14 @@ header {
         rgb(var(--secondary-stripe-rgb)) 100%
     );
     animation: pan 360s linear infinite;
+}
+::-webkit-scrollbar {
+    background-color: black;
+    color: red;
+}
+::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+::-webkit-scrollbar-corner {
+    background-color: black;
 }
