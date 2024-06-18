@@ -23,10 +23,10 @@
         
         output += `- Top ${index + 1}: ${novel.title}\n`;
         output += `Visitas: ${oldViews} → ${novel.views}\n`;
-        output += `Seguidores: ${oldFollowers} → ${novel.followers}\n`;
-        output += `Capítulos: ${oldChapters} → ${novel.chapters}\n\n`;
+        output += `Seguidores: ${oldFollowers} → ${novel.followers} + ${countDifferenceFollowers}\n`;
+        output += `Capítulos: ${oldChapters} → ${novel.chapters} + ${countDifferenceChapters}\n\n`;
         output += `${novel.url}\n\n`;
-        output += `**Obtuviste ${countDifferenceViews} visitas, ${countDifferenceFollowers} seguidores y subiste ${countDifferenceChapters} capítulos**\n\n`;
+        output += `**Obtuviste ${countDifferenceViews} visitas**\n\n`;
         output += `>———◇———<\n\n`;
     });
     
