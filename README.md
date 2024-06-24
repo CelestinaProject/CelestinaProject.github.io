@@ -16,8 +16,8 @@ CELESTINA (Carpeta raíz)
 │
 ├── novels_covers (Carpeta)
 ├── novels_info (Carpeta)
-├── script.js (Archivo)
-├── styles.css (Archivo)
+├── script.js (Carpeta)
+├── styles.css (Carpeta)
 ├── index.html (Archivo primordial)
 │
 ├── SIDEBAR (Menú, no es archivo ni carpeta)
@@ -29,5 +29,5 @@ CELESTINA (Carpeta raíz)
 │
 ├── novelsIndex.html (Índice de todas las novelas en la página) [wip]
 ├── 404.html (Página de error)
-└── rulerfox.html (Caremondá)
+└── rulerFox.html (Caremondá)
 
