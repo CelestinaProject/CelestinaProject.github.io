@@ -1,0 +1,33 @@
+    "https://es.niadd.com/original/10036678.html",
+    "https://es.niadd.com/original/10061483.html",
+    "https://es.niadd.com/original/10056045.html",
+    "https://es.niadd.com/original/10060549.html",
+    "https://es.niadd.com/original/10060752.html",
+    "https://es.niadd.com/original/10065140.html",
+    "https://es.niadd.com/original/10064674.html",
+    "https://es.niadd.com/original/10062911.html",
+    "https://es.niadd.com/original/10066472.html",
+    "https://es.niadd.com/original/10065879.html",
+    "https://es.niadd.com/original/10065213.html",
+    "https://es.niadd.com/original/10062460.html",
+    "https://es.niadd.com/original/10062869.html",
+    "https://es.niadd.com/original/10063650.html",
+    "https://es.niadd.com/original/10062059.html",
+    "https://es.niadd.com/original/10061990.html",
+    "https://es.niadd.com/original/10060950.html",
+    "https://es.niadd.com/original/10060448.html",
+// ↓↓↓ Novelas Eliminadas ↓↓↓
+                { title: "El Viaje De Arusai", cover: "novels_covers/El Viaje De Arusai.png", followers: 78, views: 416, chapters: 15, genres: "Desconocido", author: "Arusai", artist: "Desconocido", date: 2023, status: "Eliminado" },
+                { title: "Dark Crimson", cover: "novels_covers/Dark Crimson.png", followers: 720, views: 2305, chapters: 19, genres: "Desconocido", author: "Reight", artist: "Desconocido", date: 2023, status: "Eliminado" },
+                { title: "Maestros De Las Constelaciones", cover: "novels_covers/noCover.png", followers: 366, views: 310, chapters: 3, genres: "Desconocido", author: "Eimon Q", artist: "Desconocido", date: 2021, status: "Eliminado" },
+				{ title: "Una Doctora Que Solo Quiere Pintar (NL)", cover: "novels_covers/Una Doctora Que Solo Quiere Pintar (NL).png", followers: 2720, views: 14493, chapters: 37, genres: "Comedia, Cotidiano, Drama, Romance, RomáNtico, Seinen, Shojo, Vida Cotidiana, Comedia, , Cotidiano, , Drama, , Romance, , RomáNtico, , Seinen, , Shojo, , Vida Cotidiana, Comedia, Cotidiano, Drama, Romance, RomáNtico, Seinen, Shojo, Vida Cotidiana, Comedia, Cotidiano, Drama, Romance, RomáNtico, Seinen, Shojo, Vida Cotidiana", author: "Eimon Q", artist: "Desconocido", date: 2023, status: "Eliminado" },
+// ↓↓↓ Novelas con Problemas ↓↓↓
+                { title: "El Susurro Del árbol (NL)", cover: "novels_covers/El Susurro Del árbol (NL).png", followers: 160, views: 371, chapters: 000, genres: "Adventure, FantasíA, Aventuras, Magia, Adventure, , FantasíA, , Aventuras, , Magia, Adventure, FantasíA, Aventuras, Magia, Adventure, FantasíA, Aventuras, Magia", author: "M.J. Wolfrore", artist: "Moon (lunita)", date: 2023, status: "Inactivo", url: "https://es.niadd.com/original/10062059.html" },
+
+
+
+
+
+
+
+
