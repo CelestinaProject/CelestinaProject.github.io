@@ -5,6 +5,8 @@
 				display: flex;
                 flex-direction: column;
                 align-items: center;
+				justify-items: center;
+				flex-wrap: nowrap;
                 cursor: url('../assets/mouse/cursor_Miku-1/miku1.cur'), auto;
             }
             a,
