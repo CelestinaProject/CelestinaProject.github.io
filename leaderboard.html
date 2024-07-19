@@ -19,6 +19,8 @@
 		<meta name="twitter:title" content="Celestina Project Leaderboard">
 		<meta name="twitter:description" content="Celestina Project">
 		<meta name="twitter:image" content="https://celestinaproject.github.io/assets/celestina/icon.png">
+		
+		<!-- CSS -->
         <link rel="stylesheet" href="styles.css/sty_bg-aqua.css">
         <link rel="stylesheet" href="styles.css/sty_banner-events.css">
         <link rel="stylesheet" href="styles.css/sty_footer.css">
@@ -30,10 +32,12 @@
         <link rel="stylesheet" href="styles.css/sty_button-filter-week.css">
         <link rel="stylesheet" href="styles.css/sty_button-download-week.css">
         <link rel="stylesheet" href="styles.css/sty_button-print-week.css">
+		<link rel="stylesheet" href="styles.css/sty_button-compare-week.css">
         <link rel="stylesheet" href="styles.css/sty_button-pagination-week.css">
         <link rel="stylesheet" href="styles.css/sty_novels-week.css">
         <link rel="stylesheet" href="styles.css/sty_scrollTop.css">
-		<link rel="stylesheet" href="styles.css/test.css">
+		<link rel="stylesheet" href="styles.css/sty_scrollBottom.css">
+		<link rel="stylesheet" href="styles.css/sty_compareNovels-week.css">
     </head>
     <body>
         <div class="headertop">
@@ -75,48 +79,62 @@
         </div>
 
         <div class="header" style="padding: 10px;margin: 50px;top: 30px;position: relative;">
-            <h1>SEMANA NÚMERO 35</h1> <!-- Semanas -->
-            <p style="color: rgb(var(--light-rgb));">TOP MÁS VISITADOS</p> <!-- Visitas/Seguidores -->
+            <h1>SEMANA NÚMERO 36</h1> <!-- Semanas -->
+            <p style="color: rgb(var(--light-rgb));">NOVELAS MÁS VISITADAS</p> <!-- Visitas/Seguidores -->
         </div>
 
-        <!-- <button class="more-button" onclick="toggleMoreOptions()" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">
+        <!--<button class="more-button" onclick="toggleMoreOptions()" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">
             <img src="assets/ui/more.png" alt="More Icon"></a>
         </button>
+		
         <button class="order-button" onclick="toggleOrderMenu()" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">
             <img src="assets/ui/sort.png" alt="Order Icon"></a>
-        </button>
-        <button class="filter-button" onclick="toggleFilterMenu()" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">
-            <img src="assets/ui/filter_On.png" alt="Filter Icon"></a>
         </button> -->
+		
+        <button class="filter-button" onclick="toggleFilterMenu()" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">
+            <img id="filterToggleImg" src="assets/ui/filter_On.png" alt="Filter Icon">
+        </button>
+		
         <button class="print-button" onclick="togglePrintMenu()" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">
             <a><img src="assets/ui/download.png" alt="Download Icon"></a>
-        </button> <!--
-        <div class="filter-menu" id="filterMenu"> /* +25*/
-            <p>Filtrar por:</p>
-                <form id="filterForm">
-                    <label for="author">Autor:</label>
-                    <select id="author" name="author" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">
+        </button>
+		
+		<button id="compareToggle" class="compare-button" onclick="toggleCompareMenu()" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">
+            <img id="compareToggleImg" src="assets/ui/add.png" alt="Add Icon">
+        </button>
+		
+        <div class="filter-menu" id="filterMenu">
+            <p style="font-size: large">FILTRAR</p>
+                <form class="filterForm">
+                    <label for="author" class="filterLabel">Autor</label>
+                    <select id="author" name="author" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;" class="filterSelect">
                         <option value="">Todos</option>
                     </select>
-                    <label for="status">Estado:</label>
-                    <select id="status" name="status">
+					
+                    <label for="status" class="filterLabel">Estado</label>
+                    <select id="status" name="status" class="filterSelect">
                         <option value="">Todos</option>
                     </select>
-                    <label for="genre">Géneros:</label>
-                    <select id="genre" name="genre">
+					
+                    <label for="genre" class="filterLabel">Géneros</label>
+                    <select id="genre" name="genre" class="filterSelect">
                         <option value="">Todos</option>
                     </select>
-                    <label for="date">Año:</label>
-                    <select id="date" name="date">
+					
+                    <label for="date" class="filterLabel">Año</label>
+                    <select id="date" name="date" class="filterSelect">
                         <option value="">Todos</option>
                     </select>
-                    <button type="button" onclick="applyFilters()">Aplicar Filtros</button><button id="resetButton" onclick="resetFilters()">Reiniciar</button>
+					
+                    <button type="button" onclick="applyFilters()" class="filterOptionButton">Aplicar Filtros</button>
+					<button id="resetButton" onclick="resetFilters()" class="resetOptionButton">Reiniciar</button>
                 </form>
             </div>
-        </div> -->
+        </div>
+		
         <div class="print-menu" id="printMenu">
-            <p>Descargar por:</p>
-            <div>
+            <p style="font-size: large">DESCARGAR<p>
+            <div style="padding-bottom: 10px; border-bottom: 1px solid rgb(var(--dark-rgb)); border-bottom-style: dashed;">
                 <label>
                     <p><input type="checkbox" id="statusActivo" value="Activo">Activo</p>
                 </label>
@@ -132,7 +150,7 @@
                 <button onclick="printFilteredNovels()" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">Imprimir</button>
             </div>
         </div>
-
+		
         <div id="novelsList"></div>
         <div id="pagination" class="paginationButton"></div>
 
@@ -147,27 +165,51 @@
             <img src="assets/ui/arrowCircle_up.png" alt="Ir Arriba" />Ir Arriba
         </button>
 		
-		<!-- <form id="compareForm">
-        <label for="novel1">Selecciona la primera novela:</label>
-        <select id="novel1" name="novel1"></select>
-        
-        <label for="novel2">Selecciona la segunda novela:</label>
-        <select id="novel2" name="novel2"></select>
-        
-        <button class="comparebutton" type="button" onclick="compareNovels()">Comparar</button>
-    </form>
-
-    <div id="comparisonResult"></div> -->
-
+		<button id="toBottomBtn" style="display: flex;">
+            <img src="assets/ui/arrowCircle_up.png" alt="Ir Arriba" />Ir Abajo
+        </button>
 		
+		<form class="compareForm" id="compareForm">
+			<!-- <label for="novel1" class="selectLabel">Selecciona la primera novela:</label> -->
+			<select id="novel1" name="novel1" class="selectNovels">
+			<option value="-1"> Novela 1</option>
+			</select>
+			
+			<!-- <label for="novel2" class="selectLabel">Selecciona la segunda novela:</label> -->
+			<select id="novel2" name="novel2" class="selectNovels">
+			<option value="-1"> Novela 2</option>
+			</select>
+			
+			<button class="compareButton" type="button" onclick="compareNovels()">Comparar</button>
+		</form>
+	
+		<div id="comparisonResult">
+			<div class="novel-info">
+				<img src="novels_covers/noCover.png" alt="noCoverSelect">
+				<h2>Por favor, seleccione una novela</h2>
+			</div>
+			<div class="comparison-details">
+						<h3>COMPARACIÓN</h3>
+						<p> — </p>
+						<p> — </p>
+						<p> — </p>
+			</div>
+			<div class="novel-info">
+				<img src="novels_covers/noCover.png" alt="noCoverSelect">
+				<h2>Por favor, seleccione una novela</h2>
+			</div>
+		</div>
+		
+		<!-- SCRIPTS -->
         <script src="script.js/scr_novels-week.js"></script>
         <script src="script.js/scr_sidebar.js"></script>
         <script src="script.js/scr_button-printNload-week.js"></script>
         <script src="script.js/scr_button-filter-week.js"></script>
+		<script src="script.js/scr_button-toggles-week.js"></script>
+		<script src="script.js/scr_novel-compare-week.js"></script>
+		<script src="script.js/scr_novel-select-week.js"></script>
         <script src="script.js/scr_scrollTop.js"></script>
-		
-		<script src="script.js/test1.js"></script>
-		<script src="script.js/test2.js"></script>
+		<script src="script.js/scr_scrollBottom.js"></script>
 
         <footer>
             <div class="footer-content">

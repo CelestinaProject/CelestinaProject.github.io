@@ -1,11 +1,11 @@
-            .download-button {
-                background-color: rgb(var(--dark-rgb));
-                color: rgb(var(--light-rgb));
-                border: 1px solid rgb(var(--dark-rgb));
-                border-radius: 5px;
-                padding: 10px 20px;
-                margin: 10px;
-                font-size: 16px;
-                cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
-                z-index: 10000;
-            }
+.download-button {
+	background-color: rgb(var(--dark-rgb));
+	color: rgb(var(--light-rgb));
+	border: 1px solid rgb(var(--dark-rgb));
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin: 10px;
+	font-size: 16px;
+	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	z-index: 4;
+}

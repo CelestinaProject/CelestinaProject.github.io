@@ -1,16 +1,37 @@
-function togglePrintMenu() {
-                const printMenu = document.getElementById('printMenu');
-                printMenu.style.display = printMenu.style.display === 'none' || printMenu.style.display === '' ? 'block' : 'none';
-            }
+// Normalizar todos los nombres, aparte del cabrón de Bocchi ❤
+function normalizeAuthorName(author) {
+    const authorMappings = {
+        "Bocchi Omnisentus": [
+            "El bocchi/omnisent.",
+            "Omnisent (yo)",
+            "Bocchi/Omnisent",
+            "Omnisent",
+            "Omnisentus",
+            "yo"
+        ],
+        "NightCrawler": [
+            "NightCrawlerGLX",
+            "NightCrawler"
+        ]
+    };
 
+    for (const normalized in authorMappings) {
+        if (authorMappings[normalized].includes(author)) {
+            return normalized;
+        }
+    }
+    return author;
+}
+// Aplicar filtros
 function applyFilters() {
     const author = document.getElementById('author').value;
     const status = document.getElementById('status').value;
     const genre = document.getElementById('genre').value;
     const date = document.getElementById('date').value;
-    let filteredNovels = novels;
+    let filteredNovels = newNovels;
+
     if (author) {
-        filteredNovels = filteredNovels.filter(novel => novel.author === author);
+        filteredNovels = filteredNovels.filter(novel => normalizeAuthorName(novel.author) === author);
     }
     if (status) {
         filteredNovels = filteredNovels.filter(novel => novel.status === status);
@@ -21,29 +42,35 @@ function applyFilters() {
     if (date) {
         filteredNovels = filteredNovels.filter(novel => novel.date.toString() === date);
     }
-currentPage = 1;
+
+    currentPage = 0;
     totalPages = Math.ceil(filteredNovels.length / itemsPerPage);
     renderNovels(filteredNovels, currentPage, totalPages);
     renderPagination(filteredNovels);
-    toggleFilterMenu();
+    togglePagination();
 }
-
+// Extraer propiedades
 function extractUniqueValues(property) {
-    const values = novels.map(novel => novel[property]);
+    const values = newNovels.map(novel => {
+        if (property === 'author') {
+            return normalizeAuthorName(novel[property]);
+        }
+        return novel[property];
+    });
     return [...new Set(values)];
 }
-
+// Filtro
 function populateFilters() {
     const authorSelect = document.getElementById('author');
     const statusSelect = document.getElementById('status');
     const genreSelect = document.getElementById('genre');
     const dateSelect = document.getElementById('date');
 
-    const authors = extractUniqueValues('author');
-    const statuses = extractUniqueValues('status');
-    const dates = extractUniqueValues('date');
+    const authors = extractUniqueValues('author').sort();
+    const statuses = extractUniqueValues('status').sort();
+    const dates = extractUniqueValues('date').sort((a, b) => a - b);
     
-    const genres = [...new Set(novels.flatMap(novel => novel.genres.split(',').map(genre => genre.trim())))];
+    const genres = [...new Set(newNovels.flatMap(novel => novel.genres.split(',').map(genre => genre.trim())))].filter(genre => genre !== '').sort();
 
     authors.forEach(author => {
         authorSelect.innerHTML += `<option value="${author}">${author}</option>`;
@@ -58,13 +85,12 @@ function populateFilters() {
         dateSelect.innerHTML += `<option value="${date}">${date}</option>`;
     });
 }
-
+// Reiniciar Filtros
 function resetFilters() {
-    document.getElementById('author').value = '';
-    document.getElementById('status').value = '';
-    document.getElementById('genre').value = '';
-    document.getElementById('year').value = '';
-    
-    renderNovels(novels);
-    renderPagination(novels);
+    document.getElementById('author').value = 'Todos';
+    document.getElementById('status').value = 'Todos';
+    document.getElementById('genre').value = 'Todos';
+    document.getElementById('year').value = 'Todos';
+    renderNovels(newNovels);
+    renderPagination(newNovels);
 }

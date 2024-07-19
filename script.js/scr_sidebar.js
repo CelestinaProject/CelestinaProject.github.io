@@ -1,3 +1,3 @@
-            function toggleSidebar() {
-            document.getElementById('sidebar').classList.toggle('open');
-            }
+function toggleSidebar() {
+	document.getElementById('sidebar').classList.toggle('open');
+}

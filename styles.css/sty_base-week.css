@@ -12,7 +12,9 @@
             button, 
             option,
             form,
-            label {
+            label,
+			ul,
+			ol {
                 cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
             }
             input[type=text],

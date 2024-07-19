@@ -1,20 +1,20 @@
-            .order-button {
-                position: absolute;
-                left: 65px;
-                top: 150px;
-                transform: translateY(-50%);
-                background-color: rgb(var(--dark-rgb));
-                border: none;
-                padding: 10px;
-                border-radius: 50%;
-                cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
-                z-index: 10000;
-                transition: background-color 0.3s;
-            }
-            .order-button img {
-                width: 20px;
-                height: 20px;
-            }
+.order-button {
+	position: absolute;
+	left: 65px;
+	top: 150px;
+	transform: translateY(-50%);
+	background-color: rgb(var(--dark-rgb));
+	border: none;
+	padding: 10px;
+	border-radius: 50%;
+	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	z-index: 10000;
+	transition: background-color 0.3s;
+}
+.order-button img {
+	width: 20px;
+	height: 20px;
+}
 .order-button:hover {
-                background-color: rgb(var(--dark-skyblue-rgb));
-            }
+	background-color: rgb(var(--dark-skyblue-rgb));
+}

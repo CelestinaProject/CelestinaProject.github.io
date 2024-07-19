@@ -1,52 +1,52 @@
-            .print-button {
-                position: absolute;
-                left: 25px;
-                top: 250px;
-                transform: translateY(-50%);
-                background-color: rgb(var(--dark-rgb));
-                border: none;
-                padding: 10px;
-                border-radius: 50%;
-                cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
-                z-index: 10000;
-                transition: background-color 0.3s;
-            }
-            .print-button img {
-                width: 30px;
-                height: 30px;
-            }
+.print-button {
+	position: absolute;
+	left: 25px;
+	top: 250px;
+	transform: translateY(-50%);
+	background-color: rgb(var(--dark-rgb));
+	border: none;
+	padding: 10px;
+	border-radius: 50%;
+	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	z-index: 4;
+	transition: background-color 0.3s;
+}
+.print-button img {
+	width: 25px;
+	height: 25px;
+}
 
-            .print-button:hover {
-                background-color: rgb(var(--dark-skyblue-rgb));
-            }
-            .print-menu {
-                display: none;
-                position: absolute;
-                left: 50px; /*+40px*/
-                top: 376px;
-                transform: translateY(-50%);
-                background-color: rgb(var(--light-rgb));
-                border: 1px solid rgb(var(--light-rgb));
-                padding: 20px;
-                box-shadow: 0px 0px 4px 4px rgb(0 0 0 / 36%);
-                border-radius: 10px;
-                z-index: 1000;
-            }
-            .print-menu input[type="checkbox"] {
-                margin-right: 10px;
-            }
-            .print-menu label {
-                display: block;
-                margin-bottom: 10px;
-            }
-            .print-menu button {
-                display: block;
-                width: 100%;
-                padding: 10px;
-                background-color: rgb(var(--dark-skyblue-rgb));
-                color: rgb(var(--light-rgb));
-                border: none;
-                border-radius: 5px;
-                cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
-                margin-top: 10px;
-            }
+.print-button:hover {
+	background-color: rgb(var(--dark-skyblue-rgb));
+}
+.print-menu {
+	display: none;
+	position: absolute;
+	left: 50px; /*+40px*/
+	top: 372px;
+	transform: translateY(-50%);
+	background-color: rgb(var(--light-rgb));
+	border: 1px solid rgb(var(--light-rgb));
+	padding: 20px;
+	box-shadow: 0px 0px 4px 4px rgb(0 0 0 / 36%);
+	border-radius: 10px;
+	z-index: 3;
+}
+.print-menu input[type="checkbox"] {
+	margin-right: 10px;
+}
+.print-menu label {
+	display: block;
+	margin-bottom: 10px;
+}
+.print-menu button {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	background-color: rgb(var(--dark-skyblue-rgb));
+	color: rgb(var(--light-rgb));
+	border: none;
+	border-radius: 5px;
+	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	margin-top: 10px;
+}

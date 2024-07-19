@@ -1,9 +1,5 @@
-            function toggleFilterMenu() {
-                const filterMenu = document.getElementById('filterMenu');
-                filterMenu.style.display = filterMenu.style.display === 'none' || filterMenu.style.display === '' ? 'block' : 'none';
-            }
-            function printFilteredNovels() {
-    const filters = [];
+function printFilteredNovels() {
+	const filters = [];
     if (document.getElementById('statusActivo').checked) filters.push('Activo');
     if (document.getElementById('statusInactivo').checked) filters.push('Inactivo');
     if (document.getElementById('statusFinalizado').checked) filters.push('Finalizado');

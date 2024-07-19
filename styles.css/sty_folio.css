@@ -124,6 +124,7 @@ header {
 }
 .social-icons a:hover {
     transform: scale(1.2);
+	color: green;
 }
 .novels-link {
     display: inline-block;

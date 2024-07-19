@@ -1,7 +1,7 @@
-#toTopBtn {
+#toBottomBtn {
     display: block;
-    position: fixed;
-    bottom: 24px;
+    position: absolute;
+    top: 68px;
     right: 0px;
     background-color: rgb(var(--dark-rgb));
     color: rgb(var(--light-rgb));
@@ -16,11 +16,12 @@
     align-items: center;
 }
 
-#toTopBtn:hover {
+#toBottomBtn:hover {
     background-color: rgb(var(--dark-skyblue-rgb));
 }
 
-#toTopBtn img {
+#toBottomBtn img {
     width: 30px;
     height: 30px;
+	rotate: 180deg;
 }
