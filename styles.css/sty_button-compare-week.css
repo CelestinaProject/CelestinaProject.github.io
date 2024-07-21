@@ -1,8 +1,8 @@
 .compare-button {
-	position: fixed;
-    right: 2px;
-	bottom: 63%;
-    transform: translateY(-50%);
+	position: absolute;
+    right: 0px;
+	top: 0px;
+    transform: translate(10px, 10px);
     background-color: rgb(var(--dark-rgb));
     border-color: transparent;
 	border: 1px solid rgb(0 0 0 / 0%);
@@ -12,11 +12,11 @@
     z-index: 3;
     transition: background-color 0.3s;
 	display: flex;
-    flex-direction: row;
+    /*flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
 }
 .compare-button img {
     width: 30px;

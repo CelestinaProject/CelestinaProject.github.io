@@ -4,9 +4,8 @@
 	max-width: 400px;
 	min-width: 292px;
 	width: 292px;
-	right: 15px;
-	bottom: 16%;
-	position: fixed;
+	bottom: 15px;
+	position: absolute;
 	cursor: url('../assets/mouse/cursor_Miku-1/miku1.cur'), auto;
 	z-index: 3;
 	display: flex;
@@ -31,7 +30,7 @@
 	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
 }
 .compareButton {
-	border: 1px solid rgb(0 0 0 / 0%);
+	border: 1px solid rgb(var(--light-rgb));
 	background-color: rgb(var(--dark-rgb));
 	color: rgb(var(--light-rgb));
 	border-radius: 4px;
@@ -58,9 +57,9 @@
 	margin: 20px auto;
 	justify-content: space-between;
 	align-items: flex-start;
-	right: 15px;
+	/*right: 15px;
 	bottom: 13.7%;
-	position: fixed;
+	position: inherit;*/
 	z-index: 2;
 	display: flex;
 	flex-direction: row;
@@ -75,7 +74,7 @@
 	width: 60px;
 	height: 90px;
 	border-radius: 5px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 6px 1px rgb(0 0 0);
 }
 .novel-info h2 {
 	font-size: x-small;

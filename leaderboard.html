@@ -92,15 +92,11 @@
         </button> -->
 		
         <button class="filter-button" onclick="toggleFilterMenu()" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">
-            <img id="filterToggleImg" src="assets/ui/filter_On.png" alt="Filter Icon">
+            <img id="filterToggleImg" src="assets/ui/filter_on.png" alt="Filter Icon">
         </button>
 		
         <button class="print-button" onclick="togglePrintMenu()" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">
-            <a><img src="assets/ui/download.png" alt="Download Icon"></a>
-        </button>
-		
-		<button id="compareToggle" class="compare-button" onclick="toggleCompareMenu()" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">
-            <img id="compareToggleImg" src="assets/ui/add.png" alt="Add Icon">
+            <img src="assets/ui/download.png" alt="Download Icon">
         </button>
 		
         <div class="filter-menu" id="filterMenu">
@@ -168,38 +164,43 @@
 		<button id="toBottomBtn" style="display: flex;">
             <img src="assets/ui/arrowCircle_up.png" alt="Ir Arriba" />Ir Abajo
         </button>
+
+		<div style="position: fixed; z-index:2; right:25px; top:178px;">
+			<button id="compareToggle" class="compare-button" onclick="toggleCompareMenu()" style="cursor: url('assets/mouse/cursor_Miku-1/miku2.cur'), auto;">
+				<img id="compareToggleImg" src="assets/ui/add.png" alt="Add Icon">
+			</button>
+			
+			<form class="compareForm" id="compareForm">
+				<!-- <label for="novel1" class="selectLabel">Selecciona la primera novela:</label> -->
+				<select id="novel1" name="novel1" class="selectNovels">
+				<option value="-1"> Novela 1</option>
+				</select>
+				
+				<!-- <label for="novel2" class="selectLabel">Selecciona la segunda novela:</label> -->
+				<select id="novel2" name="novel2" class="selectNovels">
+				<option value="-1"> Novela 2</option>
+				</select>
+				
+				<button class="compareButton" type="button" onclick="compareNovels()">Comparar</button>
+			</form>
 		
-		<form class="compareForm" id="compareForm">
-			<!-- <label for="novel1" class="selectLabel">Selecciona la primera novela:</label> -->
-			<select id="novel1" name="novel1" class="selectNovels">
-			<option value="-1"> Novela 1</option>
-			</select>
-			
-			<!-- <label for="novel2" class="selectLabel">Selecciona la segunda novela:</label> -->
-			<select id="novel2" name="novel2" class="selectNovels">
-			<option value="-1"> Novela 2</option>
-			</select>
-			
-			<button class="compareButton" type="button" onclick="compareNovels()">Comparar</button>
-		</form>
-	
-		<div id="comparisonResult">
-			<div class="novel-info">
-				<img src="novels_covers/noCover.png" alt="noCoverSelect">
-				<h2>Por favor, seleccione una novela</h2>
-			</div>
-			<div class="comparison-details">
-						<h3>COMPARACIÓN</h3>
-						<p> — </p>
-						<p> — </p>
-						<p> — </p>
-			</div>
-			<div class="novel-info">
-				<img src="novels_covers/noCover.png" alt="noCoverSelect">
-				<h2>Por favor, seleccione una novela</h2>
+			<div id="comparisonResult">
+				<div class="novel-info">
+					<img src="novels_covers/noCover.png" alt="noCoverSelect">
+					<h2>Por favor, seleccione una novela</h2>
+				</div>
+				<div class="comparison-details">
+							<h3>COMPARACIÓN</h3>
+							<p> — </p>
+							<p> — </p>
+							<p> — </p>
+				</div>
+				<div class="novel-info">
+					<img src="novels_covers/noCover.png" alt="noCoverSelect">
+					<h2>Por favor, seleccione una novela</h2>
+				</div>
 			</div>
 		</div>
-		
 		<!-- SCRIPTS -->
         <script src="script.js/scr_novels-week.js"></script>
         <script src="script.js/scr_sidebar.js"></script>

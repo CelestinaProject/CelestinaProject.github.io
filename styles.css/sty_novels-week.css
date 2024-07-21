@@ -1,7 +1,7 @@
 .novel-container {
 	margin-bottom: 20px;
 	min-width: -webkit-fill-available;
-	width: 525px;
+	width: fit-content;
 	max-width: 525px;
 	border-radius: 10px;
 	overflow: hidden;
