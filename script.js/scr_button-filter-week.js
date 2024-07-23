@@ -7,12 +7,12 @@ function normalizeAuthorName(author) {
             "Bocchi/Omnisent",
             "Omnisent",
             "Omnisentus",
-            "yo"
+            "yo",
         ],
         "NightCrawler": [
             "NightCrawlerGLX",
             "NightCrawler"
-        ]
+        ],
     };
 
     for (const normalized in authorMappings) {
