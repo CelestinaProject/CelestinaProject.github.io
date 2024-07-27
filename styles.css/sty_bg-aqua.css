@@ -1,62 +1,53 @@
-            :root {
-                --glow-rgb: 245 245 245;
-                --light-skyblue-rgb: 51 228 249;
-                --dark-skyblue-rgb: 13 120 126;
-                --primary-stripe-rgb: 230 230 230;
-                --secondary-stripe-rgb: 240 240 240;
-                --dark-rgb: 0 0 0;
-                --light-rgb: 255 255 255;
-            }
-            * {
-                margin: 0;
-                padding: 0;
-            }
-            @keyframes pan {
-                0% {
-                    background-position: 0% 0%;
-                }
-                100% {
-                    background-position: 100% 100%;
-                }
-            }
-            #app {
-                height: 100vh;
-                overflow: hidden;
-                position: fixed;
-                z-index: -2;
-            }
-            #star-container {
-                background: radial-gradient(rgb(var(--light-skyblue-rgb)), rgb(var(--dark-skyblue-rgb)));
-                overflow: hidden;
-                position: fixed;
-                width: 100%;
-                height: 100%;
-                left: 0px;
-                top: 0px;
-                z-index: -12;
-            }
-            #star-pattern {
-                background-image: url('../assets/misc/aqua.png');
-                background-size: 10%;  
-                position: fixed;
-                left: 50%;
-                top: 0px;
-                translate: -50% 0%;
-                height: 100%;
-                width: 100%;
-                min-width: 1200px;
-                opacity: 0.10;
-                animation: pan 180s linear infinite;
-                will-change: background-position;
-                z-index: -10;
-            }
-            #star-gradient-overlay {
-                background: radial-gradient(circle, transparent 75%, rgb(var(--dark-skyblue-rgb)));
-                position: fixed;
-                left: 0px;
-                top: 0px;
-                width: 100%;
-                height: 100%;
-                opacity: 0.9;
-                z-index: -10;
-            }
+* {
+margin: 0;
+padding: 0;
+}
+@keyframes pan {
+0% {
+background-position: 0% 0%;
+}
+100% {
+background-position: 100% 100%;
+}
+}
+#app {
+height: 100vh;
+overflow: hidden;
+position: fixed;
+z-index: -2;
+}
+#star-container {
+background: radial-gradient(rgb(var(--light-skyblue-rgb)), rgb(var(--dark-skyblue-rgb)));
+overflow: hidden;
+position: fixed;
+width: 100%;
+height: 100%;
+left: 0px;
+top: 0px;
+z-index: -12;
+}
+#star-pattern {
+background-image: url('../assets/misc/aqua.png');
+background-size: 10%;  
+position: fixed;
+left: 50%;
+top: 0px;
+translate: -50% 0%;
+height: 100%;
+width: 100%;
+min-width: 1200px;
+opacity: 0.10;
+animation: pan 180s linear infinite;
+will-change: background-position;
+z-index: -10;
+}
+#star-gradient-overlay {
+background: radial-gradient(circle, transparent 75%, rgb(var(--dark-skyblue-rgb)));
+position: fixed;
+left: 0px;
+top: 0px;
+width: 100%;
+height: 100%;
+opacity: 0.9;
+z-index: -10;
+}

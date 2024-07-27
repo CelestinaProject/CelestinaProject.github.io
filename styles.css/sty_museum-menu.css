@@ -1,0 +1,148 @@
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.contest {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+    position: relative;
+    will-change: transform, box-shadow;
+	width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+	margin: 0px 25px 25px 0px;
+	text-decoration: none;
+}
+
+.contest:hover {
+    transform: translateY(-10px);
+	box-shadow: 0px 0px 4px 4px rgb(0 0 0 / 36%);
+}
+
+.contest-bg {
+    background-color: #00c4ff;
+    width: 300px;
+    height: 220px;
+    position: absolute;
+    z-index: -10;
+    opacity: 50%;
+    mix-blend-mode: luminosity;
+	transition: ease-out 0.1s;
+}
+
+.contest:hover .contest-bg {
+	filter: blur(1px);
+	mix-blend-mode: hard-light;
+}
+
+.contest-img {
+    width: 110px;
+    height: 220px;
+    display: block;
+    transition: transform 0.3s ease;
+	border: inherit;
+    border-color: black;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+.contest:hover .contest-img {
+    transform: scale(1.05);
+}
+
+.contest-info {
+    padding: 2px;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+	max-height: 210px;
+	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+}
+
+.contest:hover .contest-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contest-prev {
+	text-align: center;
+    position: fixed;
+    margin-left: 110px;
+    font-size: 30.77px;
+    color: rgb(var(--dark-rgb));
+    max-width: 190px;
+    max-height: 220px;
+    height: 220px;
+    text-shadow: 0 0 20px black;
+    text-rendering: optimizespeed;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.contest:hover .contest-prev {
+    opacity: 0;
+}
+
+.contest-prevShadow {
+	text-align: center;
+    position: fixed;
+    margin-left: 110px;
+    font-size: xx-large;
+    color: rgb(var(--light-skyblue-rgb));
+    max-width: 190px;
+    max-height: 220px;
+    height: 220px;
+    text-shadow: 0 0 20px black;
+    text-rendering: optimizespeed;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.contest:hover .contest-prevShadow {
+    opacity: 0;
+}
+
+.contest h2 {
+    margin: 0.4rem 0;
+    font-size: 1.5rem;
+	color: rgb(var(--dark-rgb));
+	text-decoration: none;
+	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+}
+
+.contest p {
+    margin: 0.4rem 0;
+    color: rgb(var(--dark-rgb));
+	text-decoration: none;
+	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+}
+
+.contest a {
+    text-decoration: none;
+    color: inherit;
+	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+}

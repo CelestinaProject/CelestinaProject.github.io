@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concurso de Novelas 2020</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <header>
+        <h1>Concurso de Novelas 2020</h1>
+    </header>
+    <main>
+        <div id="novels-container" class="container"></div>
+    </main>
+    
+    <!-- Modal para leer y descargar la obra -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-button">&times;</span>
+            <h2 id="novel-title"></h2>
+            <p id="novel-author"></p>
+            <p id="novel-theme"></p>
+            <p id="novel-genre"></p>
+            <p id="novel-score"></p>
+            <p id="novel-words"></p>
+            <p id="novel-characters"></p>
+            <p id="novel-reading-time"></p>
+            <div id="novel-content" class="novel-content"></div>
+            <button id="download-button">Descargar</button>
+            <h3>Críticas</h3>
+            <div id="reviews-container"></div>
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="test.js"></script>
+</body>
+</html>

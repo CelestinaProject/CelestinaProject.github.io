@@ -11,10 +11,22 @@
 	top: 0;
 	right: 0;
 }
+.headertop img:hover{
+cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+}
 .menu-icon {
 	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
 	padding-right: 10px;
 }
+
+.menu-icon img {
+	border: thin;
+	border-color: white;
+	border-style: solid;
+	border-radius: 5px;
+	height: 40px;
+}
+
 .sidebar {
 	position: fixed;
 	top: 0;
@@ -58,6 +70,15 @@
 	right: 30px;
 	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
 }
+.sidebar ul li:hover {
+	background-color: rgb(var(--dark-skyblue-rgb));
+	color: rgb(var(--dark-rgb));
+	border: thin;
+	border-color: rgb(var(--dark-skyblue-rgb));
+	border-style: solid;
+	border-radius: 5px;
+}
+
 main {
 	max-width: 800px;
 	margin: 20px auto;

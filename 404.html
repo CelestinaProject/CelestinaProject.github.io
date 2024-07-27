@@ -2,73 +2,33 @@
 <html lang="es">
     <head>
         <link rel="icon" href="assets/celestina/icon.png" type="image/png">
+		<meta charset="UTF-8">
 		<meta https-equiv="Permissions-Policy" content="interest-cohort=()">
 		<meta https-equiv="Permissions-Policy" content="browsing-topics=()">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Celestina Project</title>
+		<meta name="description" content="Celestina Project 404">
+		<meta property="og:url" content="https://celestinaproject.github.io/404.html">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Celestina Project">
+		<meta property="og:description" content="Celestina Project 404">
+		<meta property="og:image" content="https://celestinaproject.github.io/assets/celestina/icon.png">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta property="twitter:domain" content="celestinaproject.github.io">
+		<meta property="twitter:url" content="https://celestinaproject.github.io/404.html">
+		<meta name="twitter:title" content="Celestina Project">
+		<meta name="twitter:description" content="Celestina Project 404">
+		<meta name="twitter:image" content="https://celestinaproject.github.io/assets/celestina/icon.png">
+		
 		<link rel="stylesheet" href="styles.css/sty_base.css">
+		<link rel="stylesheet" href="styles.css/sty_color-palette.css">
 		<link rel="stylesheet" href="styles.css/sty_bg-aqua.css">
         <link rel="stylesheet" href="styles.css/sty_banner-events.css">
         <link rel="stylesheet" href="styles.css/sty_footer.css">
         <link rel="stylesheet" href="styles.css/sty_letterAni.css">
         <link rel="stylesheet" href="styles.css/sty_sidebar.css">
-        
-        <style>
-            body {
-                background-color: rgb(var(--dark-rgb));
-            }
-			@keyframes pan {
-                0% {
-                    background-position: 0% 0%;
-                }
-                100% {
-                    background-position: -100% -100%;
-                }
-            }
-            /* Background */
-            :root {
-                --light-red-rgb:204 27 6;
-                --dark-red-rgb: 242 135 129;
-            #star-container {
-                background: radial-gradient(rgb(var(--dark-red-rgb)), rgb(var(--light-red-rgb)));
-            }
-            #star-pattern {
-                background-image: url('assets/patterns/404.png');
-            }
-            #star-gradient-overlay {
-                background: radial-gradient(circle, transparent 75%, rgb(var(--light-red-rgb)));
-            }
-            .background-404 {
-                position: fixed;
-                bottom: 40%;
-                width: 400px;
-                height: 200px;
-				max-width: -webkit-fill-available;
-				max-height: -webkit-fill-available;
-                background: url('assets/bg/404_pne-1.png') no-repeat center center;
-                background-size: cover;
-                z-index: -1;
-            }
-            .background-aqua {
-                position: fixed;
-				bottom: 90px;
-				width: -webkit-fill-available;
-				height: -webkit-fill-available;
-				max-height: 475px;
-				max-width: 300px;
-				background: url(assets/bg/aqua_render-2.png) no-repeat center center;
-				background-size: contain;
-				z-index: -1;
-            }
-            .background-aqua:hover {
-                transform: scale(1.03);
-                rotate: -2deg;
-            }
-			footer {
-				position: absolute;
-            }
-        </style>
+		<link rel="stylesheet" href="styles.css/sty_404.css">
     </head>
     <body>
         <div class="headertop">
@@ -86,7 +46,7 @@
                 </div>
             </div>
              <div class="menu-icon" onclick="toggleSidebar()">
-                <a><img src="assets/ui/menu.png" alt="Menu Icon" style="height: 40px;"></a>
+                <img src="assets/ui/menu.png" alt="Menu Icon" style="height: 40px;border: thin;border-color: aliceblue;border-style: solid;">
             </div>
         </div>
         <div class="sidebar" id="sidebar">
@@ -98,7 +58,9 @@
                 <li><a onclick="window.location.href='index.html'"><img src="assets/ui/home.png" alt="Home" style="height: 20px;"> INICIO</a></li>
                 <li><a onclick="window.location.href='leaderboard.html'"><img src="assets/ui/topCrown.png" alt="Ranking" style="height: 20px;"> TOP SEMANAL</a></li>
                 <li><a onclick="window.location.href='eimon.html'"><img src="assets/social/youtube.png" alt="Eimon Q" style="height: 20px;"> AEMON Q</a></li>
-                <li><a onclick="window.location.href='novelsIndex.html'"><img src="assets/ui/archive.png" alt="Archive" style="height: 20px;"> MUSEO</a></li>
+				<!-- <li><a onclick="window.location.href='wip.html'"><img src="assets/ui/shelf.png" alt="Archive" style="height: 20px;"> ÍNDICE</a></li> -->
+                <li><a onclick="window.location.href='museumIndex.html'"><img src="assets/ui/archive.png" alt="Museum" style="height: 20px;"> MUSEO</a></li>
+				<!-- <li><a onclick="window.location.href='wip.html'"><img src="assets/ui/add_box.png" alt="Graphic" style="height: 20px;"> GRÁFICO</a></li> -->
             </ul>
             <p style="color: rgb(var(--light-rgb)); text-align: center; text-size: 8; padding-top: inherit;">¡Visita todas nuestras redes sociales!</p>
             <div style="text-align: center"> 
