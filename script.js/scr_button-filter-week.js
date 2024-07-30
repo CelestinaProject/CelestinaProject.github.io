@@ -8,6 +8,8 @@ function normalizeAuthorName(author) {
             "Omnisent",
             "Omnisentus",
             "yo",
+			"bocchi",
+			"Desconocido",
         ],
         "NightCrawler": [
             "NightCrawlerGLX",

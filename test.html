@@ -5,34 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concurso de Novelas 2020</title>
     <link rel="stylesheet" href="test.css">
+	<link rel="stylesheet" href="styles.css/sty_color-palette.css">
+	<link rel="stylesheet" href="styles.css/sty_base.css">
+	<link rel="stylesheet" href="styles.css/sty_bg-aqua.css">
+		<link rel="stylesheet" href="styles.css/sty_banner-events.css">
+		<link rel="stylesheet" href="styles.css/sty_footer.css">
+		<link rel="stylesheet" href="styles.css/sty_letterAni.css">
+		<link rel="stylesheet" href="styles.css/sty_sidebar.css">
 </head>
 <body>
     <header>
         <h1>Concurso de Novelas 2020</h1>
     </header>
     <main>
-        <div id="novels-container" class="container"></div>
+        <div id="novels-container" class="container" style="display: flex;flex-direction: row;flex-wrap: wrap; justify-content: center;"</div>
     </main>
     
-    <!-- Modal para leer y descargar la obra -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close-button" id="close-button">&times;</span>
-            <h2 id="novel-title"></h2>
-            <p id="novel-author"></p>
-            <p id="novel-theme"></p>
-            <p id="novel-genre"></p>
-            <p id="novel-score"></p>
-            <p id="novel-words"></p>
-            <p id="novel-characters"></p>
-            <p id="novel-reading-time"></p>
+            <h2 class="novel-title" id="novel-title"></h2>
+            <h4 class="novel-author" id="novel-author"></p>
+			<div class="novel-details">
+			<div class="column">
+				<p class="novel-theme" id="novel-theme"></p>
+				<p class="novel-genre" id="novel-genre"></p>
+				<p class="novel-score" id="novel-score"></p>
+			</div>
+			<div class="column">
+				<p class="novel-words" id="novel-words"></p>
+				<p class="novel-characters" id="novel-characters"></p>
+				<p class="novel-reading-time" id="novel-reading-time"></p>
+			</div>
+			<div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
             <div id="novel-content" class="novel-content"></div>
             <button id="download-button">Descargar</button>
             <h3>Críticas</h3>
             <div id="reviews-container"></div>
-            <div class="progress-container">
-                <div id="progress-bar" class="progress-bar"></div>
-            </div>
         </div>
     </div>
 

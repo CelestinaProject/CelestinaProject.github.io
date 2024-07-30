@@ -27,7 +27,7 @@ cursor: url('../assets/mouse/cursor_Miku-1/miku3.cur'), auto;
 
 ::selection {
 cursor: url('../assets/mouse/cursor_Miku-1/miku8.cur'), auto;
-background-color: red;
+background-color: rgb(var(--light-skyblue-rgb));
 }
 
 header {

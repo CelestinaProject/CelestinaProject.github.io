@@ -36,6 +36,7 @@ footer {
 }
 .footer-bottom p {
 	margin: 0;
+	text-align: center;
 }
 .footer-link {
 	color: rgb(var(--light-rgb));

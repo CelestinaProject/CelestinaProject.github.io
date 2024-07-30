@@ -2,10 +2,10 @@ const toTopBtn = document.getElementById("toTopBtn");
 
 	window.onscroll = function() {
 		if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-			toTopBtn.style.display = "flex";
+			toTopBtn.style.opacity = "100%";
 			
 		} else {
-			toTopBtn.style.display = "none";
+			toTopBtn.style.opacity = "0%";
 		}
 	};
 
