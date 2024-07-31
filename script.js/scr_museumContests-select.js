@@ -1,11 +1,11 @@
 const contests = [
     {
         title: "Luces y Sombras",
-        description: "Un concurso que destaca las mejores novelas del año 2020.",
+        description: "Un concurso que enfrenta la luz y la oscuridad.",
         participants: 9,
         year: 2024,
         cover: "assets/banners/banner_event-1.png",
-		bg: "museum/lucesysombras/banner_ganadores.png",
+		bg: "museum/LucesySombras/banner_ganadores.png",
 		style: "color: yellow;",
         link: "museum/museum-lys.html"
     },
