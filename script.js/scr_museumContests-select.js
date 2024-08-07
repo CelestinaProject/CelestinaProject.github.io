@@ -4,7 +4,8 @@ const contests = [
         description: "Un concurso que enfrenta la luz y la oscuridad.",
         participants: 9,
         year: 2024,
-        cover: "assets/banners/banner_event-1.png",
+		author: "M.J.Wolfrore",
+        cover: "assets/banners/banner_event-2.png",
 		bg: "museum/LucesySombras/banner_ganadores.png",
 		style: "color: yellow;",
         link: "museum/museum-lys.html"
@@ -65,6 +66,7 @@ function displayContests() {
             <div class="contest-info">
                 <h2>${contest.title}</h2>
                 <p>${contest.description}</p>
+				<p><strong>Autor:</strong> ${contest.author}</p>
                 <p><strong>Participantes:</strong> ${contest.participants}</p>
                 <p><strong>Año:</strong> ${contest.year}</p>
             </div>
