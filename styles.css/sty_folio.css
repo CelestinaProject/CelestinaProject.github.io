@@ -36,7 +36,6 @@ header {
 }
 .menu-icon {
     cursor: pointer;
-    padding-left: 20px;
     z-index: 0;
 }
 /* Eimon */
@@ -56,11 +55,16 @@ header {
     to { opacity: 1; }
 }
 .container {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     padding: 0px;
     z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
 }
 .profile {
     display: flex;
@@ -124,7 +128,10 @@ header {
 }
 .social-icons a:hover {
     transform: scale(1.2);
-	color: green;
+    color: green;
+    background-color: currentcolor;
+    filter: invert(1);
+    border-radius: 50px;
 }
 .novels-link {
     display: inline-block;

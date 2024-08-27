@@ -1,0 +1,127 @@
+body, html {
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-items: center;
+	flex-wrap: nowrap;
+	cursor: url('../assets/cursor/miku1.cur'), auto;
+}
+
+.h1c {
+    margin-top: 64px;
+    padding: 0 50px 0px 50px;
+    background-color: rgb(255 255 255 / 50%);
+    border: solid;
+    border-color: #af929200;
+    border-width: thick;
+    border-radius: 50px;
+    text-transform: uppercase;
+	text-align: center;
+}
+
+.h1c2 {
+    padding: 0 50px 0px 50px;
+    background-color: rgb(255 255 255 / 50%);
+    border: solid;
+    border-color: #af929200;
+    border-width: thick;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+.headertop {
+	background-color: rgb(var(--dark-rgb));
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding: 5px 15px 5px 15px;
+    width: -webkit-fill-available;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.logo {
+	height: auto;
+	width: 139px;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
+}
+
+.ul-type {
+	display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+	margin: 0px;
+    padding: 0px;
+}
+
+.inline-search {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+	margin-left: 2px;
+	margin-right: 2px;
+    width: 100%;
+    height: 22px;
+    border: solid;
+    border-width: thin;
+    border-radius: 5px;
+}
+
+.search-button {
+	background-color: rgb(var(--dark-rgb));
+    border: none;
+}
+
+.search {
+	height: auto;
+	width: 26px;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
+}
+
+.menu {
+	height: auto;
+	width: 24px;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
+}
+
+.packet-1 {
+	display: flex;
+    justify-content: flex-end;
+    width: fit-content;
+    max-width: 48%;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    right: 15px;
+    position: absolute;
+}
+
+.packet-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.onPoint {
+	cursor: url('../assets/cursor/miku2.cur'), auto;
+}

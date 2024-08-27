@@ -7,7 +7,7 @@
 	border: none;
 	padding: 10px;
 	border-radius: 50%;
-	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
 	z-index: 10000;
 	transition: background-color 0.3s;
 }

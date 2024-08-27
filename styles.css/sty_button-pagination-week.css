@@ -9,11 +9,11 @@
                 color: rgb(var(--light-rgb));
                 border-radius: 5px;
                 transition: background-color 0.3s;
-                cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+                cursor: url('../assets/cursor/miku2.cur'), auto;
               }
             .paginationButton button:hover {
                 background-color: rgb(var(--dark-skyblue-rgb));
-                cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+                cursor: url('../assets/cursor/miku2.cur'), auto;
             } 
             .container {
                 text-align: center;

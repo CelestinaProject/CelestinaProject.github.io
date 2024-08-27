@@ -27,7 +27,7 @@ top: 0px;
 z-index: -12;
 }
 #star-pattern {
-background-image: url('../assets/misc/aqua.png');
+background-image: url('../assets/misc/aqua.webp');
 background-size: 10%;  
 position: fixed;
 left: 50%;

@@ -1,33 +1,39 @@
-CELESTINA (Carpeta raíz)
+CELESTINA (FOLDER PRIME)
 │
-├── assets (Carpeta)
-│   ├── banners (subCarpeta)
-│   ├── bg (subCarpeta)
-│   ├── celestina (subCarpeta)
-│   ├── misc (subCarpeta)
-│   ├── mouse (subCarpeta)
-│   │   └── cursor_miku-1 (subsubCarpeta)
-│   ├── patterns (subCarpeta)
-│   ├── photoshop (subCarpeta)
-│   ├── platforms (subCarpeta)
-│   ├── social (subCarpeta)
-│   ├── ui (subCarpeta)
-│   └── users (subCarpeta)
+├── assets (Folder)
+│   ├── banners (subFolder)
+│   │   └── events (subsubFolder)
+│   ├── cursor (subFolder)
+│   ├── bg (subFolder)
+│   ├── buttons (subFolder)
+│   ├── celestina (subFolder)
+│   ├── cursor (subFolder)
+│   ├── misc (subFolder)
+│   ├── patterns (subFolder)
+│   ├── platforms (subFolder)
+│   ├── profiles (subFolder)
+│   │   ├── judge (subsubFolder)
+│   │   └── users (subsubFolder)
+│   ├── social (subFolder)
+│   └── ui (subFolder)
 │
-├── novels_covers (Carpeta)
-├── novels_info (Carpeta)
-├── script.js (Carpeta)
-├── styles.css (Carpeta)
-├── index.html (Archivo primordial)
+├── novels (Folder)
+│   ├── covers (subFolder)
+│   └── info (subFolder)
+├── python (Folder)
+├── rules
+│   └── museum (Folder)
+├── script.js (Folder)
+├── styles.css (Folder)
+├── index.html (Index)
 │
-├── SIDEBAR (Menú, no es archivo ni carpeta)
-│   ├── index.html (Llamada al archivo primordial)
-│   ├── leaderboard.html (Clasificaciones)
-│   ├── eimon.html (Test de perfil)
-│   ├── museumIndex.html (Museo de eventos, vista rápida) [wip]
-│   └── museumNovels.html (Museo de eventos, clasificados/archivados) [wip]
-│
-├── novelsIndex.html (Índice de todas las novelas en la página) [wip]
-├── 404.html (Página de error)
-└── rulerFox.html (Caremondá)
+├── MENU
+│   ├── index.html (Index)
+│   ├── leaderboard (Novels Top)
+│   │   ├── leaderboard-niadd.html
+│   │	└── leaderboard-webnovel.html
+│   ├── museumIndex.html (Events museum collection)
+│   ├── dailychallenge.html (Discord Daily Challenge) [wip]
+│   ├── eimon.html (Test profile)
+└── └── more.html (...) [wip]
 

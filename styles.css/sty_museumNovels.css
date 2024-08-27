@@ -7,12 +7,13 @@ footer {
 }
 
 main {
-    padding: 2rem;
+    padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 	background-color: rgb(255 255 255 / 50%);
     box-shadow: 0 0 20px 1px rgb(0 0 0);
-    border-radius: 10px
+    border-radius: 10px;
+	margin-bottom: 16px;
 }
 
 .container {
@@ -27,7 +28,7 @@ main {
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+    cursor: url('../assets/cursor/miku2.cur'), auto;
     position: relative;
     will-change: transform, box-shadow;
 	display: flex;
@@ -36,7 +37,7 @@ main {
     align-content: center;
     justify-content: center;
     align-items: stretch;
-	margin: 0px 25px 25px 0px;
+	margin: 13px;
     max-width: 301px;
 	width: 300px;
 }
@@ -83,20 +84,20 @@ main {
     font-size: 1.5rem;
 	color: rgb(var(--dark-rgb));
 	text-decoration: none;
-	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
 }
 
 .novel p {
     margin: 0.4rem 0;
     color: rgb(var(--dark-rgb));
 	text-decoration: none;
-	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
 }
 
 .novel a {
     text-decoration: none;
     color: inherit;
-	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
 }
 
 .novel-header {
@@ -164,18 +165,16 @@ main {
 
 .modal-content {
     background-color: #fff;
-    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 1000px;
+    width: -webkit-fill-available;
     max-width: 80%;
     border-radius: 10px;
 	box-shadow: 0px 0px 4px 4px rgb(0 0 0 / 36%);
     text-align: center;
     max-height: 90%;
-    height: 600px;
+    height: -webkit-fill-available;
     overflow-y: auto;
-	margin-top: 10px;
 }
 
 .close-button {
@@ -189,7 +188,7 @@ main {
 .close-button:focus {
     color: #000;
     text-decoration: none;
-    cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+    cursor: url('../assets/cursor/miku2.cur'), auto;
 }
 
 #download-button {
@@ -199,7 +198,7 @@ main {
     color: rgb(var(--light-rgb));
     border: none;
     border-radius: 20%;
-    cursor: url(../assets/mouse/cursor_Miku-1/miku2.cur), auto;
+    cursor: url('../assets/cursor/miku2.cur'), auto;
     transition: background-color 0.3s ease;
     align-items: center;
     display: grid;
@@ -215,7 +214,7 @@ main {
 
 #download-button:hover {
     background-color: rgb(var(--dark-skyblue-rgb));
-    cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+    cursor: url('../assets/cursor/miku2.cur'), auto;
 }
 
 #downloadepub-button {
@@ -225,7 +224,7 @@ main {
     color: rgb(var(--light-rgb));
     border: none;
     border-radius: 20%;
-    cursor: url(../assets/mouse/cursor_Miku-1/miku2.cur), auto;
+    cursor: url('../assets/cursor/miku2.cur'), auto;
     transition: background-color 0.3s ease;
     align-items: center;
     display: grid;
@@ -241,7 +240,7 @@ main {
 
 #downloadepub-button:hover {
     background-color: rgb(var(--dark-skyblue-rgb));
-    cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+    cursor: url('../assets/cursor/miku2.cur'), auto;
 }
 
 #share-button {
@@ -251,7 +250,7 @@ main {
     color: rgb(var(--light-rgb));
     border: none;
     border-radius: 20%;
-    cursor: url(../assets/mouse/cursor_Miku-1/miku2.cur), auto;
+    cursor: url('../assets/cursor/miku2.cur'), auto;
     transition: background-color 0.3s ease;
     align-items: center;
     display: grid;
@@ -267,7 +266,7 @@ main {
 
 #share-button:hover {
     background-color: rgb(var(--dark-skyblue-rgb));
-    cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+    cursor: url('../assets/cursor/miku2.cur'), auto;
 }
 
 #buttons-museum {
@@ -388,3 +387,137 @@ p.quote {
 .lazy-loaded {
     opacity: 1;
 }
+
+@keyframes song-animation {
+	0%, 40%, 100% {
+		transform: translateY(0px);
+	}
+	20% {
+		transform: translateY(-3px);
+	}
+}
+@keyframes color-change {
+	0%, 100% {
+		color: rgb(var(--light-skyblue-rgb));
+	}
+	50% {
+		color: #333;
+	}
+}
+.song {
+	color: rgb(var(--dark-rgb));
+}
+.song span {
+	animation: song-animation 1.5s infinite, color-change 1.5s infinite;
+	display: inline-block;
+}
+.song span:nth-child(1) { animation-delay: 0s; }
+.song span:nth-child(2) { animation-delay: 0.1s; }
+.song span:nth-child(3) { animation-delay: 0.2s; }
+.song span:nth-child(4) { animation-delay: 0.3s; }
+.song span:nth-child(5) { animation-delay: 0.4s; }
+.song span:nth-child(6) { animation-delay: 0.5s; }
+.song span:nth-child(7) { animation-delay: 0.6s; }
+.song span:nth-child(8) { animation-delay: 0.7s; }
+.song span:nth-child(9) { animation-delay: 0.8s; }
+.song span:nth-child(10) { animation-delay: 0.9s; }
+.song span:nth-child(11) { animation-delay: 1s; }
+.song span:nth-child(12) { animation-delay: 1.1s; }
+.song span:nth-child(13) { animation-delay: 1.2s; }
+.song span:nth-child(14) { animation-delay: 1.3s; }
+.song span:nth-child(15) { animation-delay: 1.4s; }
+.song span:nth-child(16) { animation-delay: 1.5s; }
+.song span:nth-child(17) { animation-delay: 1.6s; }
+.song span:nth-child(18) { animation-delay: 1.7s; }
+.song span:nth-child(19) { animation-delay: 1.8s; }
+.song span:nth-child(20) { animation-delay: 1.9s; }
+.song span:nth-child(21) { animation-delay: 2s; }
+.song span:nth-child(22) { animation-delay: 2.1s; }
+.song span:nth-child(23) { animation-delay: 2.2s; }
+.song span:nth-child(24) { animation-delay: 2.3s; }
+.song span:nth-child(25) { animation-delay: 2.4s; }
+.song span:nth-child(26) { animation-delay: 2.5s; }
+.song span:nth-child(27) { animation-delay: 2.6s; }
+.song span:nth-child(28) { animation-delay: 2.7s; }
+.song span:nth-child(29) { animation-delay: 2.8s; }
+.song span:nth-child(30) { animation-delay: 2.9s; }
+.song span:nth-child(31) { animation-delay: 3s; }
+.song span:nth-child(32) { animation-delay: 3.1s; }
+.song span:nth-child(33) { animation-delay: 3.2s; }
+.song span:nth-child(34) { animation-delay: 3.3s; }
+.song span:nth-child(35) { animation-delay: 3.4s; }
+.song span:nth-child(36) { animation-delay: 3.5s; }
+.song span:nth-child(37) { animation-delay: 3.6s; }
+.song span:nth-child(38) { animation-delay: 3.7s; }
+.song span:nth-child(39) { animation-delay: 3.8s; }
+.song span:nth-child(40) { animation-delay: 3.9s; }
+.song span:nth-child(41) { animation-delay: 4s; }
+.song span:nth-child(42) { animation-delay: 4.1s; }
+.song span:nth-child(43) { animation-delay: 4.2s; }
+.song span:nth-child(44) { animation-delay: 4.3s; }
+.song span:nth-child(45) { animation-delay: 4.4s; }
+.song span:nth-child(46) { animation-delay: 4.5s; }
+.song span:nth-child(47) { animation-delay: 4.6s; }
+.song span:nth-child(48) { animation-delay: 4.7s; }
+.song span:nth-child(49) { animation-delay: 4.8s; }
+.song span:nth-child(50) { animation-delay: 4.9s; }
+.song span:nth-child(51) { animation-delay: 5s; }
+.song span:nth-child(52) { animation-delay: 5.1s; }
+.song span:nth-child(53) { animation-delay: 5.2s; }
+.song span:nth-child(54) { animation-delay: 5.3s; }
+.song span:nth-child(55) { animation-delay: 5.4s; }
+.song span:nth-child(56) { animation-delay: 5.5s; }
+.song span:nth-child(57) { animation-delay: 5.6s; }
+.song span:nth-child(58) { animation-delay: 5.7s; }
+.song span:nth-child(59) { animation-delay: 5.8s; }
+.song span:nth-child(60) { animation-delay: 5.9s; }
+.song span:nth-child(61) { animation-delay: 6s; }
+.song span:nth-child(62) { animation-delay: 6.1s; }
+.song span:nth-child(63) { animation-delay: 6.2s; }
+.song span:nth-child(64) { animation-delay: 6.3s; }
+.song span:nth-child(65) { animation-delay: 6.4s; }
+.song span:nth-child(66) { animation-delay: 6.5s; }
+.song span:nth-child(67) { animation-delay: 6.6s; }
+.song span:nth-child(68) { animation-delay: 6.7s; }
+.song span:nth-child(68) { animation-delay: 6.8s; }
+.song span:nth-child(70) { animation-delay: 6.9s; }
+.song span:nth-child(71) { animation-delay: 7s; }
+.song span:nth-child(72) { animation-delay: 7.1s; }
+.song span:nth-child(72) { animation-delay: 7.2s; }
+.song span:nth-child(73) { animation-delay: 7.3s; }
+.song span:nth-child(75) { animation-delay: 7.4s; }
+.song span:nth-child(76) { animation-delay: 7.5s; }
+.song span:nth-child(77) { animation-delay: 7.6s; }
+.song span:nth-child(78) { animation-delay: 7.7s; }
+.song span:nth-child(79) { animation-delay: 7.8s; }
+.song span:nth-child(80) { animation-delay: 7.9s; }
+.song span:nth-child(81) { animation-delay: 8s; }
+.song span:nth-child(82) { animation-delay: 8.1s; }
+.song span:nth-child(83) { animation-delay: 8.2s; }
+.song span:nth-child(84) { animation-delay: 8.3s; }
+.song span:nth-child(85) { animation-delay: 8.4s; }
+.song span:nth-child(86) { animation-delay: 8.5s; }
+.song span:nth-child(87) { animation-delay: 8.6s; }
+.song span:nth-child(88) { animation-delay: 8.7s; }
+.song span:nth-child(89) { animation-delay: 8.8s; }
+.song span:nth-child(90) { animation-delay: 8.9s; }
+.song span:nth-child(91) { animation-delay: 9s; }
+.song span:nth-child(92) { animation-delay: 9.1s; }
+.song span:nth-child(93) { animation-delay: 9.2s; }
+.song span:nth-child(94) { animation-delay: 9.3s; }
+.song span:nth-child(95) { animation-delay: 9.4s; }
+.song span:nth-child(96) { animation-delay: 9.5s; }
+.song span:nth-child(97) { animation-delay: 9.6s; }
+.song span:nth-child(98) { animation-delay: 9.7s; }
+.song span:nth-child(99) { animation-delay: 9.8s; }
+.song span:nth-child(100) { animation-delay: 9.9s; }
+.song span:nth-child(101) { animation-delay: 10s; }
+.song span:nth-child(102) { animation-delay: 10.1s; }
+.song span:nth-child(103) { animation-delay: 10.2s; }
+.song span:nth-child(104) { animation-delay: 10.3s; }
+.song span:nth-child(105) { animation-delay: 10.4s; }
+.song span:nth-child(106) { animation-delay: 10.5s; }
+.song span:nth-child(107) { animation-delay: 10.6s; }
+.song span:nth-child(108) { animation-delay: 10.7s; }
+.song span:nth-child(119) { animation-delay: 10.8s; }
+.song span:nth-child(110) { animation-delay: 10.9s; }

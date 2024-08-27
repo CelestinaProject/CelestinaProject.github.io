@@ -1,0 +1,134 @@
+.novel-container {
+    margin-bottom: 20px;
+    max-width: 525px;
+	min-width: -webkit-fill-available;
+	width: fit-content;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, rgb(var(--dark-rgb)), rgb(var(--light-skyblue-rgb)));
+    box-shadow: 0px 0px 4px 4px rgb(0 0 0 / 36%);
+    cursor: url('../assets/cursor/miku2.cur'), auto;
+}
+
+.novel-container:hover {
+    transform: translateY(-10px);
+	box-shadow: 6px 6px 12px #c9c9c9, -6px -6px 12px #ffffff;
+}
+
+.header {
+    background: linear-gradient(to right, rgb(var(--light-skyblue-rgb)), rgb(var(--dark-skyblue-rgb)));
+    background-image: url(../assets/banners/top-1.webp);
+    background-size: cover;
+    background-position: 0px -45px;
+    padding: 10px;
+    border-radius: 15px;
+    color: rgb(var(--light-rgb));
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    cursor: url(../assets/cursor/miku1.cur), auto;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.header h1 {
+    margin: 0;
+	font-size: xx-large;
+	font-weight: bold;
+	text-align: center;
+	color: rgb(var(--dark-rgb));
+	text-shadow: 0px -1px 0px rgb(var(--light-rgb));
+	cursor: url(../assets/cursor/miku1.cur), auto;
+}
+
+.header p {
+    font-size: larger;
+	text-align: center;
+    margin: 5px 0;
+    color: rgb(var(--light-rgb));
+	text-shadow: 0 0 4px black;
+	cursor: url(../assets/cursor/miku1.cur), auto;
+}
+
+.controls {
+	margin-bottom: 20px;
+}
+
+.novel-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+    width: 100%;
+    transition: background-color 0.3s;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
+}
+
+.novel-header span {
+	font-size: 24px;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-family: 'Bell MT', serif;
+}
+
+.novel-header:hover {
+    background-color: rgb(var(--light-rgb));
+}
+
+.novel-cover {
+    width: 60px;
+    height: 90px;
+    margin-right: 20px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.novel-title {
+    font-size: larger;
+    font-weight: bold;
+    cursor: url('../assets/cursor/miku2.cur'), auto;
+	transition: color 0.3s;
+	color: rgb(var(--dark-skyblue-rgb));
+}
+
+.novel-title:hover {
+    color: rgb(var(--light-skyblue-rgb));
+}
+
+.novel-details {
+    display: none;
+    align-items: center;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    color: rgb(var(--dark-rgb));
+    padding: 10px;
+    border-top: 1px solid #ececec;
+	background-color: rgb(var(--primary-stripe-rgb));
+    width: 100%;
+	border-collapse: collapse;
+    text-align: center;
+	cursor: url(../assets/cursor/miku1.cur), auto;
+}
+
+.novel-details div {
+    margin-bottom: 8px;
+}
+
+.novel-container.active .novel-details {
+    display: flex;
+    max-height: 300px;
+    padding: 20px;
+}

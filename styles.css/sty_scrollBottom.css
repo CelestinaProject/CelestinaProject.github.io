@@ -1,13 +1,13 @@
 #toBottomBtn {
     display: block;
     position: absolute;
-    top: 68px;
+    top: 100px;
     right: 0px;
     background-color: rgb(var(--dark-rgb));
     color: rgb(var(--light-rgb));
     padding: 5px;
     border-radius: 10px;
-    cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+    cursor: url('../assets/cursor/miku2.cur'), auto;
     z-index: 2;
     transition: background-color 0.3s;
     border-left-color: rgb(var(--light-skyblue-rgb));

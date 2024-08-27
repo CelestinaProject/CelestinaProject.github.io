@@ -1,0 +1,27 @@
+.search-formpage {
+	position: absolute;
+    left: 50px;
+    top: 100px;
+	display: flex;
+}
+
+.search-bartextpage {
+    width: 100%;
+    height: 22px;
+    border: solid;
+    border-width: thin;
+    border-radius: 5px;
+}
+
+.search-buttonpage {
+	height: 26px;
+    border-width: thin;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}

@@ -28,7 +28,7 @@
     max-height: 180px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    cursor: url(../assets/mouse/cursor_Miku-1/miku2.cur), auto;
+    cursor: url(../assets/cursor/miku2.cur), auto;
 	transition: ease-in-out 0.1s;
 }
 
@@ -59,7 +59,7 @@
     max-height: 180px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    cursor: url(../assets/mouse/cursor_Miku-1/miku2.cur), auto;
+    cursor: url(../assets/cursor/miku2.cur), auto;
 	transition: ease-in-out 0.1s;
 }
 
@@ -84,7 +84,7 @@
     border-color: transparent;
 	border: 1px solid rgb(0 0 0 / 0%);
     color: rgb(var(--light-rgb));
-	cursor: url(../assets/mouse/cursor_Miku-1/miku2.cur), auto;
+	cursor: url(../assets/cursor/miku2.cur), auto;
     padding: 1px;
     border-radius: 50%;
     z-index: 2;

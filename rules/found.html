@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<link rel="icon" href="../assets/celestina/icon.png" type="image/png">
+		
+		<!-- Metadata -->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+		<meta http-equiv="Permissions-Policy" content="browsing-topics=()">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Celestina Project</title>
+
+		<!-- SEO and Social Media Metadata -->
+		<meta name="description" content="Celestina Project Search">
+		<meta name="keywords" content="top, leaderboard, light novels, celestina project, proyecto celestina, tabla de clasificación, novelas, novelas ligeras, cuentos, relatos, keim lite, keimlite, eimon q, search novels, buscador de novelas">
+		<meta name="author" content="RulerFox ♠">
+
+		<!-- Open Graph Metadata -->
+		<meta property="og:url" content="https://celestinaproject.github.io/rules/found.html">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Celestina Project">
+		<meta property="og:description" content="Celestina Project Search">
+		<meta property="og:image" content="https://celestinaproject.github.io/assets/celestina/icon.png">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+
+		<!-- Twitter Card Metadata -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@KeimLite">
+		<meta name="twitter:title" content="Celestina Project">
+		<meta name="twitter:description" content="Celestina Project Search">
+		<meta name="twitter:image" content="https://celestinaproject.github.io/assets/celestina/icon.png">
+		<meta property="twitter:domain" content="celestinaproject.github.io">
+		<meta property="twitter:url" content="https://celestinaproject.github.io/rules/found.html">
+
+		<!-- Theme Color -->
+		<meta name="theme-color" content="#33e4f9">
+
+		<!-- Additional Metadata -->
+		<meta name="robots" content="index, follow">
+		<meta name="language" content="es">
+		<meta name="revisit-after" content="7 days">
+		<meta name="rating" content="general">
+		<meta name="distribution" content="global">
+		<meta name="format-detection" content="telephone=no">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../styles.css/sty_base_2.css">
+		<link rel="stylesheet" href="../styles.css/sty_footer.css">
+		<link rel="stylesheet" href="../styles.css/sty_resultsSearch.css">
+		<link rel="stylesheet" href="../styles.css/sty_bg-aqua.css">
+		<link rel="stylesheet" href="../styles.css/sty_color-palette.css">
+		<link rel="stylesheet" href="../styles.css/sty_letterAni.css">
+		
+		<!-- SCRIPTS -->
+		<script src="../scripts.js/scr_novelsDataTotal.js"></script>
+		<script src="../scripts.js/scr_validateSearch.js"></script>
+		<script src="../scripts.js/scr_autocompleteSearch-2.js"></script>
+		<script src="../scripts.js/scr_getCelesParam.js"></script>
+		<script src="../scripts.js/scr_displaySearchTerm.js"></script>
+		<script src="../scripts.js/scr_displayResults.js"></script>
+		<script src="../scripts.js/scr_main.js"></script>
+	</head>
+	<body>
+		<!-- HEADER -->
+		<header>
+			<img src="../assets/celestina/5.png" alt="Logo" onclick="window.location.href='../index.html'" title="¡Ce-les-ti-na!">
+			<div class="search-bar">
+				<form action="found.html" method="get" onsubmit="return validateSearch()" style="display: flex;flex-direction: column;flex-wrap: wrap;align-content: center;align-items: center;width: -webkit-fill-available;">
+					<input type="text" name="celes" id="searchceles" placeholder="Buscar novela..." oninput="autocompleteSearch()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+					<button onclick="displayResults()" class="search-button">
+						<img src="../assets/ui/search.png" class="search-img">
+					</button>
+					<div id="autocomplete-list" class="autocomplete-suggestions"></div>
+				</form>
+			</div>
+			<!-- OPTION BAR -->
+			<nav>
+				<ul>
+					<li><a href="../index.html">Hogar</a></li>
+					<li>
+						<a>Top Semanal</a>
+						<ul>
+							<li>
+								<a href="leaderboard-niadd.html">
+									<img src="../assets/ui/topCrown.png" alt="Ranking">niadd
+								</a>
+							</li>
+							<li>
+								<a href="leaderboard-webnovel.html">
+									<img src="../assets/ui/topCrown.png" alt="Ranking">webnovel
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="museum.html">Museo</a></li>
+					<li><a href="wip.html">Reto Diario</a></li>
+					<li><a href="eimon.html">Eimon Q</a></li>
+					<li><a href="wip.html">MÁS</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- SEARCHBAR LOCKED-->
+		<div class="search-bar" style="margin-top:20px; z-index:1">
+			<form action="found.html" method="get" onsubmit="return validateSearch()" style="display: flex;flex-direction: column;flex-wrap: wrap;align-content: center;align-items: center;width: -webkit-fill-available;">
+				<input type="text" name="celes" id="searchceles2" placeholder="Tu busqueda aquí..." oninput="autocompleteSearch()" style="cursor: url(../assets/cursor/miku1.cur), auto; background-color: rgb(255 255 255 / 50%);text-transform: uppercase;font-weight: bolder;color:rgb(var(--dark-rgb))" disabled>
+			</form>
+		</div>
+		<!-- SEARCH RESULTS-->
+		<div class="results" id="results">
+			<!-- Los resultados de la búsqueda se insertarán aquí -->
+		</div>
+		<!-- BACKGROUND -->
+				<div id="app">
+					<div id="star-container">
+						<div id="star-pattern"></div>
+						<div id="star-gradient-overlay"></div>
+					</div>
+				</div>
+		<!-- FOOTER -->
+		<div style="position:relative; bottom:0px;">
+			<footer>
+				<div class="footer-content">
+						<div class="footer-section">
+							<h3>¿Qué es Keim Lite?</h3>
+							<p>Keim Lite es un servidor de escritura creado en 2021 dedicado a novelas de todo tipo. Creada por el señor Eimon Q, su objetivo es fomentar un ambiente en el que los escritores puedan aprender y perfeccionar sus habilidades de escritura, además de compartir sus obras con una comunidad con el mismo hobby y gustos.</p>
+						</div>
+						<div class="footer-section">
+							<h3>¿Qué es Celestina?</h3>
+							<p>Celestina es un proyecto personal que he hecho con dos objetivos principales. El primero es aprender a programar con HTML y adquirir habilidades para la creación de páginas web. El segundo es optimizar y acelerar el proceso de actualización del Top Semanal de Novelas para cuando yo no pueda hacerlo, otro pueda ocupar mi lugar.</p>
+						</div>
+						<div class="footer-section">
+							<h3>¿Top Semanal de Novelas?</h3>
+							<p>El Top Semanal de Novelas es una sección pequeña en el servidor de Discord. Cada semana, se actualiza para presentar las diez obras más populares, seleccionadas en función de su número total de visitas o seguidores.</p>
+						</div>
+					</div>
+					<div class="footer-bottom">
+						<div class="wave">
+							<p>BUSCANDO, BUSCANDO NOVELAS...</p>
+							<span>❤</span> | <span>🐌</span>
+						</div>
+					</div>
+					<a onclick="window.location.href='rulerfox.html'">
+						<img src="../assets/buttons/miku_approved.gif" style="position: absolute; bottom: 1px; left: 0px; z-index: 2;" title="Hoy no es Pascua">
+					</a>
+					<div class= "socialWeb">
+					<p style="color: rgb(var(--light-rgb)); text-align: center; text-size: 8; padding-top: inherit;">¡Visita todas nuestras redes sociales!</p>
+					<div style="text-align: center;display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: space-evenly;">  
+						<a onclick="window.location.href='https://x.com/KeimLite'">
+							<img src="../assets/social/twitter.png" alt="Twitter" class="socialImg" title="X(Twitter)">
+						</a>
+						<a onclick="window.location.href='https://discord.com/invite/fDY7MqHb4d'">
+							<img src="../assets/social/discord.png" alt="Discord" class="socialImg" title="Discord">
+						</a>
+						<a onclick="window.location.href='https://whatsapp.com/channel/0029Va9IIWhHLHQXm4tCLo03'">
+							<img src="../assets/social/whatsapp.png" alt="WhatsApp" class="socialImg" title="WhatsApp">
+						</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

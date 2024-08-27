@@ -6,7 +6,7 @@
 	width: 292px;
 	bottom: 15px;
 	position: absolute;
-	cursor: url('../assets/mouse/cursor_Miku-1/miku1.cur'), auto;
+	cursor: url('../assets/cursor/miku1.cur'), auto;
 	z-index: 3;
 	display: flex;
 	flex-direction: row;
@@ -18,7 +18,7 @@
 .selectLabel {
 	display: block;
 	margin-bottom: 5px;
-	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
 }
 .selectNovels  {
 	width: 34%;
@@ -27,7 +27,7 @@
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	font-size: smaller;
-	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
 }
 .compareButton {
 	border: 1px solid rgb(var(--light-rgb));
@@ -39,11 +39,11 @@
 	margin-left: 74px;
 	transition: background-color 0.3s;
 	width: 50%;
-	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
 }
 .compareButton:hover {
 	background-color: rgb(var(--dark-skyblue-rgb));
-	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
 }
 #comparisonResult {
 	background: #fff;
@@ -54,7 +54,6 @@
 	min-width: 200px;
 	width: 292px;
 	height: 290px;
-	margin: 20px auto;
 	justify-content: space-between;
 	align-items: flex-start;
 	/*right: 15px;

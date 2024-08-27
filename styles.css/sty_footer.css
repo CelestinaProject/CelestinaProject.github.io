@@ -3,7 +3,7 @@ footer {
 	color: rgb(var(--light-rgb));
 	text-align: center;
 	padding: 20px 0;
-	margin-top: 10px;
+	margin-top: 16px;
 	width: -webkit-fill-available;
 	z-index: 1;
 	position: relative;

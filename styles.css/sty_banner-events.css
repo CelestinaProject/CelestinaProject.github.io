@@ -10,7 +10,7 @@
             }
             .carousel:hover {
                 transform: scale(1.03);
-                cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+                cursor: url('../assets/cursor/miku2.cur'), auto;
                 rotate: -2deg;
             }
             .carousel-inner {
@@ -22,7 +22,7 @@
                 min-width: 100%;
                 box-sizing: border-box;
                 position: relative;
-                cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+                cursor: url('../assets/cursor/miku2.cur'), auto;
                 font-size: small;
                 font-weight: lighter;
                 text-align: center;

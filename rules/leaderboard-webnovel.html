@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<link rel="icon" href="../assets/celestina/icon.png" type="image/png">
+		
+		<!-- Metadata -->
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+		<meta http-equiv="Permissions-Policy" content="browsing-topics=()">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Celestina Project</title>
+
+		<!-- SEO and Social Media Metadata -->
+		<meta name="description" content="Celestina Project Leaderboard WebNovel">
+		<meta name="keywords" content="top, leaderboard, light novels, celestina project, proyecto celestina, tabla de clasificación, novelas, novelas ligeras, cuentos, relatos, keim lite, keimlite, eimon q">
+		<meta name="author" content="RulerFox ♠">
+
+		<!-- Open Graph Metadata -->
+		<meta property="og:url" content="https://celestinaproject.github.io/rules/leaderboard-webnovel.html">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Celestina Project">
+		<meta property="og:description" content="Celestina Project Leaderboard WebNovel">
+		<meta property="og:image" content="https://celestinaproject.github.io/assets/celestina/icon.png">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+
+		<!-- Twitter Card Metadata -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@KeimLite">
+		<meta name="twitter:title" content="Celestina Project">
+		<meta name="twitter:description" content="Celestina Project Leaderboard WebNovel">
+		<meta name="twitter:image" content="https://celestinaproject.github.io/assets/celestina/icon.png">
+		<meta property="twitter:domain" content="celestinaproject.github.io">
+		<meta property="twitter:url" content="https://celestinaproject.github.io/rules/leaderboard-webnovel.html">
+
+		<!-- Theme Color -->
+		<meta name="theme-color" content="#33e4f9">
+
+		<!-- Additional Metadata -->
+		<meta name="robots" content="index, follow">
+		<meta name="language" content="es">
+		<meta name="revisit-after" content="7 days">
+		<meta name="rating" content="general">
+		<meta name="distribution" content="global">
+		<meta name="format-detection" content="telephone=no">
+	
+		<!-- CSS -->
+		<link rel="stylesheet" href="../styles.css/sty_base_2.css">
+		<link rel="stylesheet" href="../styles.css/sty_footer.css">
+		<link rel="stylesheet" href="../styles.css/sty_bg-aqua.css">
+		<link rel="stylesheet" href="../styles.css/sty_color-palette.css">
+		<link rel="stylesheet" href="../styles.css/sty_letterAni.css">
+		<link rel="stylesheet" href="../styles.css/sty_button-more-week.css">
+        <link rel="stylesheet" href="../styles.css/sty_button-order-week.css">
+        <link rel="stylesheet" href="../styles.css/sty_button-filter-week.css">
+        <link rel="stylesheet" href="../styles.css/sty_button-download-week.css">
+        <link rel="stylesheet" href="../styles.css/sty_button-print-week.css">
+		<link rel="stylesheet" href="../styles.css/sty_button-compare-week.css">
+        <link rel="stylesheet" href="../styles.css/sty_button-pagination-week.css">
+        <link rel="stylesheet" href="../styles.css/sty_novels-week-wn.css">
+        <link rel="stylesheet" href="../styles.css/sty_scrollTop.css">
+		<link rel="stylesheet" href="../styles.css/sty_scrollBottom.css">
+		<link rel="stylesheet" href="../styles.css/sty_compareNovels-week.css">
+		<style>
+			body {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		</style>
+	
+		<!-- SCRIPTS -->
+		<script src="../scripts.js/scr_novelsDataTotal.js"></script>
+		<script src="../scripts.js/scr_novels-week-wn.js"></script>
+		<script src="../scripts.js/scr_novels-week-conf-wn.js"></script>
+		<script src="../scripts.js/scr_button-printNload-week-wn.js"></script>
+        <script src="../scripts.js/scr_button-filter-week-wn.js"></script>
+		<script src="../scripts.js/scr_button-toggles-week.js"></script>
+		<script src="../scripts.js/scr_novel-compare-week-wn.js"></script>
+		<script src="../scripts.js/scr_novel-select-week.js"></script>
+		<script src="../scripts.js/scr_validateSearch.js"></script>
+		<script src="../scripts.js/scr_autocompleteSearch-2.js"></script>
+		<script src="../scripts.js/scr_getCelesParam.js"></script>
+		<script src="../scripts.js/scr_displaySearchTerm.js"></script>
+		<script src="../scripts.js/scr_displayResults.js"></script>
+		<script src="../scripts.js/scr_main.js"></script>
+	</head>
+	<body>
+		<!-- HEADER -->
+		<header>
+			<img src="../assets/celestina/5.png" alt="Logo" onclick="window.location.href='../index.html'" title="¡Ce-les-ti-na!">
+			<div class="search-bar">
+				<form action="found.html" method="get" onsubmit="return validateSearch()" style="display: flex;flex-direction: column;flex-wrap: wrap;align-content: center;align-items: center;width: -webkit-fill-available;">
+					<input type="text" name="celes" id="searchceles" placeholder="Buscar novela..." oninput="autocompleteSearch()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+					<button onclick="displayResults()" class="search-button">
+						<img src="../assets/ui/search.png" class="search-img">
+					</button>
+					<div id="autocomplete-list" class="autocomplete-suggestions"></div>
+				</form>
+			</div>
+			<!-- OPTION BAR -->
+			<nav>
+				<ul>
+					<li><a href="../index.html">Hogar</a></li>
+					<li>
+						<a>Top Semanal</a>
+						<ul>
+							<li>
+								<a href="leaderboard-niadd.html">
+									<img src="../assets/ui/topCrown.png" alt="Ranking">niadd
+								</a>
+							</li>
+							<li>
+								<a href="leaderboard-webnovel.html">
+									<img src="../assets/ui/topCrown.png" alt="Ranking">webnovel
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="museum.html">Museo</a></li>
+					<li><a href="wip.html">Reto Diario</a></li>
+					<li><a href="eimon.html">Eimon Q</a></li>
+					<li><a href="wip.html">MÁS</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- TOP -->
+		<div class="header" style="padding: 10px;margin: 30px;position: relative;">
+            <h1>SEMANA NÚMERO 1</h1> <!-- Semanas -->
+            <p style="color: rgb(var(--light-rgb));">NOVELAS MÁS VISITADAS</p> <!-- Visitas/Seguidores -->
+        </div>
+        <button class="filter-button" onclick="toggleFilterMenu()" style="cursor: url('../assets/cursor/miku2.cur'), auto;">
+            <img id="filterToggleImg" src="../assets/ui/filter_on.png" alt="Filter Icon" title="Filtro">
+        </button>
+		
+		<!--
+        <button class="print-button" onclick="togglePrintMenu()" style="cursor: url('../assets/cursor/miku2.cur'), auto;">
+            <img src="../assets/ui/download.png" alt="Download Icon" title="Imprimir">
+        </button> -->
+		
+		<!-- FILTER MENU -->
+        <div class="filter-menu" id="filterMenu" style="top: 323px;">
+            <p style="font-size: large">FILTRAR</p>
+                <form class="filterForm">
+                    <label for="author" class="filterLabel">Autor</label>
+                    <select id="author" name="author" class="filterSelect" title="Filtrar por autor">
+                        <option value="">Todos</option>
+                    </select>
+					
+                    <label for="rating" class="filterLabel">Puntuación</label>
+                    <select id="rating" name="rating" class="filterSelect" title="Filtrar por puntuación">
+                        <option value="">Todos</option>
+                    </select>
+					
+                    <button type="button" onclick="applyFilters()" class="filterOptionButton">Aplicar Filtros</button>
+					<button id="resetButton" onclick="resetFilters()" class="resetOptionButton">Reiniciar</button>
+                </form>
+            </div>
+        </div>
+		
+		<!-- PRINT MENU 
+        <div class="print-menu" id="printMenu">
+            <p style="font-size: large">DESCARGAR<p>
+            <div style="padding-bottom: 10px; border-bottom: 1px solid rgb(var(--dark-rgb)); border-bottom-style: dashed;">
+                <label>
+                    <p><input type="checkbox" id="statusActivo" value="Activo" title="Imprimir por novelas activas">Activo</p>
+                </label>
+                <label>
+                     <p><input type="checkbox" id="statusInactivo" value="Inactivo" title="Imprimir por novelas inactivas">Inactivo</p>
+                </label>
+                <label>
+                     <p><input type="checkbox" id="statusFinalizado" value="Finalizado" title="Imprimir por novelas finalizadas">Finalizado</p>
+                </label>
+                <label>
+                     <p><input type="checkbox" id="statusEliminado" value="Eliminado" title="Imprimir por novelas eliminadas">Eliminado</p>
+                </label>
+                <button onclick="printFilteredNovels()" style="cursor: url('../assets/cursor/miku2.cur'), auto;">Imprimir</button>
+            </div>
+        </div> -->
+		
+		<!-- NOVELS -->
+        <div id="novelsList"></div>
+		<!-- PAGINATION -->
+        <div id="pagination" class="paginationButton"></div>
+		<!-- BUTTON UP -->		
+		<button id="toTopBtn" style="opacity: 0%; transition: ease 0.3s; display: flex;">
+            <img src="../assets/ui/arrowCircle_up.png" alt="Ir Arriba">Ir Arriba
+        </button>
+		<!-- BUTTON DOWN -->
+		<button id="toBottomBtn" style="opacity: 100%; transition: ease 0.3s; display: flex;">
+            <img src="../assets/ui/arrowCircle_up.png" alt="Ir Abajo">Ir Abajo
+        </button>
+		<!-- COMPARISON/FORM -->
+		<div style="position: fixed; z-index:2; right:25px; top:178px;">
+		<!-- FORM -->
+			<form class="compareForm" id="compareForm">
+				<select id="novel1" name="novel1" class="selectNovels">
+					<option value="-1"> Novela 1</option>
+				</select>
+				<select id="novel2" name="novel2" class="selectNovels">
+					<option value="-1"> Novela 2</option>
+				</select>
+				<button class="compareButton" type="button" onclick="compareNovels()">Comparar</button>
+			</form>
+		<!-- COMPARISON -->
+			<div>
+				<!-- CLOSE/OPEN -->
+				<button id="compareToggle" class="compare-button" onclick="toggleCompareMenu()" style="cursor: url('../assets/cursor/miku2.cur'), auto;">
+					<img id="compareToggleImg" src="../assets/ui/add.png" alt="Add Icon" title="Cerrar Comparador">
+				</button>
+				<!-- RESULTS -->
+				<div id="comparisonResult">
+					<div class="novel-info">
+						<img src="../novels/covers/noCover.webp" alt="noCoverSelect">
+						<h2>Por favor, seleccione una novela</h2>
+					</div>
+					<div class="comparison-details">
+								<h3>COMPARACIÓN</h3>
+								<p> — </p>
+								<p> — </p>
+								<p> — </p>
+					</div>
+					<div class="novel-info">
+						<img src="../novels/covers/noCover.webp" alt="noCoverSelect">
+						<h2>Por favor, seleccione una novela</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- BACKGROUND -->
+			<div id="app">
+				<div id="star-container">
+					<div id="star-pattern"></div>
+					<div id="star-gradient-overlay"></div>
+				</div>
+			</div>
+		<!-- FOOTER -->
+		<footer>
+			<div class="footer-content">
+				<div class="footer-section">
+					<h3>¿Top Semanal de Novelas?</h3>
+					<p>El Top Semanal de Novelas es una sección pequeña en nuestro servidor de Discord. Cada semana, se actualiza para presentar las diez obras más populares, seleccionadas en función de su número total de visitas o seguidores.</p>
+				</div>
+				<div class="footer-section">
+					<h3>¿Hay alguna recompensa?</h3>
+					<p>Actualmente, no existe ninguna compensación por quedar en primer lugar o en el top diez. Esto es solo un método para motivar a que la gente publique semana a semana sin rendirse.</p>
+				</div>
+				<div class="footer-section">
+					<h3>¿Cómo puedo participar?</h3>
+					<p>Es sencillo. Solo debes hablar con el encargado o la encargada de manejar las actualizaciones del top y él o ella te agregará. Sin depositos ni pagos por recarga.</p>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="wave">
+					<p>CELESTINA PROJECT × WebNovel</p>
+					<span>❤</span> | <span>🐌</span>
+				</div>
+			</div>
+			<a onclick="window.location.href='rulerfox.html'">
+				<img src="../assets/buttons/miku_approved.gif" style="position: absolute; bottom: 1px; left: 0px; z-index: 2;" title="Hoy no es Pascua">
+			</a>
+			<div class= "socialWeb">
+				<p style="color: rgb(var(--light-rgb)); text-align: center; text-size: 8; padding-top: inherit;">¡Visita todas nuestras redes sociales!</p>
+				<div style="text-align: center;display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: space-evenly;">  
+					<a onclick="window.location.href='https://x.com/KeimLite'">
+						<img src="../assets/social/twitter.png" alt="Twitter" class="socialImg" title="X(Twitter)">
+					</a>
+					<a onclick="window.location.href='https://discord.com/invite/fDY7MqHb4d'">
+						<img src="../assets/social/discord.png" alt="Discord" class="socialImg" title="Discord">
+					</a>
+					<a onclick="window.location.href='https://whatsapp.com/channel/0029Va9IIWhHLHQXm4tCLo03'">
+						<img src="../assets/social/whatsapp.png" alt="WhatsApp" class="socialImg" title="WhatsApp">
+					</a>
+				</div>
+			</div>
+		</footer>
+		<script src="../scripts.js/scr_scrollTop.js"></script>
+		<script src="../scripts.js/scr_scrollBottom.js"></script>		
+	</body>
+</html>

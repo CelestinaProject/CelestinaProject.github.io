@@ -1,0 +1,21 @@
+cmd
+
+example:
+	cd C:\Users\nyasu\Pictures\python
+
+codes:
+	python KeimConverter.py
+	python KeimNovels.py
+	python KeimReto.py
+	python KeimWN.py
+	python ImgConverter.py
+
+
+
+
+
+
+
+
+
+By: RulerFox 🎃

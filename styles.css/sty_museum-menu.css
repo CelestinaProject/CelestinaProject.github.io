@@ -16,7 +16,7 @@ main {
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+    cursor: url('../assets/cursor/miku2.cur'), auto;
     position: relative;
     will-change: transform, box-shadow;
 	width: 300px;
@@ -36,19 +36,19 @@ main {
 }
 
 .contest-bg {
-    background-color: #00c4ff;
     width: 300px;
     height: 220px;
     position: absolute;
     z-index: -10;
     opacity: 50%;
-    mix-blend-mode: luminosity;
 	transition: ease-out 0.1s;
+	left: 40px;
 }
 
 .contest:hover .contest-bg {
 	filter: blur(1px);
 	mix-blend-mode: hard-light;
+	background-color: #00c4ff;
 }
 
 .contest-img {
@@ -74,7 +74,7 @@ main {
     transform: translateX(-20px);
     transition: opacity 0.3s ease, transform 0.3s ease;
 	max-height: 210px;
-	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
 }
 
 .contest:hover .contest-info {
@@ -131,18 +131,18 @@ main {
     font-size: 1.5rem;
 	color: rgb(var(--dark-rgb));
 	text-decoration: none;
-	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
 }
 
 .contest p {
     margin: 0.4rem 0;
     color: rgb(var(--dark-rgb));
 	text-decoration: none;
-	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
 }
 
 .contest a {
     text-decoration: none;
     color: inherit;
-	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
 }

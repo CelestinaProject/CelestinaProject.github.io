@@ -7,7 +7,7 @@
 	border: none;
 	padding: 10px;
 	border-radius: 50%;
-	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
 	z-index: 4;
 	transition: background-color 0.3s;
 }
@@ -23,7 +23,7 @@
 	display: none;
 	position: absolute;
 	left: 50px; /*+40px*/
-	top: 372px;
+	top: 358px;
 	transform: translateY(-50%);
 	background-color: rgb(var(--light-rgb));
 	border: 1px solid rgb(var(--light-rgb));
@@ -47,6 +47,6 @@
 	color: rgb(var(--light-rgb));
 	border: none;
 	border-radius: 5px;
-	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
 	margin-top: 10px;
 }

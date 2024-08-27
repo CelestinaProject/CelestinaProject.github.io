@@ -1,63 +1,101 @@
+header {
+	background: linear-gradient(90deg, rgb(var(--dark-rgb)), rgb(var(--dark-red-rgb)));
+}
+footer {
+	background: linear-gradient(90deg, rgb(var(--dark-red-rgb)), rgb(var(--dark-rgb)));
+	position: fixed;
+	bottom: 0px;
+}
+footer:hover {
+    background: linear-gradient(90deg, rgb(var(--dark-rgb)), rgb(var(--dark-red-rgb)));
+}
+footer::before {
+    background-color: rgb(var(--light-red-rgb));
+}
 body {
-                background-color: rgb(var(--dark-rgb));
-            }
-			@keyframes pan {
-                0% {
-                    background-position: 0% 0%;
-                }
-                100% {
-                    background-position: -100% -100%;
-                }
-            }
-			@keyframes color-change {
-                0%, 100% {
-                    color: rgb(var(--light-rgb));
-                }
-                50% {
-                    color: rgb(var(--light-red-rgb));
-                }
-            }
-            #star-container {
-                background: radial-gradient(rgb(var(--light-red-rgb)), rgb(var(--dark-red-rgb)));
-            }
-            #star-pattern {
-                background-image: url('../assets/patterns/404.png');
-            }
-            #star-gradient-overlay {
-                background: radial-gradient(circle, transparent 75%, rgb(var(--dark-red-rgb)));
-            }
-            .background-404 {
-                position: fixed;
-                bottom: 40%;
-                width: 400px;
-                height: 200px;
-				max-width: -webkit-fill-available;
-				max-height: -webkit-fill-available;
-                background: url('../assets/bg/404_pne-1.png') no-repeat center center;
-                background-size: cover;
-                z-index: -1;
-            }
-            .background-aqua {
-                position: fixed;
-				bottom: 90px;
-				width: -webkit-fill-available;
-				height: -webkit-fill-available;
-				max-height: 475px;
-				max-width: 300px;
-				background: url(../assets/bg/aqua_render-2.png) no-repeat center center;
-				background-size: contain;
-				z-index: -1;
-				cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
-            }
-            .background-aqua:hover {
-                transform: scale(1.03);
-                rotate: -2deg;
-            }
-			.sidebar ul li:hover {
-				background-color: rgb(var(--dark-red-rgb));
-				color: rgb(var(--dark-rgb));
-				border-color: rgb(var(--dark-red-rgb));
-			}
-			footer {
-				position: absolute;
-            }
+	background-color: rgb(var(--dark-rgb));
+}
+@keyframes pan {
+	0% {
+		background-position: 0% 0%;
+	}
+	100% {
+		background-position: -100% -100%;
+	}
+}
+@keyframes color-change {
+	0%, 100% {
+		color: rgb(var(--light-rgb));
+	}
+	50% {
+		color: rgb(var(--light-red-rgb));
+	}
+}
+#star-container {
+	background: radial-gradient(rgb(var(--light-red-rgb)), rgb(var(--dark-red-rgb)));
+}
+#star-pattern {
+	background-image: url('../assets/patterns/404.webp');
+}
+#star-gradient-overlay {
+	background: radial-gradient(circle, transparent 75%, rgb(var(--dark-red-rgb)));
+}
+.bg404 {
+	width: -webkit-fill-available;
+	height: -webkit-fill-available;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+.background-404 {
+	position: fixed;
+	bottom: 40%;
+	width: 400px;
+	height: 200px;
+	max-width: -webkit-fill-available;
+	max-height: -webkit-fill-available;
+	background: url('../assets/bg/404_pne-1.webp') no-repeat center center;
+	background-size: cover;
+	z-index: -1;
+}
+.background-aqua {
+	position: fixed;
+	bottom: 6%;
+	width: -webkit-fill-available;
+	height: -webkit-fill-available;
+	max-height: 475px;
+	max-width: 300px;
+	background: url(../assets/bg/aqua_render-2.webp) no-repeat center center;
+	background-size: contain;
+	z-index: -1;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
+}
+.background-aqua:hover {
+	transform: scale(1.03);
+	rotate: -2deg;
+}
+.sidebar ul li:hover {
+	background-color: rgb(var(--dark-red-rgb));
+	color: rgb(var(--dark-rgb));
+	border-color: rgb(var(--dark-red-rgb));
+}
+::selection {
+cursor: url('../assets/cursor/miku8.cur'), auto;
+background-color: rgb(var(--light-red-rgb));
+}
+
+::-webkit-scrollbar {
+	background-color: rgb(var(--dark-rgb));
+	color: rgb(var(--light-rgb));
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb(var(--dark-red-rgb));
+}
+
+::-webkit-scrollbar-corner {
+	background-color: rgb(var(--dark-rgb));
+}

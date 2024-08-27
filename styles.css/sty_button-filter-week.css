@@ -7,7 +7,7 @@
 	border: none;
 	padding: 10px;
 	border-radius: 50%;
-	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
 	z-index: 6;
 	transition: background-color 0.3s;
 }
@@ -43,11 +43,11 @@
     margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+    cursor: url('../assets/cursor/miku2.cur'), auto;
 }
 
 .filterOption {
-    cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+    cursor: url('../assets/cursor/miku2.cur'), auto;
 }
 
 .filter-menu {
@@ -74,7 +74,7 @@
 	color: rgb(var(--light-rgb));
 	border: 1px solid rgb(var(--light-rgb));
 	border-radius: 5px;
-	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
 	margin-top: 10px;
 }
 .filterOptionButton:hover {
@@ -91,7 +91,7 @@
 	color: rgb(var(--light-rgb));
 	border: none;
 	border-radius: 5px;
-	cursor: url('../assets/mouse/cursor_Miku-1/miku2.cur'), auto;
+	cursor: url('../assets/cursor/miku2.cur'), auto;
 	margin-top: 10px;
 }
 .resetOptionButton:hover {
