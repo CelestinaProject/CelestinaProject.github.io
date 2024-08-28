@@ -22,7 +22,7 @@
 
 .header {
     background: linear-gradient(to right, rgb(var(--light-skyblue-rgb)), rgb(var(--dark-skyblue-rgb)));
-    background-image: url(../assets/banners/top-1.webp);
+    /*background-image: url(../assets/banners/top-1.webp);*/
     background-size: cover;
     background-position: 0px -45px;
     padding: 10px;

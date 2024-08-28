@@ -2,7 +2,7 @@ import os
 from PIL import Image
 
 # Ruta de la carpeta con las imágenes
-carpeta_imagenes = r'C:\Users\bgbon\Pictures\CelestinaProject V.2\python\img'
+carpeta_imagenes = r'img'
 
 # Crear una carpeta para las imágenes convertidas
 carpeta_webp = os.path.join(carpeta_imagenes, 'webp')
