@@ -46,7 +46,7 @@
 	cursor: url('../assets/cursor/miku2.cur'), auto;
 }
 #comparisonResult {
-	background: #fff;
+	background: rgb(var(--light-rgb));
 	padding: 20px;
 	border-radius: 5px;
 	box-shadow: 0px 0px 4px 4px rgb(0 0 0 / 36%);

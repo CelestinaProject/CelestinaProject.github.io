@@ -7,14 +7,16 @@ function autocompleteSearch() {
         return;
     }
 
+    // Filtrar por título y autor
     const filteredNovelsSearch = novelsDataTotal.filter(novel => 
-        novel.titleSearch.toLowerCase().includes(celes)
-    );
-	
-	const filteredNovelsSearch2 = novelsDataTotal.filter(novel => 
+        novel.titleSearch.toLowerCase().includes(celes) ||
         novel.author.toLowerCase().includes(celes)
     );
 
+    // Ordenar alfabéticamente por título
+    filteredNovelsSearch.sort((a, b) => a.titleSearch.localeCompare(b.titleSearch));
+
+    // Mostrar sugerencias
     filteredNovelsSearch.forEach(novel => {
         const suggestion = document.createElement('div');
         suggestion.className = 'autocomplete-suggestion';
@@ -28,22 +30,6 @@ function autocompleteSearch() {
             window.location.href = `found.html?celes=${encodeURIComponent(novel.titleSearch)}`;
         };
         autocompleteList.appendChild(suggestion);
-    });
-	
-	filteredNovelsSearch2.forEach(novel => {
-        const suggestion2 = document.createElement('div');
-        suggestion2.className = 'autocomplete-suggestion';
-        suggestion2.innerHTML = `
-            <img src="../novels/covers/${novel.title}.webp" alt="${novel.title}" title="${novel.title}">
-            <span>${novel.title}</span>
-        `;
-        suggestion2.onclick = function() {
-            document.getElementById('searchceles').value = novel.titleSearch;
-			document.getElementById('searchceles').value = novel.author;
-            autocompleteList.innerHTML = '';
-            window.location.href = `found.html?celes=${encodeURIComponent(novel.author)}`;
-        };
-        autocompleteList.appendChild(suggestion2);
     });
 }
 

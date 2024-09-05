@@ -11,7 +11,7 @@ main {
 }
 
 .contest {
-    background-color: #fff;
+    background-color: rgb(var(--light-rgb));
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -57,7 +57,7 @@ main {
     display: block;
     transition: transform 0.3s ease;
 	border: inherit;
-    border-color: black;
+    border-color: rgb(var(--dark-rgb));
     border-left: none;
     border-top: none;
     border-bottom: none;
@@ -75,6 +75,7 @@ main {
     transition: opacity 0.3s ease, transform 0.3s ease;
 	max-height: 210px;
 	cursor: url('../assets/cursor/miku2.cur'), auto;
+
 }
 
 .contest:hover .contest-info {
@@ -91,7 +92,7 @@ main {
     max-width: 190px;
     max-height: 220px;
     height: 220px;
-    text-shadow: 0 0 20px black;
+    text-shadow: 0 0 20px rgb(var(--dark-rgb));
     text-rendering: optimizespeed;
     display: flex;
     flex-direction: column;
@@ -113,7 +114,7 @@ main {
     max-width: 190px;
     max-height: 220px;
     height: 220px;
-    text-shadow: 0 0 20px black;
+    text-shadow: 0 0 20px rgb(var(--dark-rgb));
     text-rendering: optimizespeed;
     display: flex;
     flex-direction: column;

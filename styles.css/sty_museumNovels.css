@@ -23,7 +23,7 @@ main {
 }
 
 .novel {
-    background-color: #fff;
+    background-color: rgb(var(--light-rgb));
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -53,7 +53,7 @@ main {
     display: block;
     transition: transform 0.3s ease;
 	border: inherit;
-    border-color: black;
+    border-color: rgb(var(--dark-rgb));
     border-left: none;
     border-top: none;
     border-bottom: none;
@@ -164,7 +164,7 @@ main {
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: rgb(var(--light-rgb));
     padding: 20px;
     border: 1px solid #888;
     width: -webkit-fill-available;
@@ -186,7 +186,7 @@ main {
 
 .close-button:hover,
 .close-button:focus {
-    color: #000;
+    color: rgb(var(--dark-rgb));
     text-decoration: none;
     cursor: url('../assets/cursor/miku2.cur'), auto;
 }
@@ -324,6 +324,11 @@ main {
     margin: 20px 0;
     padding: 0 10px;
 	background-color: rgb(var(--secondary-stripe-rgb));
+	text-rendering: optimizespeed;
+}
+
+.novel-content p {
+	text-rendering: optimizespeed;
 }
 
 .progress-container {
@@ -361,7 +366,7 @@ p.uppercase { text-transform: uppercase; }
 p.lowercase { text-transform: lowercase; }
 p.capitalize { text-transform: capitalize; }
 p.highlight { background-color: yellow; }
-p.shadow { text-shadow: 2px 2px 4px #000000; }
+p.shadow { text-shadow: 2px 2px 4px rgb(var(--dark-rgb))000; }
 p.large { font-size: 1.5em; }
 p.small { font-size: 0.75em; }
 p.indent { text-indent: 2em; }
@@ -401,7 +406,7 @@ p.quote {
 		color: rgb(var(--light-skyblue-rgb));
 	}
 	50% {
-		color: #333;
+		color: rgb(var(--dark-rgb));
 	}
 }
 .song {

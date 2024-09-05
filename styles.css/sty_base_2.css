@@ -3,7 +3,7 @@
 			margin: 0;
 			padding: 0;
 			background-color: #f4f4f4;
-			color: #333;
+			color: rgb(var(--dark-rgb));
 			overflow-x: hidden;
 			cursor: url('../assets/cursor/miku1.cur'), auto;
 			z-index: 0;
@@ -64,7 +64,7 @@
 			border-radius: 0px 50px 50px 0px;
 			right: 0;
 			filter: invert(0);
-			background-color: black;
+			background-color: rgb(var(--dark-rgb));
 			height: -webkit-fill-available;
 			max-width: 30px;
 			width: -webkit-fill-available;
@@ -110,10 +110,10 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #000;
+            color: rgb(var(--dark-rgb));
             padding: 8px 0;
             transition: color 0.3s ease;
-			filter: drop-shadow(0px 0px 4px white);
+			filter: drop-shadow(0px 0px 4px rgb(var(--light-rgb)));
 			text-transform: uppercase;
 			font-weight: bold;
         }
@@ -123,7 +123,7 @@
         }
 
         nav ul li a:hover {
-            color: #fff;
+            color: rgb(var(--light-rgb));
         }
 
         nav ul li ul {
@@ -195,7 +195,7 @@
             background: linear-gradient(90deg, rgb(var(--light-skyblue-rgb)), rgb(var(--dark-rgb)));
             padding: 20px;
             text-align: center;
-            color: #fff;
+            color: rgb(var(--light-rgb));
             position: relative;
             bottom: 0;
             width: -webkit-fill-available;
@@ -323,7 +323,7 @@
         }
 		.autocomplete-suggestions {
             position: absolute;
-			background-color: #fff;
+			background-color: rgb(var(--light-rgb));
 			border: 1px solid #ddd;
 			border-radius: 0px 0px 8px 8px;
 			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);

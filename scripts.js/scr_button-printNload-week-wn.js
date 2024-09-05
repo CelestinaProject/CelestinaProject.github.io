@@ -6,7 +6,7 @@ function printFilteredNovels() {
     if (document.getElementById('statusEliminado').checked) filters.push('Eliminado');
     
     const filteredNovels = newNovels.filter(novel => filters.includes(novel.status));
-    let output = '**TOP DE NOVELAS MÁS VISITADAS PUBLICADAS EN NIADD**\n\n';
+    let output = '**TOP DE NOVELAS CON MÁS COLLECIONES EN WEBNOVEL**\n\n';
     
     filteredNovels.forEach((novel, index) => {
         const oldNovel = oldNovels.find(n => n.title === novel.title);
@@ -30,7 +30,7 @@ function printFilteredNovels() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'Top_Novelas_Niadd.txt';
+    a.download = 'Top_Novelas_WebNovel.txt';
     a.click();
     URL.revokeObjectURL(url);
 }

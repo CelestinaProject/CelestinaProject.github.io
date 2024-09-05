@@ -17,7 +17,7 @@
 
 .novel-container:hover {
     transform: translateY(-10px);
-	box-shadow: 6px 6px 12px #c9c9c9, -6px -6px 12px #ffffff;
+	box-shadow: 6px 6px 12px #c9c9c9, -6px -6px 12px rgb(var(--light-rgb));
 }
 
 .header {
@@ -58,7 +58,7 @@
 	text-align: center;
     margin: 5px 0;
     color: rgb(var(--light-rgb));
-	text-shadow: 0 0 4px black;
+	text-shadow: 0 0 4px rgb(var(--dark-rgb));
 	cursor: url(../assets/cursor/miku1.cur), auto;
 }
 
@@ -99,6 +99,7 @@
 .novel-title {
     font-size: larger;
     font-weight: bold;
+	text-transform: capitalize;
     cursor: url('../assets/cursor/miku2.cur'), auto;
 	transition: color 0.3s;
 	color: rgb(var(--dark-skyblue-rgb));

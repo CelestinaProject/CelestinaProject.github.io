@@ -20,7 +20,7 @@ body, html {
 }
 .particle {
     position: absolute;
-    background: white;
+    background: rgb(var(--light-rgb));
     border-radius: 50%;
     opacity: 0;
     animation: particle-animation linear infinite;

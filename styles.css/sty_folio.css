@@ -2,10 +2,10 @@
     --primary-color: #ff4500;
     --secondary-color: #f4f9f9;
 	--terciary-color: 255 255 255;
-	--cuartec-color: #000000;
-    --background-color: #000;
-    --text-color: #000;
-    --sidebar-bg-color: #000;
+	--cuartec-color: 0 0 0;
+    --background-color: 0 0 0;
+    --text-color: 0 0 0;
+    --sidebar-bg-color: 0 0 0;
     --hover-color: #ff6347;
     --transition-duration: 0.3s;
     --primary-stripe-rgb: 0 0 0;
@@ -14,7 +14,7 @@
 }
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: black;
+    background-color: rgb(var(--background-color));
     color: rgb(var(--cuartec-color));
     margin: 0;
     padding: 0px;
@@ -147,7 +147,7 @@ header {
     bottom: -100%;
     left: 0;
     width: 100%;
-    background: var(--cuartec-color);
+    background: rgb(var(--cuartec-color));
     color: rgb(var(--terciary-color));
     padding: 20px;
     box-sizing: border-box;
@@ -208,13 +208,13 @@ header {
 	position: relative;
     transform: translateY(20px);
     transition: all 0.5s ease-in-out;
-    border: 1px solid black;
+    border: 1px solid rgb(var(--background-color));
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
     margin-top: 25px;
 	margin-left: 25px;
 	margin-right: 25px;
-    background-color: black;
+    background-color: rgb(var(--background-color));
 	box-shadow: -1px 4px 0px 0px rgb(255 255 255);
 }
 /*.novel:nth-child(even) {
@@ -321,7 +321,7 @@ header {
 .novel:hover {
     border-color: var(--primary-color);
     transform: translateY(-10px);
-    color: var(--text-color);
+    color: rgb(var(--text-color));
     background-size: 18px 18px;
     background-image: linear-gradient(
         45deg,
@@ -336,12 +336,12 @@ header {
     animation: pan 360s linear infinite;
 }
 ::-webkit-scrollbar {
-    background-color: black;
+    background-color: rgb(var(--background-color));
     color: red;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: white;
+    background-color: rgb(var(--terciary-color));
 }
 ::-webkit-scrollbar-corner {
-    background-color: black;
+    background-color: rgb(var(--background-color));
 }

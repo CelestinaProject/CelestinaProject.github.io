@@ -24,7 +24,7 @@ body {
 	cursor: url('../assets/cursor/miku1.cur'), auto;
 	border: 0px;
 	overflow: hidden;
-	background-color: black;
+	background-color: rgb(var(--dark-rgb));
 }
 .background-animation {
 	position: fixed;
@@ -38,9 +38,8 @@ body {
 }
 h1, h2 {
 	text-align: center;
-	
-	color: white;
-	text-shadow: 0px 0px 6px black;
+	color: rgb(var(--light-rgb));
+	text-shadow: 0px 0px 6px rgb(var(--dark-rgb));
 	animation: fadeIn 2s ease-in-out infinite;
 	cursor: url('../assets/cursor/miku2.cur'), auto;
 }
@@ -54,7 +53,7 @@ h2 {
 	font-family: Arial, sans-serif;
 }
 a {
-	color: white;
+	color: rgb(var(--light-rgb));
 	text-decoration: none;
 }
 @keyframes fadeIn {

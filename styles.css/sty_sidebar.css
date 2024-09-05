@@ -21,7 +21,7 @@ cursor: url('../assets/cursor/miku2.cur'), auto;
 
 .menu-icon img {
 	border: thin;
-	border-color: white;
+	border-color: rgb(var(--light-rgb));
 	border-style: solid;
 	border-radius: 5px;
 	height: 40px;
