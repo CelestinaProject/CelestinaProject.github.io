@@ -9,8 +9,10 @@ function autocompleteSearch() {
 
     // Filtrar por título y autor
     const filteredNovelsSearch = novelsDataTotal.filter(novel => 
-        novel.titleSearch.toLowerCase().includes(celes) ||
-        novel.author.toLowerCase().includes(celes)
+        novel.title.toLowerCase().includes(celes) ||
+		novel.titleSearch.toLowerCase().includes(celes) ||
+        novel.author.toLowerCase().includes(celes) ||
+		novel.platform.toLowerCase().includes(celes)
     );
 
     // Ordenar alfabéticamente por título

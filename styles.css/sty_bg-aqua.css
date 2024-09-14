@@ -17,7 +17,7 @@ position: fixed;
 z-index: -2;
 }
 #star-container {
-background: radial-gradient(rgb(var(--light-skyblue-rgb)), rgb(var(--dark-skyblue-rgb)));
+/*background: radial-gradient(rgb(var(--light-skyblue-rgb)), rgb(var(--dark-skyblue-rgb)));*/
 overflow: hidden;
 position: fixed;
 width: 100%;
@@ -37,12 +37,13 @@ height: 100%;
 width: 100%;
 min-width: 1200px;
 opacity: 0.10;
+filter: grayscale(1);
 animation: pan 180s linear infinite;
 will-change: background-position;
 z-index: -10;
 }
 #star-gradient-overlay {
-background: radial-gradient(circle, transparent 75%, rgb(var(--dark-skyblue-rgb)));
+/*background: radial-gradient(circle, transparent 75%, rgb(var(--dark-skyblue-rgb)));*/
 position: fixed;
 left: 0px;
 top: 0px;

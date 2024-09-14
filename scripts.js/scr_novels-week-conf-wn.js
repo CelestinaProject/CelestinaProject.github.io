@@ -1,5 +1,5 @@
-const sortCriteria = 'views'; // 'followers', 'views' o 'chapters'
-const sortOrder = 'desc'; // 'asc' (menor a mayor) o 'desc' (mayor a menor)
+const sortCriteria = 'collections';
+const sortOrder = 'desc';
 const itemsPerPage = 10;
 let currentPage = 1;
 let filteredNovels = newNovels;
@@ -63,17 +63,16 @@ function renderNovels(novelsToRender, startIndex) {
             <div class="novel-container">
                 <div class="novel-header" onclick="toggleDetails(${currentIndex - 1})" style="cursor: url('../assets/cursor/miku2.cur'), auto;" title="${novel.title}">
                     <span>${currentIndex}</span>
-                    <img src="${novel.cover}" alt="${novel.title} cover" class="novel-cover">
+                    <img src="../novels/covers/${novel.title}.webp" alt="${novel.title} cover" class="novel-cover">
                     <div>
                         <div class="novel-title">${novel.title}</div>
                         <div>Autor: ${novel.author}</div>
-                        <div>Visitas: ${novel.views}</div>
-                        <div class="status-icon">Calificación: ${statusIcon} ${novel.rating}</div>
+                        <div>Colleciones: ${novel.collections} ❤</div>
                     </div>
                 </div>
                 <div class="novel-details" id="details-${currentIndex - 1}">
                     <div>Capítulos: ${novel.chapters}</div>
-                    <div>Fecha: ${novel.date}</div>
+					<div class="status-icon">Calificación: ${novel.rating} ${statusIcon}</div>
                     <a href="${novel.url}" target="_blank"><img src="../assets/platforms/webNovel.webp" alt="${novel.title} cover" class="novel-cover" style="height: 40px; width: auto; cursor: url('../assets/cursor/miku2.cur'), auto;"></a>
                 </div>
             </div>

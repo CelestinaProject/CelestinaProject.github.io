@@ -47,6 +47,7 @@ urls_info = [
     "https://es.niadd.com/original/10061792.html", # Kitsune Fever
     "https://es.niadd.com/original/10069008.html", # Yoru No Naka De Odoru
     "https://es.niadd.com/original/10068130.html", # Saikoro Ga Kimeru (Los Dados Deciden)
+    "https://es.niadd.com/original/10069970.html", # ¡Tengo Las Armas Más Poderosas Rango XXX!
     # Aquí van las URLS...
 ]
 

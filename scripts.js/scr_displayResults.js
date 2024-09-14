@@ -10,8 +10,10 @@ function displayResults() {
     const filteredNovels = celes.length === 0
         ? novelsDataTotal
         : novelsDataTotal.filter(novel => 
-            novel.titleSearch.toLowerCase().includes(celes) || 
-            novel.author.toLowerCase().includes(celes)
+            novel.title.toLowerCase().includes(celes) ||
+			novel.titleSearch.toLowerCase().includes(celes) || 
+            novel.author.toLowerCase().includes(celes) ||
+			novel.platform.toLowerCase().includes(celes)
         );
 
     if (filteredNovels.length > 0) {
@@ -44,7 +46,7 @@ function displayResults() {
                 <img src="../novels/covers/${novel.title}.webp" 
                      alt="${novel.title}" 
                      title="${novel.title}">
-                <h2 style="text-transform: uppercase;">${novel.titleSearch}</h2>
+                <h2 style="text-transform: uppercase;">${novel.title}</h2>
                 <p>Autor: ${novel.author}</p>
                 <p>Capítulos: ∓${novel.chapters}</p>
                 <p>

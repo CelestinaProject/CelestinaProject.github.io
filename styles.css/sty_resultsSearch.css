@@ -10,28 +10,29 @@
 
 .result-item {
 	margin-bottom: 20px;
-	padding: 15px;
-	background-color: rgb(var(--light-rgb));
-	border-radius: 8px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-	max-width: 300px;
-	width: 250px;
-	height: 270px;
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	justify-content: space-evenly;
-	align-items: center;
-	flex-wrap: wrap;
-	max-height: 300px;
+    padding: 5px 15px 5px 15px;
+    background-color: rgb(var(--light-rgb));
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 250px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    max-height: 300px;
 }
 
 .socialresults {
 	display: flex;
-	justify-content: space-evenly;
-	position: relative;
-	left: 124px;
-	top: -12px;
+    justify-content: flex-end;
+    position: relative;
+    width: -webkit-fill-available;
+    align-items: center;
+    flex-direction: row;
 }
 
 .result-item img {
