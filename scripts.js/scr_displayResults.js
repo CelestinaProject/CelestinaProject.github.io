@@ -43,9 +43,11 @@ function displayResults() {
                              title="Leer en ${novel.platform}">
                     </a>
                 </div>
-                <img src="../novels/covers/${novel.title}.webp" 
+                <a href="../novels/covers/${novel.title}.webp" target="_blank" style="width: 75px;height: 120px;display: flex;justify-content: center;align-items: center;">
+				<img src="../novels/covers/${novel.title}.webp" 
                      alt="${novel.title}" 
                      title="${novel.title}">
+				</a>
                 <h2 style="text-transform: uppercase;">${novel.title}</h2>
                 <p>Autor: ${novel.author}</p>
                 <p>Capítulos: ∓${novel.chapters}</p>

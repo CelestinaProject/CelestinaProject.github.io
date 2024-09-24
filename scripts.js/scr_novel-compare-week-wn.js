@@ -10,30 +10,26 @@ function compareNovels() {
         return;
     }
 	
-    const chaptersDifference = Math.abs(novel1.chapters - novel2.chapters);
+    const collectionsDifference = Math.abs(novel1.collections - novel2.collections);
     const ratingDifference = Math.abs(novel1.rating - novel2.rating);
-    const viewsDifference = Math.abs(novel1.views - novel2.views);
 
     let resultHTML = `
                 <div class="novel-info">
-                    <img src="${novel1.cover}" alt="${novel1.title}">
+                    <img src="../novels/covers/${novel1.title}.webp" alt="${novel1.title}">
                     <h2>${novel1.title}</h2>
                 </div>
                 <div class="comparison-details">
                     <h3>COMPARACIÓN</h3>
-                    <p>Hay <strong>${chaptersDifference}</strong> capítulos de diferencia</p>
+                    <p>Hay <strong>${collectionsDifference}</strong> colecciones de diferencia</p>
                     <p>Hay <strong>${ratingDifference}</strong> estrellas de diferencia</p>
-                    <p>Hay <strong>${viewsDifference}</strong> visitas de diferencia</p>
 
-					<p style="padding-top:21px">CAPÍTULOS</p>
-					<p style="top: -7px; position: relative;"><strong>${novel1.chapters}</strong>  ||  <strong>${novel2.chapters}</strong></p>
+					<p style="padding-top:21px">COLECCIONES</p>
+					<p style="top: -7px; position: relative;"><strong>${novel1.collections}</strong>  ||  <strong>${novel2.collections}</strong></p>
 					<p style="top: -9px; position: relative;">ESTRELLAS</p>
 					<p style="top: -16px; position: relative;"><strong>${novel1.rating}</strong>  ||  <strong>${novel2.rating}</strong></p>
-					<p style="top: -17px; position: relative;">VISITAS</p>
-					<p style="top: -23px; position: relative;"><strong>${novel1.views}</strong>  ||  <strong>${novel2.views}</strong></p>
                 </div>
                 <div class="novel-info">
-                    <img src="${novel2.cover}" alt="${novel2.title}">
+                    <img src="../novels/covers/${novel2.title}.webp" alt="${novel2.title}">
                     <h2>${novel2.title}</h2>
                 </div>
             `;

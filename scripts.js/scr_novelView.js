@@ -6,7 +6,6 @@ novelsDataTotal.forEach(novel => {
     novelElement.innerHTML = `
         <a href="${novel.url}" target="_blank" style="text-decoration: none;">
             <img src="novels/covers/${novel.title}.webp" alt="${novel.title}">
-            <h3>${novel.title}</h3>
         </a>
     `;
     carouselInner.appendChild(novelElement);
@@ -29,11 +28,11 @@ function showSlide(index) {
     }
 
     // Calcular el desplazamiento para el número correcto de elementos
-    carouselInner.style.transform = `translateX(-${slideIndex * (205 / visibleItems)}%)`;
+    carouselInner.style.transform = `translateX(-${slideIndex * (100 / visibleItems)}%)`;
 }
 
 function nextSlide() {
-    showSlide(slideIndex + 0.5);
+    showSlide(slideIndex + 1);
 }
 
 function prevSlide() {
@@ -50,21 +49,20 @@ const carouselInner2 = document.getElementById('carousell-inner2');
 
 novels.forEach(novel => {
     const novelElement = document.createElement('div');
-    novelElement.classList.add('carousell-item');
+    novelElement.classList.add('carousell-item-2');
     novelElement.innerHTML = `
-        <a href="rules/museum/lucesysombras.html" style="text-decoration: none;">
+        <a href="rules/museum/lucesysombras.html" style="text-decoration: none;width: 230px;height: 350px;max-width: 230px;max-height: 350px;display: flex;">
             <img src="rules/museum/${novel.cover}" alt="${novel.titlereal}">
-            <h3>${novel.titlereal}</h3>
         </a>
     `;
     carouselInner2.appendChild(novelElement);
 });
 
 let slideIndex2 = 0;
-const visibleItems2 = 4; // Ajusta el número de elementos visibles
+const visibleItems2 = 1; // Ajusta el número de elementos visibles
 
 function showSlide2(index) {
-    const slides = document.querySelectorAll('#carousell-inner2 .carousell-item');
+    const slides = document.querySelectorAll('#carousell-inner2 .carousell-item-2');
     const totalItems2 = slides.length;
 
     if (index >= Math.ceil(totalItems2 / visibleItems2)) {
@@ -76,7 +74,7 @@ function showSlide2(index) {
     }
 
     // Calcular el desplazamiento para mostrar correctamente los elementos
-    carouselInner2.style.transform = `translateX(-${slideIndex2 * (170 / visibleItems2)}%)`;
+    carouselInner2.style.transform = `translateX(-${slideIndex2 * (100 / visibleItems2)}%)`;
 }
 
 function nextSlide2() {
@@ -90,4 +88,4 @@ function prevSlide2() {
 showSlide2(slideIndex2);
 
 // Configura el movimiento automático del segundo carrusel
-setInterval(nextSlide2, 3000); // 1000 ms = 1 segundo
+setInterval(nextSlide2, 5200); // 1000 ms = 1 segundo

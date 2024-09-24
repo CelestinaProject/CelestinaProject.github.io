@@ -17,7 +17,8 @@ position: fixed;
 z-index: -2;
 }
 #star-container {
-/*background: radial-gradient(rgb(var(--light-skyblue-rgb)), rgb(var(--dark-skyblue-rgb)));*/
+background: #ddd;
+/*radial-gradient(rgb(var(--light-skyblue-rgb)), rgb(var(--dark-skyblue-rgb)));*/
 overflow: hidden;
 position: fixed;
 width: 100%;

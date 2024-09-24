@@ -36,7 +36,6 @@
 
 		<!-- Theme Color -->
 		<meta name="theme-color" content="#33e4f9">
-
 		<!-- Additional Metadata -->
 		<meta name="robots" content="index, follow">
 		<meta name="language" content="es">
@@ -52,9 +51,10 @@
 		<link rel="stylesheet" href="styles.css/sty_color-palette.css">
 		<link rel="stylesheet" href="styles.css/sty_letterAni.css">
 		<link rel="stylesheet" href="styles.css/sty_novel-view.css">
+		<link rel="stylesheet" href="styles.css/sty_panel.css">
 	
 		<!-- SCRIPTS -->
-		<script src="scripts.js/scr_novelsDataTotal.js"></script>
+		<script src="scripts.js/scr_novelsDataTotalView.js"></script>
 		<script src="scripts.js/scr_museumNovels-LYS.js"></script>
 		<script src="scripts.js/scr_validateSearch.js"></script>
 		<script src="scripts.js/scr_autocompleteSearch.js"></script>
@@ -62,6 +62,7 @@
 		<script src="scripts.js/scr_displaySearchTerm.js"></script>
 		<script src="scripts.js/scr_displayResults.js"></script>
 		<script src="scripts.js/scr_main.js"></script>
+		<script src="scripts.js/scr_panelTabs.js"></script>
 		
 	</head>
 	<body style="display: flex;flex-direction: column;align-items: center;justify-content: center;align-content: center;flex-wrap: wrap;">
@@ -97,29 +98,13 @@
 						</ul>
 					</li>
 					<li><a href="rules/museum.html">Museo</a></li>
-					<li><a href="rules/wip.html">Reto Diario</a></li>
 					<li><a href="rules/eimon.html">Eimon Q</a></li>
-					<li><a href="rules/wip.html">COSITAS</a>
-						<!-- <ul>
-							<li>
-								<a href="rules/leaderboard-niadd.html">
-									<img src="assets/ui/topCrown.png" alt="Ranking">Ruleta
-								</a>
-							</li>
-							<li>
-								<a href="rules/leaderboard-webnovel.html">
-									<img src="assets/ui/topCrown.png" alt="Ranking">Listado personal
-								</a>
-							</li>
-						</ul> -->
-					</li>
+					<li><a href="rules/wip.html">MÁS</a>
 				</ul>
 			</nav>
 		</header>
-		<!-- TITLE 1 -->
-		<h1 class="h1c">Novelas Web</h1>
 		<!-- CAROUSEL 1 -->
-		<main class="mainnovels">
+		<main class="mainnovels" style="margin-top:2%">
 			<div class="carousell">
 				<div class="carousell-inner" id="carousell-inner"></div>
 				<button class="carousell-control prev" onclick="prevSlide()">
@@ -129,29 +114,103 @@
 					<img id="compareToggleImg" src="assets/ui/arrowDrop_right.png" alt="Arrow Right Icon">
 				</button>
 			</div>
-			
 			<div class="more-novels">
-				<a href="rules/found.html?celes=">▸ Más Novelas ◂</a>
+				<a onclick="window.location.href='rules/found.html?celes='">▸ Más Novelas ◂</a>
 			</div>
         </main>
-		<!-- TITLE 2 -->
-		<h1 class="h1c2">Novelas de Concursos</h1>
-		<!-- CAROUSEL 2 -->
-		<main class="mainnovels">
-			<div class="carousell">
-				<div class="carousell-inner" id="carousell-inner2"></div>
-				<button class="carousell-control prev" onclick="prevSlide2()">
-					<img id="compareToggleImg" src="assets/ui/arrowDrop_left.png" alt="Arrow Left Icon">
-				</button>
-				<button class="carousell-control next" onclick="nextSlide2()">
-					<img id="compareToggleImg" src="assets/ui/arrowDrop_right.png" alt="Arrow Right Icon">
-				</button>
+		<!-- PANEL -->
+<div class="panel">
+	<!-- LEFT -->
+	<div class="panel-left">
+		<h2 class="panel-title">INFORMACIÓN VARIADA</h2>
+		<div class="panel-border">
+			<div class="panel-bg">
+				<!-- Aquí puede ir más contenido -->
 			</div>
+		</div>
+	</div>
+	<!-- RIGHT -->
+	<div class="panel-right">
+		<!-- CONTEST -->
+		<h2 class="panel-title">CONCURSOS</h2>
+		<div class="panel-border">
+			<!-- CONTEST SELECTOR -->
+			<div>
+				<ul class="panel-ul">
+					<li class="panel-li">
+						<a class="panel-a active" onclick="showTab('tab1')" id="tab1-link">ACTUAL</a>
+					</li>
+					<li class="panel-li">
+						<a class="panel-a" onclick="showTab('tab2')" id="tab2-link">ANTERIOR</a>
+					</li>
+				</ul>
+			</div>
+			<!-- CONTEST TABS -->
+			<div class="panel-tabs">
+				<!-- CONTEST TAB 1 -->
+				<div id="tab1" class="panel-tab-content active">
+					<div class="panel-tab">
+						<a href="https://discord.com/channels/807285452435751004/855618660499324938/1243656849262121080" target="_blank" class="panel-tab-content-a">
+							<img src="assets/banners/events/Contest-2024 - KeimFiction.jpg" class="panel-tab-content-img">
+						</a>
+					</div>
+					<div>
+						<h3 class="panel_title" style="margin:0px;padding: 5px 5px 0px 5px;font-size: smaller;border-bottom: solid 3px rgb(var(--dark-skyblue-rgb));width: fit-content;"> REGLAS</h3>
+						<!-- RULES -->
+						<div style="margin:0px;padding: 5px 5px 0px 5px;font-size: smaller">
+							<h5 class="h5text">Incripción (Terminado)</h5>
+							<li class="litext">Máximo 16 participantes (por orden de inscripción).</li>
+							<li class="litext">Registro en el <a class="panel-a-link"href="https://docs.google.com/forms/d/e/1FAIpQLScV16lHExO4w98RkRNkEBTZL1cJVDCtLkNdOYLFBCal6PYOnw/viewform?usp=sf_link">Formulario de Google</a>.</li>
+							<li class="litext">Plazo: 5 días.</li>
+							<h5 class="h5text">Entrega de obra (En Proceso)</h5>
+							<li class="litext">Enviar en PDF.</li>
+							<li class="litext">Plazo: 21 días.</li>
+							<li class="litext">Extensión: 500-3000 palabras.</li>
+							<li class="litext">Penalización por exceso de palabras, pero no descalificación.</li>
+							<hr class="panel-hr"></hr>
+							<h5 class="h5text">Críticas</h5>
+							<li class="litext">Plazo: 15 días posterior a la entrega (puede variar).</li>
+							<hr class="panel-hr"></hr>
+							<h5 class="h5text">Géneros permitidos</h5>
+							<li class="litext">Principal: Ciencia ficción.</li>
+							<li class="litext">Subgéneros: Romance, realismo, misterio, psicología, mecha, realismo, música, y misterio.</li>
+							<hr class="panel-hr"></hr>
+							<h5 class="h5text">Criterios de evaluación:</h5>
+							<li class="litext">Formato: 20 pts.</li>
+							<li class="litext">Ortografía: 10 pts.</li>
+							<li class="litext">Presentación: 10 pts.</li>
+							<li class="litext">Elementos de la obra: 30 pts.</li>
+							<li class="litext">Worldbuilding: 20 pts.</li>
+							<li class="litext">Desarrollo de la obra: 30 pts.</li>
+						</div>
+					</div>
+				</div>
+				<!-- CONTEST TAB 2 -->
+				<div id="tab2" class="panel-tab-content">
+					<div>
+						<div class="panel-tab">
+						<a href="https://discord.com/channels/807285452435751004/855618660499324938/1243656849262121080" target="_blank" class="panel-tab-content-a">
+							<img src="assets/banners/events/Contest-2024 - Luces y Sombras.png" class="panel-tab-content-img">
+						</a>
+						</div>
+						<h3 class="panel_title" style="margin:0px;padding: 5px 5px 0px 5px;font-size: smaller;border-bottom: solid 3px rgb(var(--dark-skyblue-rgb));width: fit-content;"> RESULTADOS</h3>
+						<!-- CAROUSEL 2 -->
+						<div>
+							<main class="mainnovels">
+								<div class="carousell" style="width: 240px;height: 360px;display: flex;flex-direction: row;flex-wrap: wrap;align-content: center;justify-content: center;align-items: center;box-shadow: 0px 0px 4px 4px rgb(0 0 0 / 0%);">
+									<div class="carousell-inner" id="carousell-inner2"></div>
+								</div>
+							</main>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 			
-			<div class="more-novels">
-				<a href="rules/museum.html">▸ Más Concursos ◂</a>
-			</div>
-        </main>
 		<!-- BACKGROUND -->
 			<div id="app">
 				<div id="star-container">

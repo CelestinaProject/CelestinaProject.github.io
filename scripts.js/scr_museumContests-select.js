@@ -1,6 +1,6 @@
 const contests = [
     {
-        title: "Luces y Sombras",
+        title: "LUCES Y SOMBRAS",
         description: "Un concurso que enfrenta la luz y la oscuridad.",
         participants: 9,
         year: 2024,
@@ -10,16 +10,18 @@ const contests = [
 		style: "color: yellow;",
         link: "museum/lucesysombras.html"
     },
-    /*{
-        title: "Sadomasoquismo Extremo de las Siete Lenguas",
-        description: "Un concurso que destaca las mejores novelas del año 2021.",
-        participants: 200,
-        year: 2021,
-        cover: "novels_covers/ADES (NL).png",
-		bg: "assets/banners/banner_event-1.png",
-        link: "concurso2021.html"
-    },
     {
+        title: "KEIM FICTION",
+        description: "Un concurso que destaca las mejores novelas del año 2021.",
+        participants: "¡En Proceso de Inscripción!",
+        year: 2024,
+		author: "Bocchi",
+        cover: "../assets/banners/events/24_lys-2.webp",
+		bg: "../rules/museum/lucesysombras/banner_ganadores.webp",
+		style: "color: red;",
+        link: ""
+    },
+    /*{
         title: "Concurso de Novelas 2022",
         description: "Un concurso que destaca las mejores novelas del año 2022.",
         participants: 180,

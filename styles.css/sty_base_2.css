@@ -11,7 +11,8 @@
         }
 
         header {
-            background: linear-gradient(90deg, rgb(var(--dark-skyblue-rgb)), rgb(var(--light-skyblue-rgb)));
+            background: rgb(var(--dark-rgb));
+			/*linear-gradient(90deg, rgb(var(--dark-skyblue-rgb)), rgb(var(--light-skyblue-rgb)));*/
             padding: 15px 30px;
             display: flex;
             align-items: center;
@@ -110,20 +111,22 @@
 
         nav ul li a {
             text-decoration: none;
-            color: rgb(var(--dark-rgb));
+            color: rgb(var(--light-rgb));
             padding: 8px 0;
             transition: color 0.3s ease;
-			filter: drop-shadow(0px 0px 4px rgb(var(--light-rgb)));
 			text-transform: uppercase;
 			font-weight: bold;
         }
 
         nav ul li:hover {
             transform: translateY(-5px);
+			filter: drop-shadow(0px 0px 4px rgb(var(--light-rgb)));
+			color: rgb(var(--light-skyblue-rgb));
         }
 
         nav ul li a:hover {
-            color: rgb(var(--light-rgb));
+            color: rgb(var(--light-skyblue-rgb));
+			filter: drop-shadow(0px 0px 4px rgb(var(--light-rgb)));
         }
 
         nav ul li ul {
@@ -131,7 +134,7 @@
 			position: absolute;
 			top: 5px;
 			left: 0;
-			background-color: rgba(255, 255, 255, 0.95);
+			background-color: rgba(255, 255, 255, 1);
 			border-radius: 8px;
 			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 			padding: 5px;
@@ -173,6 +176,7 @@
             transition: background 0.3s ease;
 			font-size: smaller;
 			border-radius: 5px;
+			color: rgb(var(--dark-rgb));
         }
 
         nav ul li ul li a:hover {
@@ -192,7 +196,7 @@
         }
 
         footer {
-            background: linear-gradient(90deg, rgb(var(--light-skyblue-rgb)), rgb(var(--dark-skyblue-rgb)));
+            background: linear-gradient(90deg, rgb(var(--dark-rgb)), rgb(var(--dark-skyblue-rgb)));
             padding: 20px;
             text-align: center;
             color: rgb(var(--light-rgb));
@@ -204,7 +208,7 @@
         }
 
         footer:hover {
-            background: linear-gradient(90deg, rgb(var(--dark-skyblue-rgb)), rgb(var(--light-skyblue-rgb)));
+            background: linear-gradient(90deg, rgb(var(--dark-skyblue-rgb)), rgb(var(--dark-rgb)));
         }
 
         footer::before {
@@ -330,7 +334,7 @@
 			z-index: 6;
 			max-height: 300px;
 			overflow-y: auto;
-			width: 350px;
+			width: 90%;
 			max-width: -webkit-fill-available;
 			margin-top: 20px;
 			top: 49%;
@@ -407,11 +411,15 @@
 		.socialImg {
 			height: 40px;
 			transition: transform 0.3s ease;
+			padding: 2px;
 		}
 		
 		.socialImg:hover {
 			filter: invert(1);
 			transform: scale(1.1);
+			background-color: black;
+			border-radius: 50%;
+			padding: 2px;
 		}
 		
 		.h1c {

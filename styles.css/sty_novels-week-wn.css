@@ -133,3 +133,19 @@
     max-height: 300px;
     padding: 20px;
 }
+
+.star-icon {
+    width: 20px;
+    height: auto;
+    margin-right: 2px;
+    vertical-align: middle;
+}
+
+.status-icon {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+}

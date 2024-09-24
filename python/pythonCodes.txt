@@ -5,9 +5,9 @@ example:
 
 codes:
 	python KeimConverter.py
-	python KeimNovels.py
+	python KeimNiadd.py
 	python KeimReto.py
-	python KeimWN.py
+	python KeimWebNovel.py
 	python ImgConverter.py
 
 

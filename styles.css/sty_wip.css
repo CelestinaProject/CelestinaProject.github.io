@@ -11,21 +11,6 @@ p {
 ::selection {
 	cursor: url('../assets/cursor/miku8.cur'), auto;
 }
-body {
-	font-family: 'Roboto', sans-serif;
-	margin: 0px;
-	padding: 0px;
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-image: url('../assets/bg/aqua_constructio-site.webp');
-	background-size: cover;
-	cursor: url('../assets/cursor/miku1.cur'), auto;
-	border: 0px;
-	overflow: hidden;
-	background-color: rgb(var(--dark-rgb));
-}
 .background-animation {
 	position: fixed;
 	top: 0;
@@ -36,18 +21,22 @@ body {
 	background-size: cover;
 	z-index: -10;
 }
-h1, h2 {
+h4, h5 {
 	text-align: center;
 	color: rgb(var(--light-rgb));
 	text-shadow: 0px 0px 6px rgb(var(--dark-rgb));
 	animation: fadeIn 2s ease-in-out infinite;
 	cursor: url('../assets/cursor/miku2.cur'), auto;
+	margin: 0;
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
 }
-h1 {
+h4 {
 	font-size: 5em;
 	margin-bottom: 0;
 }
-h2 {
+h5 {
 	font-size: 2.5em;
 	margin-top: 0;
 	font-family: Arial, sans-serif;
@@ -60,4 +49,16 @@ a {
 	0% {opacity: 0;}
 	50% {opacity: 1;}
 	100% {opacity: 0;}
+}
+.textaniblock {
+	position: fixed;
+    z-index: 5;
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

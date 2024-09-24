@@ -17,28 +17,29 @@ function sortNovels() {
 }
 
 function getStatusIcon(rating) {
-    switch(rating) {
-        case '5':
-            return '⭐⭐⭐⭐⭐';
-        case '4.5':
-            return '⭐⭐⭐⭐';
-        case '4':
-            return '⭐⭐⭐⭐';
-        case '3.5':
-            return '⭐⭐⭐';
-		case '3':
-            return '⭐⭐⭐';
-        case '2.5':
-            return '⭐⭐';
-        case '2':
-            return '⭐⭐';
-		case '1.5':
-            return '⭐';
-		case '1':
-            return '⭐';
-        default:
-            return '📌';
+    const roundedRating = Math.round(rating * 2) / 2;
+    let fullStars = Math.floor(roundedRating); // Estrellas llenas
+    let halfStar = (roundedRating % 1 !== 0) ? 1 : 0; // Media estrella si hay decimales
+    let emptyStars = 5 - fullStars - halfStar; // Estrellas vacías restantes
+
+    let stars = '';
+
+    // Añadir estrellas llenas
+    for (let i = 0; i < fullStars; i++) {
+        stars += '<img src="../assets/ui/fullStar.png" alt="Estrella llena" class="star-icon">';
     }
+
+    // Añadir media estrella
+    if (halfStar) {
+        stars += '<img src="../assets/ui/halfStar.png" alt="Media estrella" class="star-icon">';
+    }
+
+    // Añadir estrellas vacías
+    for (let i = 0; i < emptyStars; i++) {
+        stars += '<img src="../assets/ui/emptyStar.png" alt="Estrella vacía" class="star-icon">';
+    }
+
+    return stars;
 }
 
 function toggleDetails(index) {
@@ -67,13 +68,13 @@ function renderNovels(novelsToRender, startIndex) {
                     <div>
                         <div class="novel-title">${novel.title}</div>
                         <div>Autor: ${novel.author}</div>
-                        <div>Colleciones: ${novel.collections} ❤</div>
+                        <div>Colecciones: ${novel.collections} ❤</div>
+						<div class="status-icon">Calificación: ${novel.rating} <div style="margin-left: 10px;">${statusIcon}</div></div>
                     </div>
                 </div>
                 <div class="novel-details" id="details-${currentIndex - 1}">
-                    <div>Capítulos: ${novel.chapters}</div>
-					<div class="status-icon">Calificación: ${novel.rating} ${statusIcon}</div>
-                    <a href="${novel.url}" target="_blank"><img src="../assets/platforms/webNovel.webp" alt="${novel.title} cover" class="novel-cover" style="height: 40px; width: auto; cursor: url('../assets/cursor/miku2.cur'), auto;"></a>
+                    <!--<div>Capítulos: ${novel.chapters}</div>-->
+                    <a href="${novel.url}" target="_blank"><img src="../assets/platforms/webNovel.webp" alt="${novel.title} cover" class="novel-cover" style="height: 40px; width: auto; cursor: url('../assets/cursor/miku2.cur'), auto; box-shadow: 0px 5px 15px rgb(0 0 0 / 0%);"></a>
                 </div>
             </div>
         `;

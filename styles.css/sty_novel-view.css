@@ -1,23 +1,22 @@
 .carousell {
     position: relative;
-    max-width: 800px;
-    margin: 0px auto;
+    max-width: 100%;
+    margin: 0px;
     overflow: hidden;
     background-color: rgb(var(--light-rgb));
     box-shadow: 0px 0px 4px 4px rgb(0 0 0 / 36%);
-    border-radius: 10px;
 }
 
 .carousell-inner {
     display: flex;
     transition: transform 0.5s ease;
-    width: calc(50% * 3);
+    width: 100%;
 }
 
 .carousell-item {
-    min-width: 200px;
+    width: 120px;
+	height: 180px;
     box-sizing: border-box;
-    padding: 20px;
     text-align: center;
 }
 
@@ -26,7 +25,6 @@
     height: 180px;
 	max-width: 120px;
     max-height: 180px;
-    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     cursor: url(../assets/cursor/miku2.cur), auto;
 	transition: ease-in-out 0.1s;
@@ -34,8 +32,7 @@
 
 .carousell-item img:hover {
     box-shadow: 0px 0px 4px 4px rgb(0 0 0 / 36%);
-	transform: scale(1.05);
-	rotate: -3deg;
+	transform: scale(1.1);
 }
 
 .carousell-item h3 {
@@ -45,31 +42,30 @@
 	text-decoration: none;
 }
 
-.carousell-item2 {
-    min-width: calc(50% / 3);
+.carousell-item-2 {
+    width: 230px;
+	height: 350px;
     box-sizing: border-box;
-    padding: 20px;
     text-align: center;
+	margin: 5px;
 }
 
-.carousell-item2 img {
-    width: 120px;
-    height: 180px;
-	max-width: 120px;
-    max-height: 180px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.carousell-item-2 img {
+    width: 230px;
+    height: 350px;
+    max-width: 230px;
+    max-height: 350px;
+    box-shadow: 0px 0px 0px 1px rgb(0 0 0);
     cursor: url(../assets/cursor/miku2.cur), auto;
 	transition: ease-in-out 0.1s;
 }
 
-.carousell-item2 img:hover {
-    box-shadow: 0px 0px 4px 4px rgb(0 0 0 / 36%);
-	transform: scale(1.05);
-	rotate: -3deg;
+.carousell-item-2 img:hover {
+    box-shadow: 0px 0px 4px 1px rgb(var(--dark-skyblue-rgb));
+	transform: scale(1.01);
 }
 
-.carousell-item2 h3 {
+.carousell-item-2 h3 {
     margin-top: 10px;
     font-size: 16px;
     color: rgb(var(--dark-rgb));
@@ -96,9 +92,104 @@
 }
 
 .carousell-control.prev {
-    left: 10px;
+    left: 200px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousell-control.next {
-    right: 10px;
+    right: 200px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .carousell-item, .carousell-item-2 {
+        width: 100px;
+        height: 150px;
+    }
+
+    .carousell-item img, .carousell-item-2 img {
+        width: 100px;
+        height: 150px;
+    }
+
+    .carousell-control.prev {
+        left: 20px;
+    }
+
+    .carousell-control.next {
+        right: 20px;
+    }
+	
+	.carousell-control img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousell-item, .carousell-item-2 {
+        width: 90px;
+        height: 135px;
+    }
+
+    .carousell-item img, .carousell-item-2 img {
+        width: 90px;
+        height: 135px;
+    }
+
+    carousell-control {
+        width: 30px;
+        height: 30px;
+    }
+
+    .carousell-control img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .carousell-control.prev {
+        left: 15px;
+    }
+
+    .carousell-control.next {
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousell-item, .carousell-item-2 {
+        width: 80px;
+        height: 120px;
+    }
+
+    .carousell-item img, .carousell-item-2 img {
+        width: 80px;
+        height: 120px;
+    }
+
+    .carousell-control {
+        width: 25px;
+        height: 25px;
+    }
+
+    .carousell-control img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .carousell-control.prev {
+        left: 10px;
+    }
+
+    .carousell-control.next {
+        right: 10px;
+    }
 }
