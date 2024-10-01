@@ -94,6 +94,11 @@
     border-radius: 5px;
     object-fit: cover;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+.novel-cover:hover {
+    transform: scale(1.05);
 }
 
 .novel-title {
@@ -132,4 +137,16 @@
     display: flex;
     max-height: 300px;
     padding: 20px;
+}
+
+@media (max-width: 480px) {
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(var(--dark-rgb));
+    text-shadow: 0px -1px 0px rgb(var(--light-rgb));
+    cursor: url(../assets/cursor/miku1.cur), auto;
+}
 }

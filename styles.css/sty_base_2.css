@@ -466,3 +466,46 @@
 		.mainnovels {
 			max-width: -webkit-fill-available;
 		}
+		
+@media (max-width: 480px) {
+	.socialWeb {
+    width: 100px;
+    height: fit-content;
+    position: absolute;
+    right: 0px;
+    bottom: 1px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.socialText {
+    color: rgb(var(--light-rgb));
+    text-align: center;
+    font-size: 6px;
+    padding-top: inherit;
+    right: 0px;
+    position: absolute;
+    bottom: 29px;
+}
+.socialIcons {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.socialImg {
+    height: 20px;
+    transition: transform 0.3s ease;
+    margin: 0 5px 0 5px;
+	padding-top: 2px
+}
+.socialImg:hover {
+    filter: invert(1);
+    transform: scale(1.02);
+    background-color: black;
+    border-radius: 50%;
+    margin: 0 5px 0 5px;
+}
+}

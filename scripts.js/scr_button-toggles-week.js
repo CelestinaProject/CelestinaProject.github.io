@@ -19,9 +19,9 @@ function toggleFilterMenu() {
 
 function toggleCompareMenu() {
 	const compareForm = document.getElementById('compareForm');
-    compareForm.style.display = compareForm.style.display === 'none' || compareForm.style.display === 'none' ? 'flex' : 'none';
+    compareForm.style.display = compareForm.style.display === '' || compareForm.style.display === 'none' ? 'flex' : 'none';
 	const comparisonResult = document.getElementById('comparisonResult');
-    comparisonResult.style.display = comparisonResult.style.display === 'none' || comparisonResult.style.display === 'none' ? 'flex' : 'none';
+    comparisonResult.style.display = comparisonResult.style.display === '' || comparisonResult.style.display === 'none' ? 'flex' : 'none';
 	const compareToggleImg = document.getElementById('compareToggleImg');
 	compareToggleImg.style.rotate = compareToggleImg.style.rotate === '0deg' || compareToggleImg.style.rotate === '0deg' ? '45deg' : '0deg';
 	compareToggleImg.title = compareToggleImg.title === 'Cerrar Comparador' || compareToggleImg.title === 'Cerrar Comparador' ? 'Abrir Comparador' : 'Cerrar Comparador';

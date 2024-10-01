@@ -125,7 +125,7 @@
 		</header>
 		<!-- TOP -->
 		<div class="header" style="padding: 10px;margin: 30px;position: relative;">
-            <h1>SEMANA NÚMERO 45</h1> <!-- Semanas -->
+            <h1>SEMANA NÚMERO 47</h1> <!-- Semanas -->
             <p style="color: rgb(var(--light-rgb));">NOVELAS MÁS VISITADAS</p> <!-- Visitas/Seguidores -->
         </div>
 		<!-- BUTTONS -->
@@ -166,7 +166,7 @@
                     </select>
 					
                     <button type="button" onclick="applyFilters()" class="filterOptionButton">Aplicar Filtros</button>
-					<button id="resetButton" onclick="resetFilters()" class="resetOptionButton">Reiniciar</button>
+					<button id="resetButton" onclick="populateFilters()" class="resetOptionButton">Reiniciar</button>
                 </form>
             </div>
         </div>
@@ -202,7 +202,7 @@
             <img src="../assets/ui/arrowCircle_up.png" alt="Ir Abajo">Ir Abajo
         </button>
 		<!-- COMPARISON/FORM -->
-		<div style="position: fixed; z-index:2; right:25px; top:178px;">
+		<div class="comparisonNovels">
 		<!-- FORM -->
 			<form class="compareForm" id="compareForm">
 				<!-- <label for="novel1" class="selectLabel">Selecciona la primera novela:</label> -->
@@ -273,8 +273,8 @@
 				<img src="../assets/buttons/miku_approved.gif" style="position: absolute; bottom: 1px; left: 0px; z-index: 2;" title="Hoy no es Pascua">
 			</a>
 			<div class= "socialWeb">
-				<p style="color: rgb(var(--light-rgb)); text-align: center; text-size: 8; padding-top: inherit;">¡Visita todas nuestras redes sociales!</p>
-				<div style="text-align: center;display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: space-evenly;">  
+				<p class="socialText">¡Visita todas nuestras redes sociales!</p>
+				<div class="socialIcons"> 
 					<a onclick="window.location.href='https://x.com/KeimLite'">
 						<img src="../assets/social/twitter.png" alt="Twitter" class="socialImg" title="X(Twitter)">
 					</a>
@@ -288,6 +288,6 @@
 			</div>
 		</footer>
 		<script src="../scripts.js/scr_scrollTop.js"></script>
-		<script src="../scripts.js/scr_scrollBottom.js"></script>	
+		<script src="../scripts.js/scr_scrollBottom.js"></script>
 	</body>
 </html>

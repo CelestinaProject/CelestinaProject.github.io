@@ -110,12 +110,12 @@
 }
 
 @media (max-width: 1024px) {
-    .carousell-item, .carousell-item-2 {
+    .carousell-item {
         width: 100px;
         height: 150px;
     }
 
-    .carousell-item img, .carousell-item-2 img {
+    .carousell-item img {
         width: 100px;
         height: 150px;
     }
@@ -135,12 +135,12 @@
 }
 
 @media (max-width: 768px) {
-    .carousell-item, .carousell-item-2 {
+    .carousell-item {
         width: 90px;
         height: 135px;
     }
 
-    .carousell-item img, .carousell-item-2 img {
+    .carousell-item img {
         width: 90px;
         height: 135px;
     }
@@ -165,12 +165,12 @@
 }
 
 @media (max-width: 480px) {
-    .carousell-item, .carousell-item-2 {
+    .carousell-item {
         width: 80px;
         height: 120px;
     }
 
-    .carousell-item img, .carousell-item-2 img {
+    .carousell-item img {
         width: 80px;
         height: 120px;
     }

@@ -44,4 +44,8 @@ function compareNovels() {
 	if (comparisonResult.style.display === 'none' || comparisonResult.style.display === '') {
     comparisonResult.style.display = 'flex';
 	}
+	
+	if (comparisonResult.style.display === 'flex' || comparisonResult.style.display === '') {
+    comparisonResult.style.display = 'none';
+	}
 }

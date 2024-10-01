@@ -122,9 +122,10 @@ function applyFilters() {
 }
 
 window.onload = function() {
-    sortNovels(); // Ordenar novelas
-    applyFiltersFromURL(); // Aplicar filtros si hay en la URL
-    renderPagination(); // Renderizar paginación con las novelas actuales (filtradas o no)
-    populateFilters(filteredNovels); // Llenar los selectores de filtros
-    populateNovelSelects(); // Asumimos que esta función maneja algún otro tipo de selector o dropdown
+    sortNovels();
+    renderPagination();
+    populateFilters(filteredNovels);
+    populateNovelSelects();
 };
+
+document.addEventListener('DOMContentLoaded', applyFiltersFromURL);

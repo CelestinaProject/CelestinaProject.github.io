@@ -1,28 +1,22 @@
 function printFilteredNovels() {
 	const filters = [];
-    if (document.getElementById('statusActivo').checked) filters.push('Activo');
-    if (document.getElementById('statusInactivo').checked) filters.push('Inactivo');
-    if (document.getElementById('statusFinalizado').checked) filters.push('Finalizado');
-    if (document.getElementById('statusEliminado').checked) filters.push('Eliminado');
-    
-    const filteredNovels = newNovels.filter(novel => filters.includes(novel.status));
-    let output = '**TOP DE NOVELAS CON MÁS COLLECIONES EN WEBNOVEL**\n\n';
+    let output = '**TOP DE NOVELAS CON MÁS COLECCIONES EN WEBNOVEL**\n\n';
     
     filteredNovels.forEach((novel, index) => {
         const oldNovel = oldNovels.find(n => n.title === novel.title);
-        const oldViews = oldNovel ? oldNovel.views : 0;
-        const oldFollowers = oldNovel ? oldNovel.followers : 0;
+        const oldRating = oldNovel ? oldNovel.rating : 0;
+        const oldCollections = oldNovel ? oldNovel.collections : 0;
         const oldChapters = oldNovel ? oldNovel.chapters : 0;
-        const countDifferenceViews = novel.views - oldViews;
+        const countDifferenceRating = novel.rating - oldRating;
 		const countDifferenceChapters = novel.chapters - oldChapters;
-		const countDifferenceFollowers = novel.followers - oldFollowers;
+		const countDifferenceCollectionss = novel.collections - oldCollections;
         
         output += `- Top ${index + 1}: ${novel.title}\n`;
-        output += `Visitas: ${oldViews} → ${novel.views}\n`;
-        output += `Seguidores: ${oldFollowers} → ${novel.followers}\n`;
-        output += `Capítulos: ${oldChapters} → ${novel.chapters}\n\n`;
+        output += `Colecciones: ${oldCollections} → ${novel.collections}\n`;
+        output += `Capítulos: ${oldChapters} → ${novel.chapters}\n`;
+		output += `Calificación: ${oldRating} → ${novel.rating}\n\n`;
         output += `${novel.url}\n\n`;
-        output += `**Obtuviste ${countDifferenceViews} visitas, ${countDifferenceFollowers} seguidores y subiste ${countDifferenceChapters} capítulos**\n\n`;
+        output += `**Obtuviste ${countDifferenceCollectionss} colecciones, ${countDifferenceRating} estrellas y subiste ${countDifferenceChapters} capítulos**\n\n`;
         output += `>———◇———<\n\n`;
     });
     

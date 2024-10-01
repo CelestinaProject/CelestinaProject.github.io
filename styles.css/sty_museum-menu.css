@@ -61,6 +61,7 @@ main {
     border-left: none;
     border-top: none;
     border-bottom: none;
+	background: rgb(var(--light-rgb));
 }
 
 .contest:hover .contest-img {

@@ -25,3 +25,23 @@
     height: 30px;
 	rotate: 180deg;
 }
+
+@media (max-width: 480px) {
+#toBottomBtn {
+    display: block;
+    position: absolute;
+    top: 180px;
+    right: 0px;
+    background-color: rgb(var(--dark-rgb));
+    color: rgb(var(--light-rgb));
+    padding: 5px;
+    border-radius: 10px;
+    cursor: url('../assets/cursor/miku2.cur'), auto;
+    z-index: 2;
+    transition: background-color 0.3s;
+    border-left-color: rgb(var(--light-skyblue-rgb));
+    border-left-width: thick;
+    border-block: none;
+    align-items: center;
+}
+}

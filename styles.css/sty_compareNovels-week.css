@@ -90,3 +90,119 @@
 	font-size: 10px;
 	margin: 5px 0;
 }
+
+.comparisonNovels {
+    position: fixed;
+    z-index: 2;
+    right: 14px;
+    top: 190px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 480px) {
+	.comparisonNovels {
+	position: fixed; 
+	z-index:2; 
+	right:14px; 
+	top:228px;
+	}
+	.compareForm {
+	padding: 0;
+	border-radius: 5px;
+	max-width: 400px;
+	min-width: 176px;
+	width: 53px;
+	bottom: 34px;
+	position: absolute;
+	cursor: url(../assets/cursor/miku1.cur), auto;
+	z-index: 3;
+	display: none;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+}
+	.selectNovels {
+    width: 47%;
+    padding: 10px;
+    margin: 10px 0 0 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 10px;
+    cursor: url('../assets/cursor/miku2.cur'), auto;
+	}
+.compare-button {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    transform: translate(2px, -2px);
+    background-color: rgb(var(--dark-rgb));
+    border-color: transparent;
+    border: 1px solid rgb(0 0 0 / 0%);
+    border-radius: 50%;
+    cursor: url('../assets/cursor/miku2.cur'), auto;
+    z-index: 3;
+    transition: background-color 0.3s;
+    display: flex;
+}
+.compare-button img {
+    width: 15px;
+    height: 15px;
+    rotate: 45deg;
+    transition: all 0.5s linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%) 0s;
+}
+.compareButton {
+    border: 1px solid rgb(var(--light-rgb));
+    background-color: rgb(var(--dark-rgb));
+    color: rgb(var(--light-rgb));
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    width: 46%;
+    cursor: url('../assets/cursor/miku2.cur'), auto;
+    font-size: 10px;
+    margin-left: 0px;
+}
+#comparisonResult {
+    background: rgb(var(--light-rgb));
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 4px rgb(0 0 0 / 36%);
+    max-width: 400px;
+    min-width: 149px;
+    width: 204px;
+    height: 214px;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 2;
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.novel-info {
+    width: 45%;
+    text-align: center;
+    margin-top: 18px;
+}
+.novel-info img {
+    width: 35px;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 1px rgb(0 0 0);
+}
+.novel-info h2 {
+    font-size: 10px;
+    margin: 10px 0;
+}
+.comparison-details h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.comparison-details p {
+    font-size: 8px;
+    margin: 5px 0;
+}
+}

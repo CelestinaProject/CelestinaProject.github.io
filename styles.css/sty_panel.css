@@ -49,16 +49,23 @@
     text-decoration: none;
     color: #ddd;
     transition: linear 0.2s;
+	font-weight: lighter;
+	font-variant: all-small-caps;
+}
+
+.panel-a:hover {
+    color: rgb(var(--light-skyblue-rgb));;
 }
 
 .panel-a.active {
-    font-weight: 100;
+    font-weight: bolder;
     margin: 0;
     padding: 5px;
     font-size: smaller;
     border-bottom: solid 3px rgb(var(--dark-skyblue-rgb));
     text-decoration: none;
     color: rgb(var(--dark-skyblue-rgb));
+	font-variant: normal;
 }
 
 .panel-a:first-letter {
@@ -84,7 +91,11 @@
     border-top: solid 2px;
     border-top-color: rgb(var(--light-skyblue-rgb));
     background: rgb(var(--light-rgb));
-    height: 524px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 536px;
 }
 
 .panel-bg {
@@ -100,7 +111,6 @@
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
-    height: 100%;
 }
 
 .panel-tabs {
@@ -114,9 +124,10 @@
 .panel-tab-content.active {
     height: fit-content;
     width: 240px;
+    min-height: 500px;
     display: flex;
     flex-wrap: wrap;
-    padding: 5px 0;
+    padding: 5px 0 0 0;
 }
 
 .panel-tab-content-a {
@@ -134,11 +145,13 @@
 .litext {
     font-size: smaller;
     text-align: justify;
+	margin: 0 2px 0 2px;
 }
 
 .h5text {
     color: rgb(var(--dark-skyblue-rgb));
     margin-top: 2px;
+	margin: 2px 2px 0 2px;
 }
 
 .panel-hr {
@@ -147,18 +160,25 @@
 
 @media (max-width: 1024px) {
     .panel {
-        width: 100%;
-        flex-direction: column;
+        width: 80%;
+        flex-direction: row;
     }
 
-    .panel-left, .panel-right {
-        width: 100%;
+    .panel-left {
+		width: 65%;
+	}
+	
+	.panel-right {
+        width: fit-content;
     }
 }
 
 @media (max-width: 768px) {
     .panel {
         margin: 10px;
+		width: 75%;
+		display: flex;
+		justify-content: center;
     }
 
     .panel-tab-content {
@@ -170,16 +190,23 @@
         width: 100%;
         height: auto;
     }
+	
+	.panel-left {
+		width: 60%;
+	}
 }
 
 @media (max-width: 480px) {
     .panel-left, .panel-right {
-        width: 100%;
+        width: -webkit-fill-available;
+        height: fit-content;
+        margin-bottom: 10px;
     }
 
     .panel-ul {
         flex-direction: row;
-        align-items: flex-start;
+        display: flex;
+        justify-content: center;
     }
 
     .panel-tab-content-img {

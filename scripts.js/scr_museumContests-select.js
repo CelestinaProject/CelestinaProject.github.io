@@ -12,12 +12,12 @@ const contests = [
     },
     {
         title: "KEIM FICTION",
-        description: "Un concurso que destaca las mejores novelas del año 2021.",
-        participants: "¡En Proceso de Inscripción!",
+        description: "Un concurso de sci-fi.",
+        participants: "10",
         year: 2024,
 		author: "Bocchi",
-        cover: "../assets/banners/events/24_lys-2.webp",
-		bg: "../rules/museum/lucesysombras/banner_ganadores.webp",
+        cover: "../assets/banners/events/24_kf-2.webp",
+		bg: "../assets/banners/events/24_kf-1.webp",
 		style: "color: red;",
         link: ""
     },

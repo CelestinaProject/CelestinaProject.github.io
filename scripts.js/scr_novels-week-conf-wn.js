@@ -62,19 +62,17 @@ function renderNovels(novelsToRender, startIndex) {
         const currentIndex = startIndex + index + 1;
         novelsList.innerHTML += `
             <div class="novel-container">
-                <div class="novel-header" onclick="toggleDetails(${currentIndex - 1})" style="cursor: url('../assets/cursor/miku2.cur'), auto;" title="${novel.title}">
+                <div class="novel-header" onclick="window.location.href='${novel.url}'" style="cursor: url('../assets/cursor/miku2.cur'), auto;" title="${novel.title}">
                     <span>${currentIndex}</span>
-                    <img src="../novels/covers/${novel.title}.webp" alt="${novel.title} cover" class="novel-cover">
+					<a href="../novels/covers/${novel.title}.webp" target="_blank" class="novel-cover">
+						<img src="../novels/covers/${novel.title}.webp" alt="${novel.title} cover" class="novel-cover">
+					</a>
                     <div>
                         <div class="novel-title">${novel.title}</div>
                         <div>Autor: ${novel.author}</div>
                         <div>Colecciones: ${novel.collections} ❤</div>
 						<div class="status-icon">Calificación: ${novel.rating} <div style="margin-left: 10px;">${statusIcon}</div></div>
                     </div>
-                </div>
-                <div class="novel-details" id="details-${currentIndex - 1}">
-                    <!--<div>Capítulos: ${novel.chapters}</div>-->
-                    <a href="${novel.url}" target="_blank"><img src="../assets/platforms/webNovel.webp" alt="${novel.title} cover" class="novel-cover" style="height: 40px; width: auto; cursor: url('../assets/cursor/miku2.cur'), auto; box-shadow: 0px 5px 15px rgb(0 0 0 / 0%);"></a>
                 </div>
             </div>
         `;

@@ -53,7 +53,9 @@ function renderNovels(novelsToRender, startIndex) {
             <div class="novel-container">
                 <div class="novel-header" onclick="toggleDetails(${currentIndex - 1})" style="cursor: url('../assets/cursor/miku2.cur'), auto;" title="${novel.title}">
                     <span>${currentIndex}</span>
-                    <img src="${novel.cover}" alt="${novel.title} cover" class="novel-cover">
+					<a href="${novel.cover}" target="_blank" class="novel-cover">
+						<img src="${novel.cover}" alt="${novel.title} cover" class="novel-cover">
+					</a>
                     <div>
                         <div class="novel-title">${novel.title}</div>
                         <div>Autor: ${novel.author}</div>
@@ -95,4 +97,5 @@ window.onload = function() {
     populateFilters(filteredNovels);
     renderPagination(newNovels);
 	populateNovelSelects();
+	applyFiltersFromURL();
 };
