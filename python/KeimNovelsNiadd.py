@@ -49,7 +49,6 @@ urls_info = [
     "https://es.niadd.com/original/10068130.html", # Saikoro Ga Kimeru (Los Dados Deciden)
     "https://es.niadd.com/original/10069970.html", # ¡Tengo Las Armas Más Poderosas Rango XXX!
     "https://es.niadd.com/original/10070368.html", #Realidad Alterada - Viviendo Con Un Solo Seguidor Para No Ser Olvidada
-    # Aquí van las URLS...
 ]
 
 # Crear las carpetas si no existen
@@ -68,7 +67,9 @@ with open(os.path.join(path, 'novels_info_.txt'), 'w') as f:
         rprint(f"[cyan]Iniciando el procesamiento de la página:[/cyan] [yellow]{url_info}[/yellow]")
 
         try:
-            response_info = requests.get(url_info)
+            # Agregado timeout de 30 segundos y chequeo de estado
+            response_info = requests.get(url_info, timeout=30)
+            rprint(f"[cyan]Estado de la respuesta:[/cyan] {response_info.status_code}")
             response_info.raise_for_status()  # Lanza un error si la solicitud falla
         except requests.exceptions.RequestException as e:
             rprint(f"[red]Error al acceder a {url_info}:[/red] {e}\n")
@@ -105,7 +106,7 @@ with open(os.path.join(path, 'novels_info_.txt'), 'w') as f:
         try:
             # URL de la página de capítulos
             url_chapters = url_info.replace('.html', '/chapters.html')
-            response_chapters = requests.get(url_chapters)
+            response_chapters = requests.get(url_chapters, timeout=30)
             response_chapters.raise_for_status()  # Lanza un error si la solicitud falla
 
             soup_chapters = BeautifulSoup(response_chapters.text, 'html.parser')
