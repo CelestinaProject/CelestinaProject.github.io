@@ -49,6 +49,7 @@ urls_info = [
     "https://es.niadd.com/original/10068130.html", # Saikoro Ga Kimeru (Los Dados Deciden)
     "https://es.niadd.com/original/10069970.html", # ¡Tengo Las Armas Más Poderosas Rango XXX!
     "https://es.niadd.com/original/10070368.html", #Realidad Alterada - Viviendo Con Un Solo Seguidor Para No Ser Olvidada
+    "https://es.niadd.com/original/10070333.html", #Nintu: Los Maestros Del Destino Y La Salvación Del Imperio
 ]
 
 # Crear las carpetas si no existen
@@ -80,24 +81,31 @@ with open(os.path.join(path, 'novels_info_.txt'), 'w') as f:
         # Extraer información con valores predeterminados en caso de fallo
         title = soup_info.find('h1', class_='book-headline-name')
         title = title.text if title else "Desconocido"
+        rprint(f"[blue]Título extraído:[/blue] {title}")
 
         followers = soup_info.find('num', {'id': 'follow_num'})
         followers = int(followers.text) if followers else 0
+        rprint(f"[blue]Seguidores extraídos:[/blue] {followers}")
 
         views = soup_info.find('span', {'itemprop': 'accessMode'})
         views = int(views.text.replace(',', '')) if views else 0
+        rprint(f"[blue]Vistas extraídas:[/blue] {views}")
 
         genres = soup_info.find_all('span', {'itemprop': 'genre'})
         genres = [element.text for element in genres] if genres else ["Desconocido"]
+        rprint(f"[blue]Géneros extraídos:[/blue] {', '.join(genres)}")
 
         author_tag = soup_info.find('span', string='Autor (es):')
         author = author_tag.find_next('span').text if author_tag else 'Desconocido'
+        rprint(f"[blue]Autor extraído:[/blue] {author}")
 
         artist_tag = soup_info.find('span', string='Artista:')
         artist = artist_tag.find_next('span').text if artist_tag else 'Desconocido'
+        rprint(f"[blue]Artista extraído:[/blue] {artist}")
 
         date = soup_info.find('span', {'itemprop': 'datePublished'})
         date = date.text if date else "2024"
+        rprint(f"[blue]Fecha de publicación extraída:[/blue] {date}")
 
         # Reemplazar los caracteres inválidos en el título
         invalid_chars = "/=<>\\*?\"|:"
@@ -106,6 +114,7 @@ with open(os.path.join(path, 'novels_info_.txt'), 'w') as f:
         try:
             # URL de la página de capítulos
             url_chapters = url_info.replace('.html', '/chapters.html')
+            rprint(f"[cyan]Accediendo a página de capítulos:[/cyan] {url_chapters}")
             response_chapters = requests.get(url_chapters, timeout=30)
             response_chapters.raise_for_status()  # Lanza un error si la solicitud falla
 
@@ -115,6 +124,7 @@ with open(os.path.join(path, 'novels_info_.txt'), 'w') as f:
             chapter_section = soup_chapters.find('div', class_='bookinfo-cate-section')
             chapter_list = chapter_section.find('ul', class_='chapter-list')
             chapters = chapter_list.find_all('li', class_='chp-item') if chapter_list else []
+            rprint(f"[blue]Capítulos extraídos:[/blue] {len(chapters)}")
         except (requests.exceptions.RequestException, AttributeError) as e:
             rprint(f"[red]Hubo un error al extraer los capítulos de {url_info}:[/red] {e}\n")
             chapters = []
@@ -139,9 +149,12 @@ with open(os.path.join(path, 'novels_info_.txt'), 'w') as f:
         if status_tag and '(Terminado)' in status_tag.text:
             status = 'Finalizado'
 
+        rprint(f"[blue]Estado de la novela:[/blue] {status}")
+
         # Escribir la información de la novela en el archivo
         try:
             f.write(f'                {{ title: "{title}", cover: "../novels/covers/{title}.webp", followers: {followers}, views: {views}, chapters: {len(chapters)}, genres: "{", ".join(genres)}", author: "{author}", artist: "{artist}", date: "{date}", status: "{status}", url: "{url_info}" }},\n')
+            rprint(f"[green]Información de {title} escrita correctamente en el archivo.[/green]")
         except Exception as e:
             rprint(f"[red]Hubo un error al escribir la información de {url_info} en el archivo:[/red] {e}\n")
             continue  # Salta al siguiente ciclo si hay un error al escribir en el archivo
