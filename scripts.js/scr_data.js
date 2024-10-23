@@ -1,5 +1,19 @@
 const data = [
-{ author: "eimonq", title: "Guía de cómo publicar tus progresos diarios. V.2", date: "2023-09-03 00:02:42" },
+{ author: "eriazzz", title: "Día 63 — V.2.", date: "2024-09-25 00:09:59" },
+
+{ author: "eriazzz", title: "Día 64 — V.2.", date: "2024-10-02 23:20:38" },
+
+{ author: "eriazzz", title: "Día 65 — V.2.", date: "2024-10-11 00:33:44" },
+
+{ author: "eriazzz", title: "Día 66 — V.2.", date: "2024-10-18 22:25:12" },
+
+{ author: "swaany02", title: "Día 1 -V.3", date: "2024-10-19 02:01:29" },
+
+{ author: "swaany02", title: "Dia 2 -V.3", date: "2024-10-20 01:14:33" },
+
+{ author: "crafq1", title: "Dia 1 -V.3.", date: "2024-10-21 01:52:52" },
+
+{ author: "swaany02", title: "Día 3 -V.3", date: "2024-10-21 02:05:07" },
 
 { author: "eriazzz", title: "Dia 62 — V.2.", date: "2024-09-17 00:05:49" },
 
