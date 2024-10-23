@@ -55,7 +55,7 @@ const createGenreTabs = (genres) => {
         genreTabs.appendChild(tab);
     });
 };
-
+//A
 // 4. Mostrar contenido del género seleccionado con columnas si hay más de 7 novelas
 const showGenreContent = (selectedGenre) => {
     const contentDiv = document.getElementById('genreContent');
