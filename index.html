@@ -1,266 +1,269 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<link rel="icon" href="assets/celestina/icon.png" type="image/png">
-		
-		<!-- Metadata -->
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-		<meta http-equiv="Permissions-Policy" content="browsing-topics=()">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Celestina Project</title>
-
-		<!-- SEO and Social Media Metadata -->
-		<meta name="description" content="Celestina Project">
-		<meta name="keywords" content="top, leaderboard, light novels, celestina project, proyecto celestina, tabla de clasificación, novelas, novelas ligeras, cuentos, relatos, keim lite, keimlite, eimon q">
-		<meta name="author" content="RulerFox ♠">
-
-		<!-- Open Graph Metadata -->
-		<meta property="og:url" content="https://celestinaproject.github.io">
-		<meta property="og:type" content="website">
-		<meta property="og:title" content="Celestina Project">
-		<meta property="og:description" content="Celestina Project">
-		<meta property="og:image" content="https://celestinaproject.github.io/assets/celestina/icon.png">
-		<meta property="og:image:width" content="1200">
-		<meta property="og:image:height" content="630">
-
-		<!-- Twitter Card Metadata -->
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:site" content="@KeimLite">
-		<meta name="twitter:title" content="Celestina Project">
-		<meta name="twitter:description" content="Celestina Project">
-		<meta name="twitter:image" content="https://celestinaproject.github.io/assets/celestina/icon.png">
-		<meta property="twitter:domain" content="celestinaproject.github.io">
-		<meta property="twitter:url" content="https://celestinaproject.github.io">
-
-		<!-- Theme Color -->
-		<meta name="theme-color" content="#33e4f9">
-		<!-- Additional Metadata -->
-		<meta name="robots" content="index, follow">
-		<meta name="language" content="es">
-		<meta name="revisit-after" content="7 days">
-		<meta name="rating" content="general">
-		<meta name="distribution" content="global">
-		<meta name="format-detection" content="telephone=no">
-	
-		<!-- CSS -->
-		<link rel="stylesheet" href="styles.css/sty_base_2.css">
-		<link rel="stylesheet" href="styles.css/sty_footer.css">
-		<link rel="stylesheet" href="styles.css/sty_bg-aqua.css">
-		<link rel="stylesheet" href="styles.css/sty_color-palette.css">
-		<link rel="stylesheet" href="styles.css/sty_letterAni.css">
-		<link rel="stylesheet" href="styles.css/sty_novel-view.css">
-		<link rel="stylesheet" href="styles.css/sty_panel.css">
-	
-		<!-- SCRIPTS -->
-		<script src="scripts.js/scr_novelsDataTotalView.js"></script>
-		<script src="scripts.js/scr_museumNovels-LYS.js"></script>
-		<script src="scripts.js/scr_validateSearch.js"></script>
-		<script src="scripts.js/scr_autocompleteSearch.js"></script>
-		<script src="scripts.js/scr_getCelesParam.js"></script>
-		<script src="scripts.js/scr_displaySearchTerm.js"></script>
-		<script src="scripts.js/scr_displayResults.js"></script>
-		<script src="scripts.js/scr_main.js"></script>
-		<script src="scripts.js/scr_panelTabs.js"></script>
-		
-	</head>
-	<body style="display: flex;flex-direction: column;align-items: center;justify-content: center;align-content: center;flex-wrap: wrap;">
-		<!-- HEADER -->
-		<header>
-			<img src="assets/celestina/5.png" alt="Logo" onclick="window.location.href='index.html'" title="¡Ce-les-ti-na!">
-			<div class="search-bar">
-				<form action="rules/found.html" method="get" onsubmit="return validateSearch()" style="display: flex;flex-direction: column;flex-wrap: wrap;align-content: center;align-items: center;width: -webkit-fill-available;">
-					<input type="text" name="celes" id="searchceles" placeholder="Buscar novela..." oninput="autocompleteSearch()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-					<button onclick="displayResults()" class="search-button">
-						<img src="assets/ui/search.png" class="search-img">
-					</button>
-					<div id="autocomplete-list" class="autocomplete-suggestions"></div>
-				</form>
-			</div>
-			<!-- OPTION BAR -->
-			<nav>
-				<ul>
-					<li><a href="index.html">Hogar</a></li>
-					<li>
-						<a>Top Semanal</a>
-						<ul>
-							<li>
-								<a href="rules/leaderboard-niadd.html">
-									<img src="assets/ui/topCrown.png" alt="Ranking">niadd
-								</a>
-							</li>
-							<li>
-								<a href="rules/leaderboard-webnovel.html">
-									<img src="assets/ui/topCrown.png" alt="Ranking">webnovel
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li><a href="rules/museum.html">Museo</a></li>
-					<li><a href="rules/eimon.html">Eimon Q</a></li>
-					<li><a href="rules/wip.html">MÁS</a>
-				</ul>
-			</nav>
-		</header>
-		<!-- CAROUSEL 1 -->
-		<main class="mainnovels" style="margin-top:2%">
-			<div class="carousell">
-				<div class="carousell-inner" id="carousell-inner"></div>
-				<button class="carousell-control prev" onclick="prevSlide()">
-					<img id="compareToggleImg" src="assets/ui/arrowDrop_left.png" alt="Arrow Left Icon">
-				</button>
-				<button class="carousell-control next" onclick="nextSlide()">
-					<img id="compareToggleImg" src="assets/ui/arrowDrop_right.png" alt="Arrow Right Icon">
-				</button>
-			</div>
-			<div class="more-novels">
-				<a onclick="window.location.href='rules/found.html?celes='">▸ Más Novelas ◂</a>
-			</div>
+    <head>
+        <link rel="icon" href="assets/celestina/icon.png" type="image/png">
+        <!-- Metadata -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+        <meta http-equiv="Permissions-Policy" content="browsing-topics=()">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Celestina Project</title>
+        <!-- SEO and Social Media Metadata -->
+        <meta name="description" content="Celestina Project">
+        <meta name="keywords" content="top, leaderboard, light novels, celestina project, proyecto celestina, tabla de clasificación, novelas, novelas ligeras, cuentos, relatos, keim lite, keimlite, eimon q">
+        <meta name="author" content="RulerFox ♠">
+        <!-- Open Graph Metadata -->
+        <meta property="og:url" content="https://celestinaproject.github.io">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Celestina Project">
+        <meta property="og:description" content="Celestina Project">
+        <meta property="og:image" content="https://celestinaproject.github.io/assets/celestina/icon.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <!-- Twitter Card Metadata -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@KeimLite">
+        <meta name="twitter:title" content="Celestina Project">
+        <meta name="twitter:description" content="Celestina Project">
+        <meta name="twitter:image" content="https://celestinaproject.github.io/assets/celestina/icon.png">
+        <meta property="twitter:domain" content="celestinaproject.github.io">
+        <meta property="twitter:url" content="https://celestinaproject.github.io">
+        <!-- Theme Color -->
+        <meta name="theme-color" content="#33e4f9">
+        <!-- Additional Metadata -->
+        <meta name="robots" content="index, follow">
+        <meta name="language" content="es">
+        <meta name="revisit-after" content="7 days">
+        <meta name="rating" content="general">
+        <meta name="distribution" content="global">
+        <meta name="format-detection" content="telephone=no">
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles.css/sty_base_2.css">
+        <link rel="stylesheet" href="styles.css/sty_footer.css">
+        <link rel="stylesheet" href="styles.css/sty_bg-aqua.css">
+        <link rel="stylesheet" href="styles.css/sty_color-palette.css">
+        <link rel="stylesheet" href="styles.css/sty_letterAni.css">
+        <link rel="stylesheet" href="styles.css/sty_novel-view.css">
+        <link rel="stylesheet" href="styles.css/sty_panel.css">
+        <!-- SCRIPTS -->
+        <script src="scripts.js/scr_novelsDataTotalView.js"></script>
+        <script src="scripts.js/scr_museumNovels-LYS.js"></script>
+        <script src="scripts.js/scr_validateSearch.js"></script>
+        <script src="scripts.js/scr_autocompleteSearch.js"></script>
+        <script src="scripts.js/scr_getCelesParam.js"></script>
+        <script src="scripts.js/scr_displaySearchTerm.js"></script>
+        <script src="scripts.js/scr_displayResults.js"></script>
+        <script src="scripts.js/scr_main.js"></script>
+    </head>
+    <body style="display: flex;flex-direction: column;align-items: center;justify-content: center;align-content: center;flex-wrap: wrap;">
+        <!-- HEADER -->
+        <header>
+            <img src="assets/celestina/5.png" alt="Logo" onclick="window.location.href='index.html'" title="¡Ce-les-ti-na!">
+            <div class="search-bar">
+                <form action="rules/found.html" method="get" onsubmit="return validateSearch()" style="display: flex;flex-direction: column;flex-wrap: wrap;align-content: center;align-items: center;width: -webkit-fill-available;">
+                    <input type="text" name="celes" id="searchceles" placeholder="Buscar novela..." oninput="autocompleteSearch()" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <button onclick="displayResults()" class="search-button">
+                    <img src="assets/ui/search.png" class="search-img">
+                    </button>
+                    <div id="autocomplete-list" class="autocomplete-suggestions"></div>
+                </form>
+            </div>
+            <!-- OPTION BAR -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Hogar</a></li>
+                    <li>
+                        <a>Top Semanal</a>
+                        <ul>
+                            <li>
+                                <a href="rules/leaderboard-niadd.html">
+                                <img src="assets/ui/topCrown.png" alt="Ranking">niadd
+                                </a>
+                            </li>
+                            <li>
+                                <a href="rules/leaderboard-webnovel.html">
+                                <img src="assets/ui/topCrown.png" alt="Ranking">webnovel
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="rules/museum.html">Museo</a></li>
+                    <li><a href="rules/eimon.html">Eimon Q</a></li>
+                    <li><a href="rules/wip.html">MÁS</a>
+                </ul>
+            </nav>
+        </header>
+        <!-- CAROUSEL 1 -->
+        <main class="mainnovels" style="margin-top:2%">
+            <div class="carousell">
+                <div class="carousell-inner" id="carousell-inner"></div>
+                <button class="carousell-control prev" onclick="prevSlide()">
+                <img id="compareToggleImg" src="assets/ui/arrowDrop_left.png" alt="Arrow Left Icon">
+                </button>
+                <button class="carousell-control next" onclick="nextSlide()">
+                <img id="compareToggleImg" src="assets/ui/arrowDrop_right.png" alt="Arrow Right Icon">
+                </button>
+            </div>
+            <div class="more-novels">
+                <a onclick="window.location.href='rules/found.html?celes='">▸ Más Novelas ◂</a>
+            </div>
         </main>
-		<!-- PANEL -->
-<div class="panel">
-	<!-- LEFT -->
-	<div class="panel-left">
-		<h2 class="panel-title">INFORMACIÓN VARIADA</h2>
-		<div class="panel-border">
-			<div class="panel-bg">
-				<!-- Aquí puede ir más contenido -->
-			</div>
-		</div>
-	</div>
-	<!-- RIGHT -->
-	<div class="panel-right">
-		<!-- CONTEST -->
-		<h2 class="panel-title">CONCURSOS</h2>
-		<div class="panel-border">
-			<!-- CONTEST SELECTOR -->
-			<div style="width: -webkit-fill-available">
-				<ul class="panel-ul">
-					<li class="panel-li">
-						<a class="panel-a active" onclick="showTab('tab1')" id="tab1-link">ACTUAL</a>
-					</li>
-					<li class="panel-li">
-						<a class="panel-a" onclick="showTab('tab2')" id="tab2-link">ANTERIOR</a>
-					</li>
-				</ul>
-			</div>
-			<!-- CONTEST TABS -->
-			<div class="panel-tabs">
-				<!-- CONTEST TAB 1 -->
-				<div id="tab1" class="panel-tab-content active">
-					<div class="panel-tab">
-						<a href="https://discord.com/channels/807285452435751004/855618660499324938/1243656849262121080" target="_blank" class="panel-tab-content-a">
-							<img src="assets/banners/events/Contest-2024 - KeimFiction.webp" class="panel-tab-content-img">
-						</a>
-					</div>
-					<div>
-						<h3 class="panel_title" style="margin:0px;padding: 5px 5px 0px 5px;font-size: smaller;border-bottom: solid 3px rgb(var(--dark-skyblue-rgb));width: fit-content;"> REGLAS</h3>
-						<!-- RULES -->
-						<div style="margin:0px;padding: 5px 5px 0px 5px;font-size: smaller">
-							<h5 class="h5text">Incripción (Terminado)</h5>
-							<li class="litext">Máximo 16 participantes (por orden de inscripción).</li>
-							<li class="litext">Registro en el <a class="panel-a-link"href="https://docs.google.com/forms/d/e/1FAIpQLScV16lHExO4w98RkRNkEBTZL1cJVDCtLkNdOYLFBCal6PYOnw/viewform?usp=sf_link">Formulario de Google</a>.</li>
-							<li class="litext">Plazo: 5 días.</li>
-							<h5 class="h5text">Entrega de obra (En Proceso)</h5>
-							<li class="litext">Enviar en PDF.</li>
-							<li class="litext">Plazo: 21 días.</li>
-							<li class="litext">Extensión: 500-3000 palabras.</li>
-							<li class="litext">Penalización por exceso de palabras, pero no descalificación.</li>
-							<hr class="panel-hr"></hr>
-							<h5 class="h5text">Críticas</h5>
-							<li class="litext">Plazo: 15 días posterior a la entrega (puede variar).</li>
-							<hr class="panel-hr"></hr>
-							<h5 class="h5text">Géneros permitidos</h5>
-							<li class="litext">Principal: Ciencia ficción.</li>
-							<li class="litext">Subgéneros: Romance, realismo, misterio, psicología, mecha, realismo, música, y misterio.</li>
-							<hr class="panel-hr"></hr>
-							<h5 class="h5text">Criterios de evaluación:</h5>
-							<li class="litext">Formato: 20 pts.</li>
-							<li class="litext">Ortografía: 10 pts.</li>
-							<li class="litext">Presentación: 10 pts.</li>
-							<li class="litext">Elementos de la obra: 30 pts.</li>
-							<li class="litext">Worldbuilding: 20 pts.</li>
-							<li class="litext">Desarrollo de la obra: 30 pts.</li>
-						</div>
-					</div>
-				</div>
-				<!-- CONTEST TAB 2 -->
-				<div id="tab2" class="panel-tab-content">
-					<div>
-						<div class="panel-tab">
-						<a href="https://discord.com/channels/807285452435751004/855618660499324938/1243656849262121080" target="_blank" class="panel-tab-content-a">
-							<img src="assets/banners/events/Contest-2024 - Luces y Sombras.webp" class="panel-tab-content-img">
-						</a>
-						</div>
-						<h3 class="panel_title" style="margin:0px;padding: 5px 5px 0px 5px;font-size: smaller;border-bottom: solid 3px rgb(var(--dark-skyblue-rgb));width: fit-content;"> RESULTADOS</h3>
-						<!-- CAROUSEL 2 -->
-						<div>
-							<main class="mainnovels">
-								<div class="carousell" style="width: 240px;height: 360px;display: flex;flex-direction: row;flex-wrap: wrap;align-content: center;justify-content: center;align-items: center;box-shadow: 0px 0px 4px 4px rgb(0 0 0 / 0%);">
-									<div class="carousell-inner" id="carousell-inner2"></div>
-								</div>
-							</main>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-			
-		<!-- BACKGROUND -->
-			<div id="app">
-				<div id="star-container">
-					<div id="star-pattern"></div>
-					<div id="star-gradient-overlay"></div>
-				</div>
-			</div>
-		<!-- FOOTER -->
-		<footer>
-			<div class="footer-content">
-					<div class="footer-section">
-						<h3>¿Qué es Keim Lite?</h3>
-						<p>Keim Lite es un servidor de escritura creado en 2021 por el señor Eimon Q, dedicado a novelas de todo tipo. Su objetivo es fomentar un ambiente en el que los escritores puedan aprender y perfeccionar sus habilidades de escritura, además de compartir sus obras con una comunidad con el mismo hobby y gustos.</p>
-					</div>
-					<div class="footer-section">
-						<h3>¿Qué es Celestina?</h3>
-						<p>Celestina es un proyecto para optimizar y acelerar varios procesos de actualización en el servidor, cómo lo sería el Top Semanal de Novelas o el Reto Diario. Diseñado para que los encargados no se compliquen tanto.</p>
-					</div>
-					<div class="footer-section">
-						<h3>¿Top Semanal de Novelas?</h3>
-						<p>El Top Semanal de Novelas es una sección pequeña en el servidor de Discord. Cada semana, se actualiza para presentar las diez obras más populares, seleccionadas en función de su número total de visitas o seguidores.</p>
-					</div>
-			</div>
-			<div class="footer-bottom">
-					<div class="wave">
-						<p>CELESTINA PROJECT</p>
-						<span>❤</span> | <span>🐌</span>
-					</div>
-			</div>
-			<a onclick="window.location.href='rules/rulerfox.html'">
-					<img src="assets/buttons/miku_approved.gif" style="position: absolute; bottom: 1px; left: 0px; z-index: 2;" title="Hoy no es Pascua">
-			</a>
-			<div class= "socialWeb">
-				<p class="socialText">¡Visita todas nuestras redes sociales!</p>
-				<div class="socialIcons"">  
-					<a onclick="window.location.href='https://discord.com/invite/fDY7MqHb4d'">
-						<img src="assets/social/discord.png" alt="Discord" class="socialImg" title="Discord">
-					</a>
-					<!-- <a onclick="window.location.href='https://whatsapp.com/channel/0029Va9IIWhHLHQXm4tCLo03'">
-						<img src="assets/social/facebook.png" alt="FaceBook" class="socialImg" title="FaceBook">
-					</a> -->
-					<a onclick="window.location.href='https://whatsapp.com/channel/0029Va9IIWhHLHQXm4tCLo03'">
-						<img src="assets/social/whatsapp.png" alt="WhatsApp" class="socialImg" title="WhatsApp">
-					</a>
-					<a onclick="window.location.href='https://x.com/KeimLite'">
-						<img src="assets/social/twitter.png" alt="Twitter" class="socialImg" title="X(Twitter)">
-					</a>
-				</div>
-			</div>
-		</footer>
-		<script src="scripts.js/scr_novelView.js"></script>
-	</body>
+        <!-- PANEL -->
+        <div class="panel">
+            <!-- LEFT -->
+            <div class="panel-left">
+                <h2 class="panel-title">INFORMACIÓN VARIADA</h2>
+                <div class="panel-border">
+                    <div class="panel-bg">
+                        <!-- Pestañas de géneros -->
+                        <div class="tabs" style="width: -webkit-fill-available">
+                            <ul class="panel-ul" id="onlyTabs">
+								<li class="panel-li" id="genreTabs">
+									<!-- Las pestañas de género se generarán dinámicamente aquí -->
+								</li>
+                            </ul>
+                        </div>
+                        <!-- Contenido de cada género -->
+                        <div id="genreContent" style="margin: 5px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- RIGHT -->
+            <div class="panel-right">
+                <!-- CONTEST -->
+                <h2 class="panel-title">CONCURSOS</h2>
+                <div class="panel-border">
+                    <!-- CONTEST SELECTOR -->
+                    <div style="width: -webkit-fill-available">
+                        <ul class="panel-ul">
+                            <li class="panel-li">
+                                <a class="panel-a active" onclick="showTab('tab1')" id="tab1-link">ACTUAL</a>
+                            </li>
+                            <li class="panel-li">
+                                <a class="panel-a" onclick="showTab('tab2')" id="tab2-link">ANTERIOR</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- CONTEST TABS -->
+                    <div class="panel-tabs"  id="onlyTabs2">
+                        <!-- CONTEST TAB 1 -->
+                        <div id="tab1" class="panel-tab-content active">
+                            <div class="panel-tab">
+                                <a href="https://discord.com/channels/807285452435751004/855618660499324938/1243656849262121080" target="_blank" class="panel-tab-content-a">
+                                <img src="assets/banners/events/Contest-2024 - KeimFiction.webp" class="panel-tab-content-img">
+                                </a>
+                            </div>
+                            <div>
+                                <h3 class="panel_title" style="margin:0px;padding: 5px 5px 0px 5px;font-size: smaller;border-bottom: solid 3px rgb(var(--dark-skyblue-rgb));width: fit-content;"> REGLAS</h3>
+                                <!-- RULES -->
+                                <div style="margin:0px;padding: 5px 5px 0px 5px;font-size: smaller">
+                                    <h5 class="h5text">Incripción (Terminado)</h5>
+                                    <li class="litext">Máximo 16 participantes (por orden de inscripción).</li>
+                                    <li class="litext">Registro en el <a class="panel-a-link"href="https://docs.google.com/forms/d/e/1FAIpQLScV16lHExO4w98RkRNkEBTZL1cJVDCtLkNdOYLFBCal6PYOnw/viewform?usp=sf_link">Formulario de Google</a>.</li>
+                                    <li class="litext">Plazo: 5 días.</li>
+                                    <h5 class="h5text">Entrega de obra (En Proceso)</h5>
+                                    <li class="litext">Enviar en PDF.</li>
+                                    <li class="litext">Plazo: 21 días.</li>
+                                    <li class="litext">Extensión: 500-3000 palabras.</li>
+                                    <li class="litext">Penalización por exceso de palabras, pero no descalificación.</li>
+                                    <hr class="panel-hr">
+                                    </hr>
+                                    <h5 class="h5text">Críticas</h5>
+                                    <li class="litext">Plazo: 15 días posterior a la entrega (puede variar).</li>
+                                    <hr class="panel-hr">
+                                    </hr>
+                                    <h5 class="h5text">Géneros permitidos</h5>
+                                    <li class="litext">Principal: Ciencia ficción.</li>
+                                    <li class="litext">Subgéneros: Romance, realismo, misterio, psicología, mecha, realismo, música, y misterio.</li>
+                                    <hr class="panel-hr">
+                                    </hr>
+                                    <h5 class="h5text">Criterios de evaluación:</h5>
+                                    <li class="litext">Formato: 20 pts.</li>
+                                    <li class="litext">Ortografía: 10 pts.</li>
+                                    <li class="litext">Presentación: 10 pts.</li>
+                                    <li class="litext">Elementos de la obra: 30 pts.</li>
+                                    <li class="litext">Worldbuilding: 20 pts.</li>
+                                    <li class="litext">Desarrollo de la obra: 30 pts.</li>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CONTEST TAB 2 -->
+                        <div id="tab2" class="panel-tab-content">
+                            <div>
+                                <div class="panel-tab">
+                                    <a href="https://discord.com/channels/807285452435751004/855618660499324938/1243656849262121080" target="_blank" class="panel-tab-content-a">
+                                    <img src="assets/banners/events/Contest-2024 - Luces y Sombras.webp" class="panel-tab-content-img">
+                                    </a>
+                                </div>
+                                <h3 class="panel_title" style="margin:0px;padding: 5px 5px 0px 5px;font-size: smaller;border-bottom: solid 3px rgb(var(--dark-skyblue-rgb));width: fit-content;"> RESULTADOS</h3>
+                                <!-- CAROUSEL 2 -->
+                                <div>
+                                    <main class="mainnovels">
+                                        <div class="carousell" style="width: 240px;height: 360px;display: flex;flex-direction: row;flex-wrap: wrap;align-content: center;justify-content: center;align-items: center;box-shadow: 0px 0px 4px 4px rgb(0 0 0 / 0%);">
+                                            <div class="carousell-inner" id="carousell-inner2"></div>
+                                        </div>
+                                    </main>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BACKGROUND -->
+        <div id="app">
+            <div id="star-container">
+                <div id="star-pattern"></div>
+                <div id="star-gradient-overlay"></div>
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>¿Qué es Keim Lite?</h3>
+                    <p>Keim Lite es un servidor de escritura creado en 2021 por el señor Eimon Q, dedicado a novelas de todo tipo. Su objetivo es fomentar un ambiente en el que los escritores puedan aprender y perfeccionar sus habilidades de escritura, además de compartir sus obras con una comunidad con el mismo hobby y gustos.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>¿Qué es Celestina?</h3>
+                    <p>Celestina es un proyecto para optimizar y acelerar varios procesos de actualización en el servidor, cómo lo sería el Top Semanal de Novelas o el Reto Diario. Diseñado para que los encargados no se compliquen tanto.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>¿Top Semanal de Novelas?</h3>
+                    <p>El Top Semanal de Novelas es una sección pequeña en el servidor de Discord. Cada semana, se actualiza para presentar las diez obras más populares, seleccionadas en función de su número total de visitas o seguidores.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="wave">
+                    <p>CELESTINA PROJECT</p>
+                    <span>❤</span> | <span>🐌</span>
+                </div>
+            </div>
+            <a onclick="window.location.href='rules/rulerfox.html'">
+            <img src="assets/buttons/miku_approved.gif" style="position: absolute; bottom: 1px; left: 0px; z-index: 2;" title="Hoy no es Pascua">
+            </a>
+            <div class= "socialWeb">
+                <p class="socialText">¡Visita todas nuestras redes sociales!</p>
+                <div class="socialIcons"">
+                    <a onclick="window.location.href='https://discord.com/invite/fDY7MqHb4d'">
+                    <img src="assets/social/discord.png" alt="Discord" class="socialImg" title="Discord">
+                    </a>
+                    <!-- <a onclick="window.location.href='https://whatsapp.com/channel/0029Va9IIWhHLHQXm4tCLo03'">
+                        <img src="assets/social/facebook.png" alt="FaceBook" class="socialImg" title="FaceBook">
+                        </a> -->
+                    <a onclick="window.location.href='https://whatsapp.com/channel/0029Va9IIWhHLHQXm4tCLo03'">
+                    <img src="assets/social/whatsapp.png" alt="WhatsApp" class="socialImg" title="WhatsApp">
+                    </a>
+                    <a onclick="window.location.href='https://x.com/KeimLite'">
+                    <img src="assets/social/twitter.png" alt="Twitter" class="socialImg" title="X(Twitter)">
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script src="scripts.js/scr_novels-week.js"></script>
+        <script src="scripts.js/scr_novelView.js"></script>
+        <script src="scripts.js/scr_panelTabs.js"></script>
+    </body>
 </html>

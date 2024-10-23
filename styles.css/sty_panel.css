@@ -66,6 +66,7 @@
     text-decoration: none;
     color: rgb(var(--dark-skyblue-rgb));
 	font-variant: normal;
+	text-transform: uppercase;
 }
 
 .panel-a:first-letter {
@@ -95,12 +96,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 536px;
+    max-height: 590px;
 }
 
 .panel-bg {
     background: rgb(var(--light-rgb));
-    height: 90px;
+    max-height: 590px;
+	width: -webkit-fill-available;
 }
 
 .panel-tab {
@@ -157,6 +159,21 @@
 .panel-hr {
     margin: 5px 0;
 }
+
+/* Contenedor principal de las columnas */
+.columns-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;  /* Espacio entre columnas */
+}
+
+/* Estilos de cada columna de novelas */
+.novel-column {
+    flex: 1;  /* Cada columna ocupará un espacio igual */
+    width: 300px;  /* Tamaño mínimo de cada columna */
+	max-height: -webkit-fill-available;
+}
+
 
 @media (max-width: 1024px) {
     .panel {
