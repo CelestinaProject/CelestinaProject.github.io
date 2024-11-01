@@ -50,3 +50,4 @@ const novelsDataTotal = [
 { title: "I Have the Sacred Sword", titleSearch: "Tengo La Espada Sagrada", platform: "scribblehub", cover: "novels/covers/I Have the Sacred Sword.webp", author: "EimonQ", date: "2023", chapters: "23", views: "4", rating: "0", synopsis: "Eleonora is an ego-sword that one day was abandoned by her candidate. Confident, she thought that not many days would pass until she would get a new owner, but to her surprise more than 3000 years passed. In her absence, too many things in the world changed. Most of the things she knows, work differently and magic, along with technology, are moving across the continent as the 3 great kingdoms compete. How will the sword adapt to this strange time never seen before?", url: "https://www.scribblehub.com/series/599985/i-have-the-sacred-sword/" },
 // WEBTOON ---------------------------------------------------------->
 ];
+

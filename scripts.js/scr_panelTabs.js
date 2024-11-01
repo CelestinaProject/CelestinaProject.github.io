@@ -83,7 +83,7 @@ const showGenreContent = (selectedGenre) => {
         novelItem.classList.add('novel-item');
 
         // Definir el icono de la corona según el ranking
-        let crown = '';
+        let crown = ''; 
         if (index === 0) {
             crown = '👑 ';  // Corona de oro
         } else if (index === 1) {
@@ -99,11 +99,11 @@ const showGenreContent = (selectedGenre) => {
                     <span>${index + 1}</span>
                 </span>
                 <div>
-                    <h4><a href="${novel.url}" target="_blank" style="color: rgb(var(--light-skyblue-rgb));">${novel.title}</h4></a>
+                    <h4><a href="${novel.url}" target="_blank" style="color: #ff7518;">${novel.title}</h4></a>
                     <p style="font-size: small;text-indent: 15px; text-transform: uppercase;">${novel.author}</p>
                 </div>
             </div>
-        `;
+        `; //rgb(var(--light-skyblue-rgb))
 
         // Añadir a la columna correspondiente
         if (index < 7) {

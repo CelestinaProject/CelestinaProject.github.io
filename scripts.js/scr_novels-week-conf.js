@@ -1,4 +1,4 @@
-const sortCriteria = 'views'; // 'followers', 'views' o 'chapters'
+const sortCriteria = 'chapters'; // 'followers', 'views' o 'chapters'
 const sortOrder = 'desc'; // 'asc' (menor a mayor) o 'desc' (mayor a menor)
 const itemsPerPage = 10;
 let currentPage = 1;
@@ -59,13 +59,13 @@ function renderNovels(novelsToRender, startIndex) {
                     <div>
                         <div class="novel-title">${novel.title}</div>
                         <div>Autor: ${novel.author}</div>
-                        <div>Visitas: ${novel.views}</div>
+                        <div>Capítulos: ${novel.chapters}</div>
                         <div class="status-icon">Estado: ${novel.status} ${statusIcon}</div>
                     </div>
                 </div>
                 <div class="novel-details" id="details-${currentIndex - 1}">
                     <div>Seguidores: ${novel.followers}</div>
-                    <div>Capítulos: ${novel.chapters}</div>
+					<div>Visitas: ${novel.views}</div>
                     <div>Artista: ${novel.artist}</div>
                     <div>Fecha: ${novel.date}</div>
                     <a href="${novel.url}" target="_blank"><img src="../assets/platforms/niadd-2.webp" alt="${novel.title} cover" class="novel-cover" style="height: 40px; width: auto; cursor: url('../assets/cursor/miku2.cur'), auto;"></a>

@@ -1,8 +1,9 @@
 		body {
-			font-family: 'Helvetica Neue', Arial, sans-serif;
+			/*font-family: 'Helvetica Neue', Arial, sans-serif;*/
+			font-family: 'Creepster', cursive;
 			margin: 0;
 			padding: 0;
-			background-color: #f4f4f4;
+			background-color: #333;/*#f4f4f4;*/
 			color: rgb(var(--dark-rgb));
 			overflow-x: hidden;
 			cursor: url('../assets/cursor/miku1.cur'), auto;
@@ -26,6 +27,7 @@
             height: 50px;
             transition: transform 0.3s ease;
 			cursor: url('../assets/cursor/miku2.cur'), auto;
+			filter: hue-rotate(218deg);
         }
 
         header img:hover {
@@ -121,11 +123,11 @@
         nav ul li:hover {
             transform: translateY(-5px);
 			filter: drop-shadow(0px 0px 4px rgb(var(--light-rgb)));
-			color: rgb(var(--light-skyblue-rgb));
+			color: #ff7518;/*rgb(var(--light-skyblue-rgb));*/
         }
 
         nav ul li a:hover {
-            color: rgb(var(--light-skyblue-rgb));
+            color: #ff7518;/*rgb(var(--light-skyblue-rgb));*/
 			filter: drop-shadow(0px 0px 4px rgb(var(--light-rgb)));
         }
 
@@ -196,7 +198,8 @@
         }
 
         footer {
-            background: linear-gradient(90deg, rgb(var(--dark-rgb)), rgb(var(--dark-skyblue-rgb)));
+            background: linear-gradient(90deg, rgb(var(--dark-rgb)), #ff7518);
+			/*rgb(var(--dark-skyblue-rgb)))*/
             padding: 20px;
             text-align: center;
             color: rgb(var(--light-rgb));
@@ -208,7 +211,8 @@
         }
 
         footer:hover {
-            background: linear-gradient(90deg, rgb(var(--dark-skyblue-rgb)), rgb(var(--dark-rgb)));
+            background: linear-gradient(90deg, #ff7518, rgb(var(--dark-rgb)));
+			/*rgb(var(--dark-skyblue-rgb))*/
         }
 
         footer::before {
@@ -219,7 +223,7 @@
             transform: translateX(-50%);
             width: 60px;
             height: 4px;
-            background-color: #33e4f9;
+            background-color: #ff7518;/*33e4f9;*/
             border-radius: 2px;
             transition: width 0.3s ease;
         }
@@ -383,7 +387,7 @@
 		
 		::selection {
 			cursor: url('../assets/cursor/miku8.cur'), auto;
-			background-color: rgb(var(--light-skyblue-rgb));
+			background-color: #ff7518;/*rgb(var(--light-skyblue-rgb));*/
 		}
 		
 		::-webkit-scrollbar {
@@ -393,7 +397,7 @@
 		}
 
 		::-webkit-scrollbar-thumb {
-			background-color: rgb(var(--dark-skyblue-rgb));
+			background-color: #ff7518;/*rgb(var(--dark-skyblue-rgb));*/
 		}
 
 		::-webkit-scrollbar-corner {
@@ -507,5 +511,35 @@
     background-color: black;
     border-radius: 50%;
     margin: 0 5px 0 5px;
+	}
 }
+
+/* Halowin */
+#particle-container{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+	z-index: 1000000000000;
+}
+
+/* Efectos de Partículas */
+.particle {
+    position: absolute;
+    font-size: 20px;
+    animation: fall infinite ease-in;
+    color: #ff7518;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg) scale(0.7);
+        opacity: 0;
+    }
 }
