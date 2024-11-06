@@ -1,15 +1,20 @@
+		@font-face { font-family: 'Playful Christmas'; src: url('../assets/fonts/Playful Christmas-Personal Use.ttf') format('opentype');
+		}
+	
+		
 		body {
 			/*font-family: 'Helvetica Neue', Arial, sans-serif;*/
-			font-family: 'Creepster', cursive;
+			font-family: 'Playful Christmas';
 			margin: 0;
 			padding: 0;
-			background-color: #333;/*#f4f4f4;*/
+			background-color: #f4f4f4;
 			color: rgb(var(--dark-rgb));
 			overflow-x: hidden;
 			cursor: url('../assets/cursor/miku1.cur'), auto;
 			z-index: 0;
 			position: relative;
         }
+		
 
         header {
             background: rgb(var(--dark-rgb));
@@ -27,7 +32,6 @@
             height: 50px;
             transition: transform 0.3s ease;
 			cursor: url('../assets/cursor/miku2.cur'), auto;
-			filter: hue-rotate(218deg);
         }
 
         header img:hover {
@@ -123,11 +127,11 @@
         nav ul li:hover {
             transform: translateY(-5px);
 			filter: drop-shadow(0px 0px 4px rgb(var(--light-rgb)));
-			color: #ff7518;/*rgb(var(--light-skyblue-rgb));*/
+			color: #008000;/*rgb(var(--light-skyblue-rgb));*/
         }
 
         nav ul li a:hover {
-            color: #ff7518;/*rgb(var(--light-skyblue-rgb));*/
+            color: #008000;/*rgb(var(--light-skyblue-rgb));*/
 			filter: drop-shadow(0px 0px 4px rgb(var(--light-rgb)));
         }
 
@@ -198,7 +202,7 @@
         }
 
         footer {
-            background: linear-gradient(90deg, rgb(var(--dark-rgb)), #ff7518);
+            background: linear-gradient(90deg, rgb(var(--dark-rgb)), #008000);
 			/*rgb(var(--dark-skyblue-rgb)))*/
             padding: 20px;
             text-align: center;
@@ -211,7 +215,7 @@
         }
 
         footer:hover {
-            background: linear-gradient(90deg, #ff7518, rgb(var(--dark-rgb)));
+            background: linear-gradient(90deg, #008000, rgb(var(--dark-rgb)));
 			/*rgb(var(--dark-skyblue-rgb))*/
         }
 
@@ -223,7 +227,7 @@
             transform: translateX(-50%);
             width: 60px;
             height: 4px;
-            background-color: #ff7518;/*33e4f9;*/
+            background-color: #FFD700;/*33e4f9;*/
             border-radius: 2px;
             transition: width 0.3s ease;
         }
@@ -387,7 +391,7 @@
 		
 		::selection {
 			cursor: url('../assets/cursor/miku8.cur'), auto;
-			background-color: #ff7518;/*rgb(var(--light-skyblue-rgb));*/
+			background-color: #008000;/*rgb(var(--light-skyblue-rgb));*/
 		}
 		
 		::-webkit-scrollbar {
@@ -397,7 +401,7 @@
 		}
 
 		::-webkit-scrollbar-thumb {
-			background-color: #ff7518;/*rgb(var(--dark-skyblue-rgb));*/
+			background-color: #008000;/*rgb(var(--dark-skyblue-rgb));*/
 		}
 
 		::-webkit-scrollbar-corner {
@@ -530,7 +534,7 @@
     position: absolute;
     font-size: 20px;
     animation: fall infinite ease-in;
-    color: #ff7518;
+    color: #008000;
 }
 
 @keyframes fall {

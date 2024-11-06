@@ -1,8 +1,8 @@
 const particleContainer = document.getElementById('particle-container');
 
 		// Definición de emojis de Halloween y colores
-		const halloweenEmojis = ["🎃", "👻", "🕸️", "🦇", "🍂"];
-		const colors = ["#ff7518", "#e9b44c", "#f8d49d", "#c13b00", "#d67d3e"];
+		const halloweenEmojis = ["❄️"];
+		const colors = ["#FF0000", "#008000", "#FFFFFF", "#FFD700", "#C0C0C0"];
 
 		function createParticle() {
 			const particle = document.createElement("span");
@@ -25,14 +25,14 @@ const particleContainer = document.getElementById('particle-container');
 		}
 
 		// Ajustar el número de partículas activas en pantalla
-		const maxParticles = 20;
+		const maxParticles = 10;
 		let activeParticles = 0;
 
 		function generateParticles() {
 			if (activeParticles < maxParticles) {
 				createParticle();
 				activeParticles++;
-				setTimeout(() => activeParticles--, Math.random() * 3000 + 4000); // Controla el número de partículas activas
+				setTimeout(() => activeParticles--, Math.random() * 3000 + 2000); // Controla el número de partículas activas
 			}
 		}
 

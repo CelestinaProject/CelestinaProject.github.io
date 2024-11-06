@@ -99,7 +99,7 @@ const showGenreContent = (selectedGenre) => {
                     <span>${index + 1}</span>
                 </span>
                 <div>
-                    <h4><a href="${novel.url}" target="_blank" style="color: #ff7518;">${novel.title}</h4></a>
+                    <h4><a href="${novel.url}" target="_blank" style="color: #008000;">${novel.title}</h4></a>
                     <p style="font-size: small;text-indent: 15px; text-transform: uppercase;">${novel.author}</p>
                 </div>
             </div>
