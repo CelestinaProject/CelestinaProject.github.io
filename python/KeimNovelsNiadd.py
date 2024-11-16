@@ -50,6 +50,8 @@ urls_info = [
     "https://es.niadd.com/original/10069970.html", # ¡Tengo Las Armas Más Poderosas Rango XXX!
     "https://es.niadd.com/original/10070368.html", #Realidad Alterada - Viviendo Con Un Solo Seguidor Para No Ser Olvidada
     "https://es.niadd.com/original/10070333.html", #Nintu: Los Maestros Del Destino Y La Salvación Del Imperio
+    "https://es.niadd.com/original/10072118.html", #Kotowareta Ai No Herupaa No Aiko-san Desu
+    "https://es.niadd.com/original/10072187.html", #Futatsu No Sekai Kara Umareta No Onnanoko No Yris-san Desu
 ]
 
 # Crear las carpetas si no existen
