@@ -6,7 +6,7 @@ function printFilteredNovels() {
     if (document.getElementById('statusEliminado').checked) filters.push('Eliminado');
     
     const filteredNovels = newNovels.filter(novel => filters.includes(novel.status));
-    let output = '**TOP DE NOVELAS MÁS VISITADAS PUBLICADAS EN NIADD**\n\n';
+    let output = '**TOP DE NOVELAS MÁS SEGUIDAS PUBLICADAS EN NIADD**\n\n';
     
     filteredNovels.forEach((novel, index) => {
         const oldNovel = oldNovels.find(n => n.title === novel.title);

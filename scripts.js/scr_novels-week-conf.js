@@ -1,4 +1,4 @@
-const sortCriteria = 'chapters'; // 'followers', 'views' o 'chapters'
+const sortCriteria = 'followers'; // 'followers', 'views' o 'chapters'
 const sortOrder = 'desc'; // 'asc' (menor a mayor) o 'desc' (mayor a menor)
 const itemsPerPage = 10;
 let currentPage = 1;
