@@ -46,6 +46,32 @@
         <link rel="stylesheet" href="styles.css/sty_letterAni.css">
         <link rel="stylesheet" href="styles.css/sty_novel-view.css">
         <link rel="stylesheet" href="styles.css/sty_panel.css">
+  <style>
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 50px auto;
+    width: 70%;
+    flex-direction: row;
+    align-items: center;
+}
+.countdown div {
+    background: linear-gradient(135deg, var(--text-color-blue), var(--highlight-color));
+    color: var(--text-color-black);
+    padding: 10px 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px var(--hover-color);
+    font-size: 1em;
+    font-weight: bold;
+    animation: fadeIn 1.5s ease-in-out, bounce 2s infinite;
+    transition: transform 0.3s ease, background 0.3s ease;
+    display: flex;
+    text-align: center;
+    width: max-content;
+}
+  </style>
 		
 		<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
         <!-- SCRIPTS -->
@@ -96,7 +122,14 @@
                 </ul>
             </nav>
         </header>
-        <!-- CAROUSEL 1 -->
+<div class="countdown" id="countdown">
+    <div id="months">0 meses</div>
+    <div id="days">0 días</div>
+    <div id="hours">0 horas</div>
+    <div id="minutes">0 minutos</div>
+    <div id="seconds">0 segundos</div>
+  </div>
+        <!--  CAROUSEL 1
         <main class="mainnovels" style="margin-top:2%">
             <div class="carousell">
                 <div class="carousell-inner" id="carousell-inner"></div>
@@ -110,7 +143,7 @@
             <div class="more-novels">
                 <a onclick="window.location.href='rules/found.html?celes='">▸ Más Novelas ◂</a>
             </div>
-        </main>
+        </main> -->
         <!-- PANEL -->
         <div class="panel">
             <!-- LEFT -->
@@ -269,5 +302,35 @@
         <script src="scripts.js/scr_novelView.js"></script>
         <script src="scripts.js/scr_panelTabs.js"></script>
 		<script src="scripts.js/halowin.js"></script>
+
+ <script>
+    const targetDate = new Date('2025-06-05T00:00:00Z').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const timeLeft = targetDate - now;
+
+      if (timeLeft <= 0) {
+        document.getElementById('countdown').innerHTML = "¡El tiempo ha llegado!";
+        clearInterval(interval);
+        return;
+      }
+
+      const months = Math.floor(timeLeft / (30 * 24 * 60 * 60 * 1000));
+      const days = Math.floor((timeLeft % (30 * 24 * 60 * 60 * 1000)) / (24 * 60 * 60 * 1000));
+      const hours = Math.floor((timeLeft % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+      const minutes = Math.floor((timeLeft % (60 * 60 * 1000)) / (60 * 1000));
+      const seconds = Math.floor((timeLeft % (60 * 1000)) / 1000);
+
+      document.getElementById('months').textContent = `${months} meses`;
+      document.getElementById('days').textContent = `${days} días`;
+      document.getElementById('hours').textContent = `${hours} horas`;
+      document.getElementById('minutes').textContent = `${minutes} minutos`;
+      document.getElementById('seconds').textContent = `${seconds} segundos`;
+    }
+
+    const interval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
     </body>
 </html>
