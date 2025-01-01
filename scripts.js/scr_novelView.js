@@ -5,7 +5,7 @@ novelsDataTotal.forEach(novel => {
     novelElement.classList.add('carousell-item');
     novelElement.innerHTML = `
         <a href="${novel.url}" target="_blank" style="text-decoration: none;">
-            <img src="novels/covers/${novel.title}.webp" alt="${novel.title}">
+            <img src="novels/covers/${novel.title || default}.webp" alt="${novel.title}">
         </a>
     `;
     carouselInner.appendChild(novelElement);
@@ -52,7 +52,7 @@ novels.forEach(novel => {
     novelElement.classList.add('carousell-item-2');
     novelElement.innerHTML = `
         <a href="rules/museum/lucesysombras.html" style="text-decoration: none;width: 230px;height: 350px;max-width: 230px;max-height: 350px;display: flex;">
-            <img src="rules/museum/${novel.cover}" alt="${novel.titlereal}">
+            <img src="${novel.cover}" alt="${novel.titlereal}">
         </a>
     `;
     carouselInner2.appendChild(novelElement);
