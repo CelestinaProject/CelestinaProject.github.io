@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <link rel="icon" href="../../../../assets/celestina/icon.png" type="image/png">
-        <!-- Metadata -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-        <meta http-equiv="Permissions-Policy" content="browsing-topics=()">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Celestina Project</title>
-        <!-- SEO and Social Media Metadata -->
-        <meta name="description" content="Celestina Project">
-        <meta name="keywords" content="top, leaderboard, light novels, celestina project, proyecto celestina, tabla de clasificación, novelas, novelas ligeras, cuentos, relatos, keim lite, keimlite, eimon q">
-        <meta name="author" content="RulerFox ♠">
-        <!-- Open Graph Metadata -->
-        <meta property="og:url" content="https://celestinaproject.github.io">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Celestina Project">
-        <meta property="og:description" content="Celestina Project">
-        <meta property="og:image" content="https://celestinaproject.github.io/assets/celestina/icon.png">
-        <meta property="og:image:width" content="1200">
-        <meta property="og:image:height" content="630">
-        <!-- Twitter Card Metadata -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:site" content="@KeimLite">
-        <meta name="twitter:title" content="Celestina Project">
-        <meta name="twitter:description" content="Celestina Project">
-        <meta name="twitter:image" content="https://celestinaproject.github.io/assets/celestina/icon.png">
-        <meta property="twitter:domain" content="celestinaproject.github.io">
-        <meta property="twitter:url" content="https://celestinaproject.github.io">
-        <!-- Theme Color -->
-        <meta name="theme-color" content="#33e4f9">
-        <!-- Additional Metadata -->
-        <meta name="robots" content="index, follow">
-        <meta name="language" content="es">
-        <meta name="revisit-after" content="7 days">
-        <meta name="rating" content="general">
-        <meta name="distribution" content="global">
-        <meta name="format-detection" content="telephone=no">
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <meta http-equiv="Permissions-Policy" content="browsing-topics=()">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestina Project</title>
+    <!-- SEO and Social Media Metadata -->
+    <meta name="description" content="Celestina Project">
+    <meta name="keywords"
+        content="top, leaderboard, light novels, celestina project, proyecto celestina, tabla de clasificación, novelas, novelas ligeras, cuentos, relatos, keim lite, keimlite, eimon q">
+    <meta name="author" content="RulerFox ♠">
+    <!-- Open Graph Metadata -->
+    <meta property="og:url" content="https://celestinaproject.github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Celestina Project">
+    <meta property="og:description" content="Celestina Project">
+    <meta property="og:image" content="https://celestinaproject.github.io/assets/celestina/icon.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@KeimLite">
+    <meta name="twitter:title" content="Celestina Project">
+    <meta name="twitter:description" content="Celestina Project">
+    <meta name="twitter:image" content="https://celestinaproject.github.io/assets/celestina/icon.png">
+    <meta property="twitter:domain" content="celestinaproject.github.io">
+    <meta property="twitter:url" content="https://celestinaproject.github.io">
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#33e4f9">
+    <!-- Additional Metadata -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="es">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="format-detection" content="telephone=no">
     <title>Niadd Wrap</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
@@ -49,17 +51,20 @@
             color: #333;
             position: relative;
         }
+
         header {
             background-color: #4CAF50;
             color: white;
             text-align: center;
             padding: 20px 10px;
         }
+
         main {
             max-width: 1200px;
             margin: auto;
             padding: 20px;
         }
+
         .chart-container {
             margin: 20px auto;
             padding: 20px;
@@ -67,12 +72,14 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-			display: none;
+            display: none;
         }
+
         .buttons {
             text-align: center;
             margin-bottom: 20px;
         }
+
         .buttons button {
             padding: 10px 20px;
             margin: 5px;
@@ -83,15 +90,18 @@
             font-weight: bold;
             transition: background-color 0.2s, color 0.2s;
         }
+
         .buttons button:hover {
             background-color: #4CAF50;
             color: white;
         }
+
         .buttons button.active {
             background-color: #4CAF50;
             color: white;
             border-color: #4CAF50;
         }
+
         .gallery {
             display: flex;
             flex-wrap: wrap;
@@ -99,6 +109,7 @@
             justify-content: center;
             margin: 20px 0;
         }
+
         .gallery .novela {
             display: flex;
             flex-direction: column;
@@ -113,27 +124,33 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s, box-shadow 0.2s;
         }
+
         .gallery .novela:hover {
             transform: scale(1.05);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+
         .novela img {
             width: 100%;
-			height: 200px;
+            height: 200px;
             border-radius: 4px;
         }
+
         .novela h3 {
             font-size: 14px;
             margin: 8px 0 4px;
         }
+
         .novela a {
             font-size: 12px;
             color: #007bff;
             text-decoration: none;
         }
+
         .novela a:hover {
             text-decoration: underline;
         }
+
         #backToTop {
             position: fixed;
             bottom: 20px;
@@ -151,11 +168,53 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
             transition: opacity 0.2s;
         }
+
         #backToTop:hover {
             background-color: #45a049;
         }
+
+        .resumen-novela {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        .resumen-novela h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .info {
+            margin-bottom: 10px;
+        }
+
+        .porcentaje p {
+            font-weight: bold;
+        }
+
+        .positivo {
+            color: green;
+        }
+
+        .negativo {
+            color: red;
+        }
+
+        .resumen-total {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border: 2px solid #ddd;
+        }
+
+        .resumen-total h2 {
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
+
 <body>
     <main>
         <!-- Galería de novelas -->
@@ -165,11 +224,11 @@
         <div class="chart-container" id="chartsContainer">
             <div class="buttons">
                 <button id="btnVisitas">Visitas</button>
-				<button id="btnCapitulos">Capítulos</button>
+                <button id="btnCapitulos">Capítulos</button>
                 <button id="btnSeguidores">Seguidores</button>
             </div>
             <canvas id="visitasChart" width="400" height="200"></canvas>
-			<canvas id="capitulosChart" width="400" height="200"></canvas>
+            <canvas id="capitulosChart" width="400" height="200"></canvas>
             <canvas id="seguidoresChart" width="400" height="200"></canvas>
         </div>
     </main>
@@ -201,7 +260,8 @@
     <script src="novels_info_57.js"></script>
     <script src="novels_info_58.js"></script>
     <script src="novels_info_59.js"></script>
-	<script src="novels_info_60.js"></script>
+    <script src="novels_info_60.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

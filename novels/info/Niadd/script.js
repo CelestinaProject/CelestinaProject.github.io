@@ -70,7 +70,7 @@ cargarDatos(week56, 'Semana 56');
 cargarDatos(week57, 'Semana 57');
 cargarDatos(week58, 'Semana 58');
 cargarDatos(week59, 'Semana 59');
-cargarDatos(week59, 'Semana 60');
+cargarDatos(week60, 'Semana 60');
 
 // Modificar cargarNovela para desplazarse hacia los gráficos
 function cargarNovela(index) {
@@ -216,3 +216,5 @@ const backToTop = document.getElementById("backToTop");
 	backToTop.onclick = function() {
 		window.scrollTo({ top: 0, behavior: 'smooth'});
 	};
+	
+	
